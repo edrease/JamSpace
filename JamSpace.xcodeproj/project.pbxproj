@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CB12EC01B8BB25600AC8BEB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB12EBF1B8BB25600AC8BEB /* Keys.swift */; };
 		9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */; };
 		9E0AA1A81B8B90DB00DC0319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A71B8B90DB00DC0319 /* ViewController.swift */; };
 		9E0AA1AB1B8B90DB00DC0319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6CB12EBF1B8BB25600AC8BEB /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keys.swift; path = ../Keys.swift; sourceTree = "<group>"; };
 		9E0AA1A01B8B90DB00DC0319 /* JamSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0AA1A41B8B90DB00DC0319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		9E0AA1A21B8B90DB00DC0319 /* JamSpace */ = {
 			isa = PBXGroup;
 			children = (
+				6CB12EBF1B8BB25600AC8BEB /* Keys.swift */,
 				9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */,
 				9E0AA1A71B8B90DB00DC0319 /* ViewController.swift */,
 				9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0AA1A81B8B90DB00DC0319 /* ViewController.swift in Sources */,
+				6CB12EC01B8BB25600AC8BEB /* Keys.swift in Sources */,
 				9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				9E0AA1C11B8B90DC00DC0319 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E0AA1C21B8B90DC00DC0319 /* Build configuration list for PBXNativeTarget "JamSpaceTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				9E0AA1C41B8B90DC00DC0319 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
