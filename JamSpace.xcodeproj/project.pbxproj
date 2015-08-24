@@ -82,6 +82,7 @@
 				6CB12EBF1B8BB25600AC8BEB /* Keys.swift */,
 				9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */,
 				9E0AA1A71B8B90DB00DC0319 /* ViewController.swift */,
+				6CB12EC11B8BBA0200AC8BEB /* Keys.swift */,
 				9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */,
 				9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */,
 				9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */,
