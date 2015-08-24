@@ -186,7 +186,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a City to Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x5-OU-Emf">
-                                <rect key="frame" x="216" y="257" width="168" height="21"/>
+                                <rect key="frame" x="216" y="253.5" width="168" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -209,7 +209,7 @@
                             <constraint firstItem="O03-PR-fYD" firstAttribute="leading" secondItem="qXM-KK-5fE" secondAttribute="leadingMargin" constant="32" id="bpP-MF-B18"/>
                             <constraint firstAttribute="centerX" secondItem="O03-PR-fYD" secondAttribute="centerX" id="j77-iH-BtN"/>
                             <constraint firstItem="O03-PR-fYD" firstAttribute="trailing" secondItem="qXM-KK-5fE" secondAttribute="trailingMargin" constant="-32" id="kAi-mh-20W"/>
-                            <constraint firstItem="O03-PR-fYD" firstAttribute="top" secondItem="7x5-OU-Emf" secondAttribute="bottom" id="swB-Hc-JNA"/>
+                            <constraint firstItem="O03-PR-fYD" firstAttribute="top" secondItem="7x5-OU-Emf" secondAttribute="bottom" constant="4" id="swB-Hc-JNA"/>
                             <constraint firstItem="P4Q-ti-xxW" firstAttribute="leading" secondItem="qXM-KK-5fE" secondAttribute="leadingMargin" constant="-16" id="v2G-l5-lHy"/>
                         </constraints>
                         <variation key="default">
