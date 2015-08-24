@@ -83,6 +83,8 @@
 		346FBC761B8BB56800B960E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */,
+				9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -112,9 +114,7 @@
 				346FBC741B8BB53D00B960E5 /* Models */,
 				346FBC751B8BB55E00B960E5 /* Controllers */,
 				346FBC761B8BB56800B960E5 /* Views */,
-				9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */,
 				9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */,
-				9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */,
 				9E0AA1A31B8B90DB00DC0319 /* Supporting Files */,
 			);
 			path = JamSpace;
