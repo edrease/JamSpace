@@ -22,7 +22,7 @@ xcuserdata
 *.moved-aside
 *.xcuserstate
 *.xcscmblueprint
-JamSpace/Keys.swift
+Keys.swift
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
