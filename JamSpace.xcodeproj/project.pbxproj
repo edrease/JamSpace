@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		346FBC781B8BB5B700B960E5 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC771B8BB5B700B960E5 /* Users.swift */; };
 		346FBC7A1B8BB5E600B960E5 /* PracticeSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */; };
-		6C3904681B8BD32800C94306 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3904671B8BD32800C94306 /* Parse.framework */; };
-		6CB12EC41B8BBC8A00AC8BEB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB12EC31B8BBC8A00AC8BEB /* Keys.swift */; };
+		346FBC7C1B8BC0F300B960E5 /* FirstSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC7B1B8BC0F300B960E5 /* FirstSearchViewController.swift */; };
+		346FBC7E1B8BC11A00B960E5 /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC7D1B8BC11A00B960E5 /* MapSearchViewController.swift */; };
+		346FBC801B8BC12900B960E5 /* ListSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC7F1B8BC12900B960E5 /* ListSearchViewController.swift */; };
+		346FBC821B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */; };
+		346FBC841B8BC15300B960E5 /* FilterSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC831B8BC15300B960E5 /* FilterSearchViewController.swift */; };
+		346FBC881B8BD0D500B960E5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346FBC871B8BD0D500B960E5 /* Parse.framework */; };
 		9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */; };
 		9E0AA1AB1B8B90DB00DC0319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */; };
 		9E0AA1AD1B8B90DB00DC0319 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */; };
@@ -46,8 +50,12 @@
 /* Begin PBXFileReference section */
 		346FBC771B8BB5B700B960E5 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeSpaces.swift; sourceTree = "<group>"; };
-		6C3904671B8BD32800C94306 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.8.1 (1)/Parse.framework"; sourceTree = "<group>"; };
-		6CB12EC31B8BBC8A00AC8BEB /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keys.swift; path = ../Keys.swift; sourceTree = "<group>"; };
+		346FBC7B1B8BC0F300B960E5 /* FirstSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSearchViewController.swift; sourceTree = "<group>"; };
+		346FBC7D1B8BC11A00B960E5 /* MapSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
+		346FBC7F1B8BC12900B960E5 /* ListSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSearchViewController.swift; sourceTree = "<group>"; };
+		346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeSpaceDetailViewController.swift; sourceTree = "<group>"; };
+		346FBC831B8BC15300B960E5 /* FilterSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSearchViewController.swift; sourceTree = "<group>"; };
+		346FBC871B8BD0D500B960E5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.8.1 (1)/Parse.framework"; sourceTree = "<group>"; };
 		9E0AA1A01B8B90DB00DC0319 /* JamSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0AA1A41B8B90DB00DC0319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +93,7 @@
 				9E0AA1D71B8BC11700DC0319 /* SystemConfiguration.framework in Frameworks */,
 				9E0AA1D51B8BC10B00DC0319 /* StoreKit.framework in Frameworks */,
 				9E0AA1D31B8BC10200DC0319 /* Security.framework in Frameworks */,
-				6C3904681B8BD32800C94306 /* Parse.framework in Frameworks */,
+				346FBC881B8BD0D500B960E5 /* Parse.framework in Frameworks */,
 				9E0AA1ED1B8BC87800DC0319 /* ParseTwitterUtils.framework in Frameworks */,
 				9E0AA1D11B8BC0F600DC0319 /* QuartzCore.framework in Frameworks */,
 				9E0AA1CF1B8BC0EB00DC0319 /* CoreLocation.framework in Frameworks */,
@@ -203,7 +211,6 @@
 				9E0AA1E81B8BC86000DC0319 /* ParseFacebookUtilsV4.framework */,
 				346FBC871B8BD0D500B960E5 /* Parse.framework */,
 				9E0AA1E61B8BC84000DC0319 /* ParseUI.framework */,
-				6C3904671B8BD32800C94306 /* Parse.framework */,
 				9E0AA1E21B8BC82600DC0319 /* Bolts.framework */,
 				9E0AA1DA1B8BC13E00DC0319 /* libsqlite3.dylib */,
 				9E0AA1D81B8BC12700DC0319 /* libz.dylib */,
@@ -458,7 +465,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/parse-library-1.8.1",
+					"$(PROJECT_DIR)/\"parse-library-1.8.1 (1)\"",
 					"(1)",
 				);
 				INFOPLIST_FILE = JamSpace/Info.plist;
@@ -474,7 +481,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/parse-library-1.8.1",
+					"$(PROJECT_DIR)/\"parse-library-1.8.1 (1)\"",
 					"(1)",
 				);
 				INFOPLIST_FILE = JamSpace/Info.plist;
