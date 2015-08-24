@@ -12,7 +12,6 @@
 		6C3904681B8BD32800C94306 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3904671B8BD32800C94306 /* Parse.framework */; };
 		6CB12EC41B8BBC8A00AC8BEB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB12EC31B8BBC8A00AC8BEB /* Keys.swift */; };
 		9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */; };
-		9E0AA1A81B8B90DB00DC0319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A71B8B90DB00DC0319 /* ViewController.swift */; };
 		9E0AA1AB1B8B90DB00DC0319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */; };
 		9E0AA1AD1B8B90DB00DC0319 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */; };
 		9E0AA1B01B8B90DB00DC0319 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */; };
@@ -52,7 +51,6 @@
 		9E0AA1A01B8B90DB00DC0319 /* JamSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0AA1A41B8B90DB00DC0319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E0AA1A71B8B90DB00DC0319 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E0AA1AA1B8B90DB00DC0319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9E0AA1AF1B8B90DB00DC0319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			children = (
 				346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */,
 				346FBC771B8BB5B700B960E5 /* Users.swift */,
-				6CB12EC31B8BBC8A00AC8BEB /* Keys.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -123,7 +120,11 @@
 		346FBC751B8BB55E00B960E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E0AA1A71B8B90DB00DC0319 /* ViewController.swift */,
+				346FBC7B1B8BC0F300B960E5 /* FirstSearchViewController.swift */,
+				346FBC7D1B8BC11A00B960E5 /* MapSearchViewController.swift */,
+				346FBC7F1B8BC12900B960E5 /* ListSearchViewController.swift */,
+				346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */,
+				346FBC831B8BC15300B960E5 /* FilterSearchViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +201,7 @@
 				9E0AA1EC1B8BC87800DC0319 /* ParseTwitterUtils.framework */,
 				9E0AA1EA1B8BC86D00DC0319 /* ParseFacebookUtils.framework */,
 				9E0AA1E81B8BC86000DC0319 /* ParseFacebookUtilsV4.framework */,
+				346FBC871B8BD0D500B960E5 /* Parse.framework */,
 				9E0AA1E61B8BC84000DC0319 /* ParseUI.framework */,
 				6C3904671B8BD32800C94306 /* Parse.framework */,
 				9E0AA1E21B8BC82600DC0319 /* Bolts.framework */,
@@ -317,11 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346FBC7C1B8BC0F300B960E5 /* FirstSearchViewController.swift in Sources */,
+				346FBC7E1B8BC11A00B960E5 /* MapSearchViewController.swift in Sources */,
 				346FBC781B8BB5B700B960E5 /* Users.swift in Sources */,
-				9E0AA1A81B8B90DB00DC0319 /* ViewController.swift in Sources */,
+				346FBC821B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift in Sources */,
 				346FBC7A1B8BB5E600B960E5 /* PracticeSpaces.swift in Sources */,
+				346FBC801B8BC12900B960E5 /* ListSearchViewController.swift in Sources */,
+				346FBC841B8BC15300B960E5 /* FilterSearchViewController.swift in Sources */,
 				9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */,
-				6CB12EC41B8BBC8A00AC8BEB /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
