@@ -58,6 +58,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		346FBC741B8BB53D00B960E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		346FBC751B8BB55E00B960E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA1A71B8B90DB00DC0319 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		346FBC761B8BB56800B960E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		9E0AA1971B8B90DB00DC0319 = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +101,6 @@
 		9E0AA1A21B8B90DB00DC0319 /* JamSpace */ = {
 			isa = PBXGroup;
 			children = (
-				6CB12EBF1B8BB25600AC8BEB /* Keys.swift */,
 				9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */,
 				9E0AA1A71B8B90DB00DC0319 /* ViewController.swift */,
 				6CB12EC11B8BBA0200AC8BEB /* Keys.swift */,
@@ -216,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346FBC781B8BB5B700B960E5 /* Users.swift in Sources */,
 				9E0AA1A81B8B90DB00DC0319 /* ViewController.swift in Sources */,
 				6CB12EC21B8BBA0200AC8BEB /* Keys.swift in Sources */,
 				9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */,
