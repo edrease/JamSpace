@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     Parse.setApplicationId("eW2jvK3gIIFQFpRQR08T3WioDcxKU2wcSUDcjJKW",
       clientKey: "QDLSkD4WIDyrJmzfSncxgKLPCQQU9sx1lQZ35XTW")
-
+    
+    let testObject: PFObject = PFObject(className: "Messages")
+    testObject["SomeProperty"] = "Some Value"
+    testObject.saveInBackgroundWithBlock(nil)
+    
     return true
   }
 

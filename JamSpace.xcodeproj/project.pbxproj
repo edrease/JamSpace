@@ -35,6 +35,10 @@
 		9E0AA1E91B8BC86000DC0319 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0AA1E81B8BC86000DC0319 /* ParseFacebookUtilsV4.framework */; };
 		9E0AA1EB1B8BC86D00DC0319 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0AA1EA1B8BC86D00DC0319 /* ParseFacebookUtils.framework */; };
 		9E0AA1ED1B8BC87800DC0319 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0AA1EC1B8BC87800DC0319 /* ParseTwitterUtils.framework */; };
+		9E0AA1EF1B8BDD6700DC0319 /* MessageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1EE1B8BDD6700DC0319 /* MessageCenterViewController.swift */; };
+		9E0AA1F31B8BE12700DC0319 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F21B8BE12700DC0319 /* Message.swift */; };
+		9E0AA1F61B8BEF9D00DC0319 /* MessageCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F51B8BEF9D00DC0319 /* MessageCenterCell.swift */; };
+		9E0AA1F81B8BFBE700DC0319 /* DateToStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		9E0AA1E81B8BC86000DC0319 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "parse-library-1.8.1 (1)/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
 		9E0AA1EA1B8BC86D00DC0319 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1.8.1 (1)/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
 		9E0AA1EC1B8BC87800DC0319 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1.8.1 (1)/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		9E0AA1EE1B8BDD6700DC0319 /* MessageCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCenterViewController.swift; sourceTree = "<group>"; };
+		9E0AA1F21B8BE12700DC0319 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9E0AA1F51B8BEF9D00DC0319 /* MessageCenterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCenterCell.swift; sourceTree = "<group>"; };
+		9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateToStringFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +127,10 @@
 		346FBC741B8BB53D00B960E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9E0AA1F11B8BE10200DC0319 /* MessageCenterData */,
 				346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */,
 				346FBC771B8BB5B700B960E5 /* Users.swift */,
+				9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -133,6 +143,7 @@
 				346FBC7F1B8BC12900B960E5 /* ListSearchViewController.swift */,
 				346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */,
 				346FBC831B8BC15300B960E5 /* FilterSearchViewController.swift */,
+				9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 		346FBC761B8BB56800B960E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9E0AA1F41B8BEF7200DC0319 /* MessageCenterViews */,
 				9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */,
 				9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */,
 			);
@@ -224,6 +236,30 @@
 				9E0AA1C81B8BC0C500DC0319 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA1EE1B8BDD6700DC0319 /* MessageCenterViewController.swift */,
+			);
+			name = MessageCenterControllers;
+			sourceTree = "<group>";
+		};
+		9E0AA1F11B8BE10200DC0319 /* MessageCenterData */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA1F21B8BE12700DC0319 /* Message.swift */,
+			);
+			name = MessageCenterData;
+			sourceTree = "<group>";
+		};
+		9E0AA1F41B8BEF7200DC0319 /* MessageCenterViews */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA1F51B8BEF9D00DC0319 /* MessageCenterCell.swift */,
+			);
+			name = MessageCenterViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,11 +363,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				346FBC7C1B8BC0F300B960E5 /* FirstSearchViewController.swift in Sources */,
+				9E0AA1EF1B8BDD6700DC0319 /* MessageCenterViewController.swift in Sources */,
+				9E0AA1F81B8BFBE700DC0319 /* DateToStringFormatter.swift in Sources */,
 				346FBC7E1B8BC11A00B960E5 /* MapSearchViewController.swift in Sources */,
+				9E0AA1F61B8BEF9D00DC0319 /* MessageCenterCell.swift in Sources */,
 				346FBC781B8BB5B700B960E5 /* Users.swift in Sources */,
 				346FBC821B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift in Sources */,
 				346FBC7A1B8BB5E600B960E5 /* PracticeSpaces.swift in Sources */,
 				346FBC801B8BC12900B960E5 /* ListSearchViewController.swift in Sources */,
+				9E0AA1F31B8BE12700DC0319 /* Message.swift in Sources */,
 				346FBC841B8BC15300B960E5 /* FilterSearchViewController.swift in Sources */,
 				9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */,
 			);
