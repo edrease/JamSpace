@@ -10,11 +10,15 @@ import UIKit
 import Parse
 import Bolts
 import ParseUI
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
+
   var window: UIWindow?
+  let locationManager = CLLocationManager()
+
+
   var dummyUsersArray = [User]()
   var dummySpacesArray = [PracticeSpace]()
   
@@ -52,11 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     Parse.setApplicationId("eW2jvK3gIIFQFpRQR08T3WioDcxKU2wcSUDcjJKW",
       clientKey: "QDLSkD4WIDyrJmzfSncxgKLPCQQU9sx1lQZ35XTW")
-    loadDummyUsersArray()
-    loadDummySpacesArray()
-    
-    
-    
+
     return true
   }
   
