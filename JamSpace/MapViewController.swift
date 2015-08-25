@@ -41,11 +41,12 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
       
     } else {
       
-      getLocation()
-//      fetchLocationFromParse()
+      
       
     }
-    
+    getLocation()
+    fetchLocationFromParse()
+
     //Request User permission
     //mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
     
