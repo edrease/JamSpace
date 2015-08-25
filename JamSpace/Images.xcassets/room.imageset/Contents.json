@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "studio.jpg"
+      "filename" : "room.jpeg"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "studio@2x.jpeg"
+      "filename" : "room@2x.jpeg"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "studio@3x.jpg"
+      "filename" : "room@3x.jpg"
     }
   ],
   "info" : {
