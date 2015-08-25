@@ -66,6 +66,12 @@ extension SignUpLoginViewController : PFLogInViewControllerDelegate {
   
 }
 
+extension SignUpLoginViewController : PFSignUpViewControllerDelegate {
+  func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+    
+  }
+}
+
 
 
 
