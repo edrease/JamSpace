@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="186" id="9Z8-ze-CYJ" customClass="PracticeSpaceCell" customModule="JamSpace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="542" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Z8-ze-CYJ" id="2hx-5V-ode">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0rx-4U-3AW">
+                        <rect key="frame" x="0.0" y="0.0" width="542" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="lXG-1E-17B"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$66" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-c2-i74">
+                        <rect key="frame" x="8" y="171" width="28.5" height="20.5"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4en-V3-rhs">
+                        <rect key="frame" x="504" y="8" width="30" height="30"/>
+                        <state key="normal" title="fav">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="favoriteToggle:" destination="9Z8-ze-CYJ" eventType="touchUpInside" id="4wh-0U-KTb"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="0rx-4U-3AW" secondAttribute="bottom" constant="-8" id="50D-l2-u45"/>
+                    <constraint firstItem="0rx-4U-3AW" firstAttribute="leading" secondItem="2hx-5V-ode" secondAttribute="leadingMargin" constant="-8" id="9vW-wy-kqv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0rx-4U-3AW" secondAttribute="trailing" constant="-8" id="C98-Dd-Zmv"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0rx-4U-3AW" secondAttribute="bottom" constant="-8" id="GQe-BN-uVR"/>
+                    <constraint firstAttribute="centerX" secondItem="0rx-4U-3AW" secondAttribute="centerX" id="Go5-y0-fPn"/>
+                    <constraint firstItem="0rx-4U-3AW" firstAttribute="leading" secondItem="2hx-5V-ode" secondAttribute="leadingMargin" constant="-8" id="MIP-de-IJS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0rx-4U-3AW" secondAttribute="bottom" constant="-8" id="PkF-aK-Xcy"/>
+                    <constraint firstItem="0rx-4U-3AW" firstAttribute="top" secondItem="2hx-5V-ode" secondAttribute="topMargin" id="PlD-0z-gtN"/>
+                    <constraint firstAttribute="centerY" secondItem="0rx-4U-3AW" secondAttribute="centerY" id="Q6j-Hi-rE9"/>
+                    <constraint firstItem="0rx-4U-3AW" firstAttribute="top" secondItem="2hx-5V-ode" secondAttribute="topMargin" constant="-8" id="RXE-jd-Obr"/>
+                    <constraint firstItem="wrk-c2-i74" firstAttribute="leading" secondItem="2hx-5V-ode" secondAttribute="leadingMargin" id="TgG-5w-4Xo"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wrk-c2-i74" secondAttribute="bottom" id="TvT-zj-bq3"/>
+                    <constraint firstItem="0rx-4U-3AW" firstAttribute="top" secondItem="2hx-5V-ode" secondAttribute="topMargin" constant="-8" id="WBL-FT-HMv"/>
+                    <constraint firstItem="4en-V3-rhs" firstAttribute="trailing" secondItem="2hx-5V-ode" secondAttribute="trailingMargin" id="aId-6l-JNL"/>
+                    <constraint firstItem="0rx-4U-3AW" firstAttribute="top" secondItem="2hx-5V-ode" secondAttribute="topMargin" constant="-8" id="efV-4w-woZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0rx-4U-3AW" secondAttribute="trailing" constant="-8" id="fuL-ES-cIQ"/>
+                    <constraint firstItem="4en-V3-rhs" firstAttribute="top" secondItem="2hx-5V-ode" secondAttribute="topMargin" id="hTy-lY-2e5"/>
+                    <constraint firstItem="0rx-4U-3AW" firstAttribute="top" secondItem="2hx-5V-ode" secondAttribute="top" id="l2p-UL-Bf0"/>
+                    <constraint firstItem="0rx-4U-3AW" firstAttribute="top" secondItem="2hx-5V-ode" secondAttribute="topMargin" constant="-8" id="mI0-38-ZHf"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="GQe-BN-uVR"/>
+                        <exclude reference="MIP-de-IJS"/>
+                        <exclude reference="PkF-aK-Xcy"/>
+                        <exclude reference="PlD-0z-gtN"/>
+                        <exclude reference="RXE-jd-Obr"/>
+                        <exclude reference="WBL-FT-HMv"/>
+                        <exclude reference="fuL-ES-cIQ"/>
+                        <exclude reference="l2p-UL-Bf0"/>
+                        <exclude reference="mI0-38-ZHf"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellImageView" destination="0rx-4U-3AW" id="djg-sS-ETR"/>
+                <outlet property="cellPrice" destination="wrk-c2-i74" id="fa5-tZ-xJF"/>
+                <outlet property="favoriteButton" destination="4en-V3-rhs" id="wi2-hx-SED"/>
+                <outlet property="imageView" destination="0rx-4U-3AW" id="beY-hr-z3U"/>
+            </connections>
+            <point key="canvasLocation" x="224" y="18.5"/>
+        </tableViewCell>
+    </objects>
+</document>
