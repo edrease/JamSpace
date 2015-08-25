@@ -100,11 +100,11 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
         println("Successful query for annotations")
         if let myPosts = posts as? [PFObject] {
           for post in myPosts {
-            if let point = post["spaceLocation"] as? PFGeoPoint, let spaceName = post["nameOfSpace"] as? String{
+            if let point = post["spaceLocation"] as? PFGeoPoint, let spaceName = post["nameOfSpace"] as? String, let spaceDescript = post["description"] as? String{
               let annotation = MKPointAnnotation()
               annotation.coordinate = CLLocationCoordinate2DMake(point.latitude, point.longitude)
               self.mapView.addAnnotation(annotation)
-              annotation.title = spaceName
+              annotation.title = spaceName + spaceDescript
             }
           }
         }
