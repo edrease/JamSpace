@@ -13,11 +13,15 @@ import Parse
 class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
   
   //MARK: - Outlets
+  
   @IBOutlet weak var mapView: MKMapView!
   
   var currentLoc: PFGeoPoint! = PFGeoPoint()
   var coreLocationManager = CLLocationManager()
   var locationManager : LocationManager!
+  
+  
+  //MARK: - Lifecycle methods
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -41,7 +45,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
       
     } else {
       
-      
+      //Do some stuff here...
       
     }
     getLocation()
@@ -53,6 +57,8 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  //MARK: - My actions
   
   func getLocation() {
     
@@ -67,7 +73,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude), span: MKCoordinateSpanMake(0.05, 0.05)), animated: true)
     
     let locationPinCoord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        
+    
     locationManager.reverseGeocodeLocationWithCoordinates(location, onReverseGeocodingCompletionHandler: { (reverseGecodeInfo, placemark, error) -> Void in
       println(reverseGecodeInfo)
       let address = reverseGecodeInfo?.objectForKey("formattedAddress") as! String
@@ -82,22 +88,6 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     })
   }
   
-  func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-    
-      fetchLocationFromParse()
-    
-
-  }
-  
-  
-  func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-    if status != CLAuthorizationStatus.NotDetermined || status != CLAuthorizationStatus.Denied || status != CLAuthorizationStatus.Restricted {
-      getLocation()
-      //fetchLocationFromParse()
-    }
-  }
-  
-  
   func fetchLocationFromParse (){
     var annotationQuery = PFQuery(className: "PracticeSpaces")
     currentLoc = PFGeoPoint(location: coreLocationManager.location)
@@ -108,12 +98,15 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
       if error == nil {
         // The find succeeded.
         println("Successful query for annotations")
-        let myPosts = posts as! [PFObject]
-        for post in myPosts {
-          let point = post["spaceLocation"] as! PFGeoPoint
-          let annotation = MKPointAnnotation()
-          annotation.coordinate = CLLocationCoordinate2DMake(point.latitude, point.longitude)
-          self.mapView.addAnnotation(annotation)
+        if let myPosts = posts as? [PFObject] {
+          for post in myPosts {
+            if let point = post["spaceLocation"] as? PFGeoPoint, let spaceName = post["nameOfSpace"] as? String{
+              let annotation = MKPointAnnotation()
+              annotation.coordinate = CLLocationCoordinate2DMake(point.latitude, point.longitude)
+              self.mapView.addAnnotation(annotation)
+              annotation.title = spaceName
+            }
+          }
         }
       } else {
         // Error
@@ -122,7 +115,21 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     }
     
   }
+
+  //MARK: - Location Manager Delegate methods
   
+  func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    
+      fetchLocationFromParse()
+    
+  }
+  
+  func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    if status != CLAuthorizationStatus.NotDetermined || status != CLAuthorizationStatus.Denied || status != CLAuthorizationStatus.Restricted {
+      getLocation()
+      //fetchLocationFromParse()
+    }
+  }
   
   
   /*
