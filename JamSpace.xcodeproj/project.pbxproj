@@ -34,6 +34,11 @@
 		9E0AA1E91B8BC86000DC0319 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0AA1E81B8BC86000DC0319 /* ParseFacebookUtilsV4.framework */; };
 		9E0AA1EB1B8BC86D00DC0319 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0AA1EA1B8BC86D00DC0319 /* ParseFacebookUtils.framework */; };
 		9E0AA1ED1B8BC87800DC0319 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0AA1EC1B8BC87800DC0319 /* ParseTwitterUtils.framework */; };
+		9E0AA1EF1B8BDD6700DC0319 /* MessageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1EE1B8BDD6700DC0319 /* MessageCenterViewController.swift */; };
+		9E0AA1F31B8BE12700DC0319 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F21B8BE12700DC0319 /* Message.swift */; };
+		9E0AA1F61B8BEF9D00DC0319 /* MessageCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F51B8BEF9D00DC0319 /* MessageCenterCell.swift */; };
+		9E0AA1F81B8BFBE700DC0319 /* DateToStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */; };
+		9E0AA1FC1B8CF48A00DC0319 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1FB1B8CF48A00DC0319 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,11 @@
 		9E0AA1E81B8BC86000DC0319 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "parse-library-1.8.1 (1)/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
 		9E0AA1EA1B8BC86D00DC0319 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1.8.1 (1)/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
 		9E0AA1EC1B8BC87800DC0319 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1.8.1 (1)/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		9E0AA1EE1B8BDD6700DC0319 /* MessageCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCenterViewController.swift; sourceTree = "<group>"; };
+		9E0AA1F21B8BE12700DC0319 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9E0AA1F51B8BEF9D00DC0319 /* MessageCenterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCenterCell.swift; sourceTree = "<group>"; };
+		9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateToStringFormatter.swift; sourceTree = "<group>"; };
+		9E0AA1FB1B8CF48A00DC0319 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +127,10 @@
 		346FBC741B8BB53D00B960E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6C3904691B8BD7B100C94306 /* Keys.swift */,
+				9E0AA1F11B8BE10200DC0319 /* MessageCenterData */,
 				346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */,
 				346FBC771B8BB5B700B960E5 /* Users.swift */,
+				9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -137,6 +148,8 @@
 		346FBC761B8BB56800B960E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9E0AA1F41B8BEF7200DC0319 /* MessageCenterViews */,
+				9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */,
 				9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */,
 				9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */,
 			);
@@ -171,6 +184,7 @@
 				346FBC761B8BB56800B960E5 /* Views */,
 				9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */,
 				9E0AA1A31B8B90DB00DC0319 /* Supporting Files */,
+				9E0AA1FB1B8CF48A00DC0319 /* Keys.swift */,
 			);
 			path = JamSpace;
 			sourceTree = "<group>";
@@ -221,6 +235,30 @@
 				9E0AA1C81B8BC0C500DC0319 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA1EE1B8BDD6700DC0319 /* MessageCenterViewController.swift */,
+			);
+			name = MessageCenterControllers;
+			sourceTree = "<group>";
+		};
+		9E0AA1F11B8BE10200DC0319 /* MessageCenterData */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA1F21B8BE12700DC0319 /* Message.swift */,
+			);
+			name = MessageCenterData;
+			sourceTree = "<group>";
+		};
+		9E0AA1F41B8BEF7200DC0319 /* MessageCenterViews */ = {
+			isa = PBXGroup;
+			children = (
+				9E0AA1F51B8BEF9D00DC0319 /* MessageCenterCell.swift */,
+			);
+			name = MessageCenterViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
