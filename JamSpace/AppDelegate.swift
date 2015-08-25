@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     Parse.setApplicationId(kApplicationID,
       clientKey: kClientKey)
-
+    
     return true
   }
   
