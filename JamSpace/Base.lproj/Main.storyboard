@@ -329,7 +329,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="cPb-2w-vgB" secondAttribute="centerX" id="2YZ-wv-kz1"/>
                             <constraint firstItem="TlJ-uw-rqs" firstAttribute="top" secondItem="cPb-2w-vgB" secondAttribute="bottom" id="3XZ-Yj-sbW"/>

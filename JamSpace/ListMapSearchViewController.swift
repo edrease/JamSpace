@@ -53,8 +53,9 @@ class ListMapSearchViewController: UIViewController {
         println(thing.nameOfSpace)
       }
       
-      tableView.estimatedRowHeight = 76
-      tableView.rowHeight = UITableViewAutomaticDimension
+      let cellWidth = tableView.frame.size.width
+      tableView.rowHeight = (0.75) * cellWidth
+      //tableView.rowHeight = UITableViewAutomaticDimension
       tableView.registerNib(UINib(nibName: "PracticeSpaceCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "PracticeSpaceCell")
       
       tableView.dataSource = self
@@ -94,8 +95,8 @@ extension ListMapSearchViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("PracticeSpaceCell", forIndexPath: indexPath) as! PracticeSpaceCell
     cell.cellImageView.image = arrayOfPracticeSpaces[indexPath.row].imageFolder[0]
-    cell.cellPrice.text = arrayOfPracticeSpaces[indexPath.row].pricePerDay.description
-    cell.favoriteButton.backgroundColor = UIColor.redColor()
+    cell.cellPrice.text = "$\(arrayOfPracticeSpaces[indexPath.row].pricePerDay.description)"
+    //cell.favoriteButton.backgroundColor = UIColor.redColor()
     
     return cell
   }
@@ -106,5 +107,9 @@ extension ListMapSearchViewController: UITableViewDataSource {
 extension ListMapSearchViewController: UITableViewDelegate {
   func sendToFilter(){
     self.performSegueWithIdentifier("showFilterView", sender: nil)
+  }
+  
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return (0.75) * view.frame.width
   }
 }

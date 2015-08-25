@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     tomsImageFolder.append(tomsBasement!)
     let space1 = PracticeSpace(city: "Chicago", zipcode: 38001, streetAddress: "532 Rogers Park West", nameOfSpace: "Tom's Basement", sizeInFeet: 332, pricePerDay: 88, isBasement: true, isRoom: false, isGarage: false, isStudio: false, imageFolder: tomsImageFolder)
     dummySpacesArray.append(space1)
-    let juliesLivingRoom = UIImage(named: "livingroom")
+    let juliesLivingRoom = UIImage(named: "room")
     var juliesImageFolder = [UIImage]()
     juliesImageFolder.append(juliesLivingRoom!)
     let space2 = PracticeSpace(city: "Chicago", zipcode: 38002, streetAddress: "1253 Lake Shore Drive #32B", nameOfSpace: "Julie's Living Room", sizeInFeet: 62, pricePerDay: 105, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: juliesImageFolder)
