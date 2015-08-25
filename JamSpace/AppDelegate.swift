@@ -54,8 +54,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
-    Parse.setApplicationId("eW2jvK3gIIFQFpRQR08T3WioDcxKU2wcSUDcjJKW",
-      clientKey: "QDLSkD4WIDyrJmzfSncxgKLPCQQU9sx1lQZ35XTW")
+    Parse.setApplicationId(kApplicationID,
+      clientKey: kClientKey)
+    
+//    locationManager.delegate = self                
+//    locationManager.requestAlwaysAuthorization()
+   
 
     return true
   }
