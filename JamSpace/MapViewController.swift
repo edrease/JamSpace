@@ -42,7 +42,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     } else {
       
       getLocation()
-      fetchLocationFromParse()
+//      fetchLocationFromParse()
       
     }
     
@@ -92,10 +92,18 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     })
   }
   
+  func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    
+      fetchLocationFromParse()
+    
+
+  }
+  
+  
   func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
     if status != CLAuthorizationStatus.NotDetermined || status != CLAuthorizationStatus.Denied || status != CLAuthorizationStatus.Restricted {
       getLocation()
-      fetchLocationFromParse()
+      //fetchLocationFromParse()
     }
   }
   
