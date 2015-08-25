@@ -47,11 +47,6 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     getLocation()
     fetchLocationFromParse()
 
-    //Request User permission
-    //mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
-    
-    
-    
   }
   
   override func didReceiveMemoryWarning() {
@@ -72,13 +67,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude), span: MKCoordinateSpanMake(0.05, 0.05)), animated: true)
     
     let locationPinCoord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-    
-//    let annotation = MKPointAnnotation()
-//    annotation.coordinate = locationPinCoord
-//    annotation.title = "My location"
-    
-    
-    
+        
     locationManager.reverseGeocodeLocationWithCoordinates(location, onReverseGeocodingCompletionHandler: { (reverseGecodeInfo, placemark, error) -> Void in
       println(reverseGecodeInfo)
       let address = reverseGecodeInfo?.objectForKey("formattedAddress") as! String
