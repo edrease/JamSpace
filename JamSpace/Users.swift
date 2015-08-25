@@ -14,3 +14,4 @@ struct User {
   var favorites: [PracticeSpace]?
   
 }
+

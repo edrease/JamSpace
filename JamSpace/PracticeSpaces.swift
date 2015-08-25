@@ -6,21 +6,23 @@
 //  Copyright (c) 2015 cf. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct PracticeSpace {
-  //let city: data type for city exist?
+  let city: String
+  let zipcode: Int
+  let streetAddress: String
   var nameOfSpace: String
-  let owner: User
+  //let owner: User?
   var sizeInFeet: Int
   var pricePerDay: Int
-  let streetAddress: String
-  //var imageFolder: [UIImage] how to create an array of images within a struct??
-  enum spaceType {
-    case basement
-    case garage
-    case roomInHouse
-    case entireHouse
-    case roomInRecordingStudio
-  }
+  var isBasement: Bool
+  var isRoom: Bool
+  var isGarage: Bool
+  var isStudio: Bool 
+  var imageFolder = [UIImage]()
 }
+
+
+
+

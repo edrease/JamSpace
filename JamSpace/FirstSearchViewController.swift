@@ -9,11 +9,13 @@
 import UIKit
 
 class FirstSearchViewController: UIViewController {
+  
+  var dummyPracticeSpacesArray = [PracticeSpace]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,7 +24,7 @@ class FirstSearchViewController: UIViewController {
     }
     
 
-    /*
+  
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,6 +32,6 @@ class FirstSearchViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+  
 
 }
