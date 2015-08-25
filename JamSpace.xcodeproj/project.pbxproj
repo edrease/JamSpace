@@ -41,6 +41,8 @@
 		9E0AA1EF1B8BDD6700DC0319 /* MessageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1EE1B8BDD6700DC0319 /* MessageCenterViewController.swift */; };
 		9E0AA1F61B8BEF9D00DC0319 /* MessageCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F51B8BEF9D00DC0319 /* MessageCenterCell.swift */; };
 		9E0AA1F81B8BFBE700DC0319 /* DateToStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */; };
+		9E43D1B11B8D09D900AE70F4 /* SpaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */; };
+		9E43D1B51B8D14A700AE70F4 /* DetailListingFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E43D1B41B8D14A700AE70F4 /* DetailListingFooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		9E0AA1F21B8BE12700DC0319 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9E0AA1F51B8BEF9D00DC0319 /* MessageCenterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCenterCell.swift; sourceTree = "<group>"; };
 		9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateToStringFormatter.swift; sourceTree = "<group>"; };
+		9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceDetailViewController.swift; sourceTree = "<group>"; };
+		9E43D1B41B8D14A700AE70F4 /* DetailListingFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailListingFooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */,
 				34DC5EC61B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift */,
 				9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */,
+				9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				34DC5EC21B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib */,
 				9E0AA1F41B8BEF7200DC0319 /* MessageCenterViews */,
 				9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */,
+				9E43D1B41B8D14A700AE70F4 /* DetailListingFooterView.xib */,
 				9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */,
 			);
 			name = Views;
@@ -352,6 +358,7 @@
 				34DC5EC31B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib in Resources */,
 				9E0AA1B01B8B90DB00DC0319 /* LaunchScreen.xib in Resources */,
 				9E0AA1AD1B8B90DB00DC0319 /* Images.xcassets in Resources */,
+				9E43D1B51B8D14A700AE70F4 /* DetailListingFooterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +380,7 @@
 				9E0AA1EF1B8BDD6700DC0319 /* MessageCenterViewController.swift in Sources */,
 				9E0AA1F81B8BFBE700DC0319 /* DateToStringFormatter.swift in Sources */,
 				9E0AA1F61B8BEF9D00DC0319 /* MessageCenterCell.swift in Sources */,
+				9E43D1B11B8D09D900AE70F4 /* SpaceDetailViewController.swift in Sources */,
 				346FBC781B8BB5B700B960E5 /* Users.swift in Sources */,
 				34DC5EC51B8CFEF700EDC7C2 /* PracticeSpaceCell.swift in Sources */,
 				346FBC821B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift in Sources */,
