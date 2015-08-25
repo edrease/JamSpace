@@ -32,7 +32,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="favoriteToggle:" destination="9Z8-ze-CYJ" eventType="touchUpInside" id="4wh-0U-KTb"/>
+                            <action selector="favoriteToggle:" destination="9Z8-ze-CYJ" eventType="touchUpInside" id="0ik-z6-ZDo"/>
                         </connections>
                     </button>
                 </subviews>
@@ -72,10 +72,9 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="cellImageView" destination="0rx-4U-3AW" id="djg-sS-ETR"/>
-                <outlet property="cellPrice" destination="wrk-c2-i74" id="fa5-tZ-xJF"/>
-                <outlet property="favoriteButton" destination="4en-V3-rhs" id="wi2-hx-SED"/>
-                <outlet property="imageView" destination="0rx-4U-3AW" id="beY-hr-z3U"/>
+                <outlet property="cellImageView" destination="0rx-4U-3AW" id="sgf-K9-jJE"/>
+                <outlet property="cellPrice" destination="wrk-c2-i74" id="JjW-nm-UtI"/>
+                <outlet property="favoriteButton" destination="4en-V3-rhs" id="b2x-ET-S72"/>
             </connections>
             <point key="canvasLocation" x="224" y="18.5"/>
         </tableViewCell>

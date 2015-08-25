@@ -55,7 +55,7 @@ class ListMapSearchViewController: UIViewController {
       
       tableView.estimatedRowHeight = 76
       tableView.rowHeight = UITableViewAutomaticDimension
-      tableView.registerNib(UINib(nibName: "PracticeSpaceCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "practiceSpaceCell")
+      tableView.registerNib(UINib(nibName: "PracticeSpaceCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "PracticeSpaceCell")
       
       tableView.dataSource = self
       tableView.delegate = self
@@ -92,7 +92,7 @@ extension ListMapSearchViewController: UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("practiceSpaceCell", forIndexPath: indexPath) as! PracticeSpaceCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("PracticeSpaceCell", forIndexPath: indexPath) as! PracticeSpaceCell
     cell.cellImageView.image = arrayOfPracticeSpaces[indexPath.row].imageFolder[0]
     cell.cellPrice.text = arrayOfPracticeSpaces[indexPath.row].pricePerDay.description
     cell.favoriteButton.backgroundColor = UIColor.redColor()
