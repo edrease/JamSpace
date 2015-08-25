@@ -19,12 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
-    Parse.setApplicationId("eW2jvK3gIIFQFpRQR08T3WioDcxKU2wcSUDcjJKW",
-      clientKey: "QDLSkD4WIDyrJmzfSncxgKLPCQQU9sx1lQZ35XTW")
-    
-    let testObject: PFObject = PFObject(className: "Messages")
-    testObject["SomeProperty"] = "Some Value"
-    testObject.saveInBackgroundWithBlock(nil)
+    Parse.setApplicationId(kApplicationID,
+      clientKey: kClientKey)
     
     return true
   }
