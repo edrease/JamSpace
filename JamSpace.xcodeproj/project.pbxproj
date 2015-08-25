@@ -17,6 +17,11 @@
 		6C39046C1B8BE26400C94306 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C39046B1B8BE26400C94306 /* MapViewController.swift */; };
 		6C39046E1B8BE33200C94306 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C39046D1B8BE33200C94306 /* MapKit.framework */; };
 		6C3904701B8C1CD100C94306 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C39046F1B8C1CD100C94306 /* LocationManager.swift */; };
+		34DC5EC01B8CFE9400EDC7C2 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC5EBF1B8CFE9400EDC7C2 /* Keys.swift */; };
+		34DC5EC11B8CFEC000EDC7C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F21B8BE12700DC0319 /* Message.swift */; };
+		34DC5EC31B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34DC5EC21B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib */; };
+		34DC5EC51B8CFEF700EDC7C2 /* PracticeSpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC5EC41B8CFEF700EDC7C2 /* PracticeSpaceCell.swift */; };
+		34DC5EC71B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC5EC61B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift */; };
 		9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */; };
 		9E0AA1AB1B8B90DB00DC0319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */; };
 		9E0AA1AD1B8B90DB00DC0319 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */; };
@@ -63,6 +68,10 @@
 		6C39046B1B8BE26400C94306 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6C39046D1B8BE33200C94306 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6C39046F1B8C1CD100C94306 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		34DC5EBF1B8CFE9400EDC7C2 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		34DC5EC21B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PracticeSpaceCell.xib; sourceTree = "<group>"; };
+		34DC5EC41B8CFEF700EDC7C2 /* PracticeSpaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeSpaceCell.swift; sourceTree = "<group>"; };
+		34DC5EC61B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSearchTableViewController.swift; sourceTree = "<group>"; };
 		9E0AA1A01B8B90DB00DC0319 /* JamSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0AA1A41B8B90DB00DC0319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +157,8 @@
 				346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */,
 				346FBC831B8BC15300B960E5 /* FilterSearchViewController.swift */,
 				6C39046B1B8BE26400C94306 /* MapViewController.swift */,
+				34DC5EC61B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift */,
+				9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -378,6 +389,7 @@
 				346FBC781B8BB5B700B960E5 /* Users.swift in Sources */,
 				6C3904701B8C1CD100C94306 /* LocationManager.swift in Sources */,
 				6C39046C1B8BE26400C94306 /* MapViewController.swift in Sources */,
+				34DC5EC51B8CFEF700EDC7C2 /* PracticeSpaceCell.swift in Sources */,
 				346FBC821B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift in Sources */,
 				34DC5EC11B8CFEC000EDC7C2 /* Message.swift in Sources */,
 				346FBC7A1B8BB5E600B960E5 /* PracticeSpaces.swift in Sources */,

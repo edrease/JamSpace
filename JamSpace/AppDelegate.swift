@@ -19,6 +19,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
   let locationManager = CLLocationManager()
 
 
+  var dummyUsersArray = [User]()
+  var dummySpacesArray = [PracticeSpace]()
+  
+  func loadDummyUsersArray(){
+    let user1 = User(firstName: "Tom", lastName: "Callahan", favorites: nil)
+    dummyUsersArray.append(user1)
+    let user2 = User(firstName: "Julie", lastName: "Black", favorites: nil)
+    dummyUsersArray.append(user2)
+  }
+  
+  func loadDummySpacesArray(){
+    let tomsBasement = UIImage(named: "basement")
+    var tomsImageFolder = [UIImage]()
+    tomsImageFolder.append(tomsBasement!)
+    let space1 = PracticeSpace(city: "Chicago", zipcode: 38001, streetAddress: "532 Rogers Park West", nameOfSpace: "Tom's Basement", sizeInFeet: 332, pricePerDay: 88, isBasement: true, isRoom: false, isGarage: false, isStudio: false, imageFolder: tomsImageFolder)
+    dummySpacesArray.append(space1)
+    let juliesLivingRoom = UIImage(named: "livingroom")
+    var juliesImageFolder = [UIImage]()
+    juliesImageFolder.append(juliesLivingRoom!)
+    let space2 = PracticeSpace(city: "Chicago", zipcode: 38002, streetAddress: "1253 Lake Shore Drive #32B", nameOfSpace: "Julie's Living Room", sizeInFeet: 62, pricePerDay: 105, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: juliesImageFolder)
+    dummySpacesArray.append(space2)
+    let joesGarage = UIImage(named: "garage")
+    var joesImageFolder = [UIImage]()
+    joesImageFolder.append(joesGarage!)
+    let space3 = PracticeSpace(city: "Chicago", zipcode: 38022, streetAddress: "2233 Lake Shore Drive #43C", nameOfSpace: "Joe's Garage", sizeInFeet: 882, pricePerDay: 45, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: joesImageFolder)
+    dummySpacesArray.append(space3)
+    let susansStudio = UIImage(named: "studio")
+    var susansImageFolder = [UIImage]()
+    susansImageFolder.append(susansStudio!)
+    let space4 = PracticeSpace(city: "Chicago", zipcode: 38022, streetAddress: "2233 Lake Shore Drive #45D", nameOfSpace: "Susan's Studio", sizeInFeet: 200, pricePerDay: 175, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: susansImageFolder)
+    dummySpacesArray.append(space4)
+  }
+  
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     Parse.setApplicationId(kApplicationID,
