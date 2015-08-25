@@ -72,16 +72,30 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     
     let locationPinCoord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
     
-    let annotation = MKPointAnnotation()
-    annotation.coordinate = locationPinCoord
+//    let annotation = MKPointAnnotation()
+//    annotation.coordinate = locationPinCoord
+//    annotation.title = "My location"
     
-    mapView.addAnnotation(annotation)
-    mapView.showAnnotations([annotation], animated: true)
+    
+    
+    locationManager.reverseGeocodeLocationWithCoordinates(location, onReverseGeocodingCompletionHandler: { (reverseGecodeInfo, placemark, error) -> Void in
+      println(reverseGecodeInfo)
+      let address = reverseGecodeInfo?.objectForKey("formattedAddress") as! String
+      
+      let annotation = MKPointAnnotation()
+      annotation.coordinate = locationPinCoord
+      annotation.title = address
+      
+      self.mapView.addAnnotation(annotation)
+      self.mapView.showAnnotations([annotation], animated: true)
+      
+    })
   }
   
   func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
     if status != CLAuthorizationStatus.NotDetermined || status != CLAuthorizationStatus.Denied || status != CLAuthorizationStatus.Restricted {
       getLocation()
+      fetchLocationFromParse()
     }
   }
   
