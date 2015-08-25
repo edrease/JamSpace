@@ -9,9 +9,11 @@
 import UIKit
 import Parse
 import ParseUI
+import ParseTwitterUtils
 
 
-class SignUpLoginViewController: UIViewController {
+
+class SignUpLoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
 
   
   //MARK: - Lifecycle methods
@@ -27,6 +29,10 @@ class SignUpLoginViewController: UIViewController {
     var loginItems = PFLogInViewController()
     
     loginItems.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.Twitter | PFLogInFields.Facebook | PFLogInFields.SignUpButton
+    
+    loginItems.delegate = self
+    loginItems.signUpController?.delegate = self
+    
     self.presentViewController(loginItems, animated: true, completion: nil)
   }
   
@@ -49,3 +55,23 @@ class SignUpLoginViewController: UIViewController {
     */
 
 }
+
+//MARK: - Parse's PFLoginViewControllerDelegate
+
+extension SignUpLoginViewController : PFLogInViewControllerDelegate {
+  
+  func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+    
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
