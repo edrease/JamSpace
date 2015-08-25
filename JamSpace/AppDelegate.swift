@@ -56,6 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     // Override point for customization after application launch.
     Parse.setApplicationId("eW2jvK3gIIFQFpRQR08T3WioDcxKU2wcSUDcjJKW",
       clientKey: "QDLSkD4WIDyrJmzfSncxgKLPCQQU9sx1lQZ35XTW")
+    loadDummyUsersArray()
+    loadDummySpacesArray()
+
 
     return true
   }
