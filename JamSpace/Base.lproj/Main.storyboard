@@ -304,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="-1285" y="526"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="6C3-jm-lHd">
             <objects>
-                <viewController id="yaO-dg-cJX" sceneMemberID="viewController">
+                <viewController id="yaO-dg-cJX" customClass="MapViewController" customModule="JamSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SRe-wC-REt"/>
                         <viewControllerLayoutGuide type="bottom" id="zt3-gk-NDx"/>
@@ -325,9 +325,24 @@
                             <constraint firstItem="2Zd-cn-n7H" firstAttribute="leading" secondItem="lmW-RA-Vuc" secondAttribute="leadingMargin" constant="-16" id="2Az-Yi-dAS"/>
                             <constraint firstItem="2Zd-cn-n7H" firstAttribute="top" secondItem="lmW-RA-Vuc" secondAttribute="topMargin" id="G36-8a-qt9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Zd-cn-n7H" secondAttribute="trailing" constant="-16" id="JNi-qO-zV6"/>
+                            <constraint firstItem="2Zd-cn-n7H" firstAttribute="leading" secondItem="lmW-RA-Vuc" secondAttribute="leadingMargin" constant="-16" id="LJz-7k-pi3"/>
+                            <constraint firstItem="2Zd-cn-n7H" firstAttribute="top" secondItem="lmW-RA-Vuc" secondAttribute="topMargin" id="iOF-xq-el9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Zd-cn-n7H" secondAttribute="trailing" constant="-16" id="nQw-o6-1LP"/>
+                            <constraint firstItem="zt3-gk-NDx" firstAttribute="top" secondItem="2Zd-cn-n7H" secondAttribute="bottom" id="sI6-Op-qVR"/>
                             <constraint firstItem="zt3-gk-NDx" firstAttribute="top" secondItem="2Zd-cn-n7H" secondAttribute="bottom" id="v9c-Dh-Oa7"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Az-Yi-dAS"/>
+                                <exclude reference="G36-8a-qt9"/>
+                                <exclude reference="JNi-qO-zV6"/>
+                                <exclude reference="sI6-Op-qVR"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="2Zd-cn-n7H" id="nmK-il-Zgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbo-y6-ANK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
