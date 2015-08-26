@@ -21,7 +21,7 @@ class SpacePostViewController: UIViewController {
 	@IBOutlet weak var postCity: UITextField!
 	@IBOutlet weak var postState: UITextField!
 	@IBOutlet weak var postZipCode: UITextField!
-	@IBOutlet weak var pastStartDate: UITextField!
+	@IBOutlet weak var postStartDate: UITextField!
 	@IBOutlet weak var postEndDate: UITextField!
 	@IBOutlet weak var spaceSize: UITextField!
 	
@@ -41,21 +41,54 @@ class SpacePostViewController: UIViewController {
 		// validate entry of field to ensure all is field out
 		// look at input validation
 		
-		//grab current User from PFuser object
-//		var gameScore = PFObject(className:"GameScore")
-//		gameScore["score"] = 1337
-//		gameScore["playerName"] = "Sean Plott"
-//		gameScore["cheatMode"] = false
-//		gameScore.saveInBackgroundWithBlock {
+		
+		//PracticeSpaces
+		//instantiate current user
+		
+		var practiceSpaces = PFObject(className: "PracticeSpaces")
+		practiceSpaces["nameOfSpace"] = postTitle.text
+		practiceSpaces["description"] = postSummary.text
+		practiceSpaces["openingHour"] = startTime.text
+		practiceSpaces["closingHour"] = endTime.text
+		practiceSpaces["startDate"] = postStartDate.text
+		practiceSpaces["endDate"] = postEndDate.text
+		practiceSpaces["pricePerDay"] = postEndDate.text.toInt()
+		practiceSpaces["sizeInFeet"] = spaceSize.text.toInt()
+		practiceSpaces["streetAddress"] = postStreetAddress.text
+		practiceSpaces["state"] = postState.text
+		practiceSpaces["zipCode"] = postZipCode.text
+		practiceSpaces.save()
+		
+		
+//		var user = PFUser.currentUser()
+//		var relation = user?.relationForKey("listings")
+//		relation?.addObject(practiceSpaces)
+//		user?.saveInBackgroundWithBlock({ (success:Bool, error : NSError?) -> Void in
+//			if (success){
+//				println("It was uploaded")
+//			}
+//			else{
+//				println("Total Fail")
+//				println(user)
+//			}
+//		})
+		
+//		var user = PFUser.currentUser()
+//		var relation = user.relationForKey("likes")
+//		relation.addObject(post)
+//		user.saveInBackgroundWithBlock {
 //			(success: Bool, error: NSError?) -> Void in
 //			if (success) {
-//    // The object has been saved.
+//    // The post has been added to the user's likes relation.
 //			} else {
 //    // There was a problem, check error.description
 //			}
 //		}
 		
-		//PracticeSpaces
+		
+		//create the relation between practiceSpaces here
+		// instantiate a user property
+		// a PFRelation object with relation key "listings" then add the practice Spaces to this object
 		
 
 		
