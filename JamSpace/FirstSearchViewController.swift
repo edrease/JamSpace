@@ -17,9 +17,11 @@ class FirstSearchViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      //searchTextField.becomeFirstResponder()
-
-        // Do any additional setup after loading the view.
+      
+      
+    //searchTextField.becomeFirstResponder()
+    
+      // Do any additional setup after loading the view.
       
       searchTextField.delegate = self
     }
@@ -66,9 +68,11 @@ extension FirstSearchViewController: UITextFieldDelegate {
     searchTextField.resignFirstResponder()
     println(cityToSearch)
     dismissViewControllerAnimated(true, completion: nil)
-    
+    LocationSearchService.locationsForSearchTerm("Seattle", completionHandler: { (error, practiceSpaces) -> (Void) in
+      
+    })
     //trigger search query to parse, return data, segue to next vc with following method:
-    searchForCity(cityToSearch)
+    //searchForCity(cityToSearch)
     return true
   }
 }
