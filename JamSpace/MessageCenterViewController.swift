@@ -21,6 +21,17 @@ class MessageCenterViewController: UIViewController {
     let messageOne = Message(user: userOne, messageText: "Hullo", profileImage: nil, dateSent: NSDate())
     messages.append(messageOne)
     
+    let jamUser = PFUser.currentUser()?.username
+    
+    if (jamUser != nil) {
+      println("user exists")
+      
+    } else {
+      
+      
+    }
+    
+    
   }
   
   override func didReceiveMemoryWarning() {
