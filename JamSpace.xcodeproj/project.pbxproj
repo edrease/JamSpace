@@ -163,7 +163,10 @@
 				346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */,
 				6CAE51B01B8D286D008D9BB0 /* SignUpViewController.swift */,
 				9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */,
+				007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */,
 				9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */,
+				9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */,
+				6C8A2DBB1B8E45DB000D37E3 /* AdditionalInfoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
