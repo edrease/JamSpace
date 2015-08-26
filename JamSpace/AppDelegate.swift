@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
   var window: UIWindow?
   let locationManager = CLLocationManager()
+  var currentFilteredSpacesArray = [PracticeSpace]()
 
 
   var dummyUsersArray = [User]()

@@ -29,10 +29,16 @@ class FirstSearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
   
-  func searchForCity(text: UITextField){
-    //send city name to Parse
+  func searchForCity(city: String){
+    //send city name to Parse and pull down array of practice spaces in that city to var searchResults
+    
+    //while search is taking place, run the wheel of death
+    
+    //then, when data has been returned from parse, perform segue below:
+    
     performSegueWithIdentifier("showListMapVC", sender: nil)
-   // dismissViewControllerAnimated(true, completion: <#(() -> Void)?##() -> Void#>)
+    
+   
   }
     
 
@@ -54,6 +60,9 @@ extension FirstSearchViewController: UITextFieldDelegate {
     searchTextField.resignFirstResponder()
     println(cityToSearch)
     dismissViewControllerAnimated(true, completion: nil)
+    
+    //trigger search query to parse, return data, segue to next vc with following method:
+    searchForCity(cityToSearch)
     return true
   }
 }
