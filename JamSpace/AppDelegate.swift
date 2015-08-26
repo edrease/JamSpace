@@ -33,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     let tomsBasement = UIImage(named: "basement")
     var tomsImageFolder = [UIImage]()
     tomsImageFolder.append(tomsBasement!)
+    
+    let test = PracticeSpace.object()
+    test.nameOfSpace = ""
+    test.zipcode = 34344
+    
     let space1 = PracticeSpace(city: "Chicago", zipcode: 38001, streetAddress: "532 Rogers Park West", nameOfSpace: "Tom's Basement", sizeInFeet: 332, pricePerDay: 88, isBasement: true, isRoom: false, isGarage: false, isStudio: false, imageFolder: tomsImageFolder)
     dummySpacesArray.append(space1)
     let juliesLivingRoom = UIImage(named: "room")

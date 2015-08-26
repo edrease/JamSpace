@@ -45,6 +45,7 @@
 		9E0AA1F61B8BEF9D00DC0319 /* MessageCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F51B8BEF9D00DC0319 /* MessageCenterCell.swift */; };
 		9E0AA1F81B8BFBE700DC0319 /* DateToStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */; };
 		9E43D1B51B8D14A700AE70F4 /* DetailListingFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E43D1B41B8D14A700AE70F4 /* DetailListingFooterView.xib */; };
+		9ECB0A041B8E395300CE16D6 /* LocationSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB0A031B8E395300CE16D6 /* LocationSearchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateToStringFormatter.swift; sourceTree = "<group>"; };
 		9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceDetailViewController.swift; sourceTree = "<group>"; };
 		9E43D1B41B8D14A700AE70F4 /* DetailListingFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailListingFooterView.xib; sourceTree = "<group>"; };
+		9ECB0A031B8E395300CE16D6 /* LocationSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				346FBC761B8BB56800B960E5 /* Views */,
 				9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */,
 				9E0AA1A31B8B90DB00DC0319 /* Supporting Files */,
+				9ECB0A031B8E395300CE16D6 /* LocationSearchService.swift */,
 			);
 			path = JamSpace;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ECB0A041B8E395300CE16D6 /* LocationSearchService.swift in Sources */,
 				346FBC7C1B8BC0F300B960E5 /* FirstSearchViewController.swift in Sources */,
 				9E0AA1EF1B8BDD6700DC0319 /* MessageCenterViewController.swift in Sources */,
 				9E0AA1F81B8BFBE700DC0319 /* DateToStringFormatter.swift in Sources */,
