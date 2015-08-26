@@ -14,8 +14,8 @@ import ParseTwitterUtils
 
 
 class SignUpLoginViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
-  
-  
+  var loginItems = PFLogInViewController()
+  var signUpItems = PFSignUpViewController()
   //MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,18 +26,29 @@ class SignUpLoginViewController: UIViewController, PFLogInViewControllerDelegate
   }
   
   override func viewDidAppear(animated: Bool) {
-    var loginItems = PFLogInViewController()
+    super.viewDidAppear(animated)
     
-    loginItems.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.Twitter | PFLogInFields.Facebook | PFLogInFields.SignUpButton
+    
+    loginItems.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.Twitter | PFLogInFields.Facebook | PFLogInFields.SignUpButton | PFLogInFields.PasswordForgotten
     
     loginItems.delegate = self
+    signUpItems.delegate = self
     loginItems.signUpController?.delegate = self
     
-    self.presentViewController(loginItems, animated: true, completion: nil)
+    self.presentViewController(loginItems, animated: false, completion: nil)
+//
+//    var loginItems = PFLogInViewController()
+//    
+//    loginItems.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.Twitter | PFLogInFields.Facebook | PFLogInFields.SignUpButton | PFLogInFields.PasswordForgotten
+//    
+//    loginItems.delegate = self
+//    loginItems.signUpController?.delegate = self
+//    
+//    self.presentViewController(loginItems, animated: true, completion: nil)
+//    
   }
   
-  
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -60,7 +71,23 @@ class SignUpLoginViewController: UIViewController, PFLogInViewControllerDelegate
 
 extension SignUpLoginViewController : PFLogInViewControllerDelegate {
   
+  
   func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+    
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
+        
+    logInController.presentViewController(initialView, animated: true, completion: nil)
+   
+  }
+  
+}
+
+extension SignUpLoginViewController : PFSignUpViewControllerDelegate {
+  func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+    
+    self.dismissViewControllerAnimated(true, completion: nil)
     
   }
   

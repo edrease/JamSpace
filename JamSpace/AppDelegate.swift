@@ -58,6 +58,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     Parse.setApplicationId(kApplicationID,
       clientKey: kClientKey)
     
+        let jamUser = PFUser.currentUser()?.username
+    
+        if (jamUser != nil) {
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+          let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
+    
+          self.window?.rootViewController = initialView
+    
+        } else {
+    
+    
+    }
+    
 //    locationManager.delegate = self                
 //    locationManager.requestAlwaysAuthorization()
    loadDummySpacesArray()
