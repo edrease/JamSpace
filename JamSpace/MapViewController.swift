@@ -12,6 +12,9 @@ import Parse
 
 class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
   
+  var arrayOfPracticeSpaces = [PracticeSpace]()
+
+  
   //MARK: - Outlets
   
   @IBOutlet weak var mapView: MKMapView!
@@ -132,14 +135,17 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
   }
   
   
-  /*
+
   // MARK: - Navigation
   
   // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  // Get the new view controller using segue.destinationViewController.
-  // Pass the selected object to the new view controller.
+//    if segue.identifier == "showFilterView" {
+//        let filterSearchTableViewController = segue.destinationViewController as! FilterSearchTableViewController
+//      filterSearchTableViewController.passedSpacesArray = arrayOfPracticeSpaces 
+//    }
+    
   }
-  */
+
   
 }

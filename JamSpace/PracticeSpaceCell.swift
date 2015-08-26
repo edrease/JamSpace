@@ -12,7 +12,7 @@ class PracticeSpaceCell: UITableViewCell {
 
   @IBOutlet weak var cellImageView: UIImageView!
   @IBOutlet weak var cellPrice: UILabel!
-  
+  @IBOutlet weak var spaceSummaryLabel: UILabel!
   @IBOutlet weak var favoriteButton: UIButton!
   @IBAction func favoriteToggle(sender: UIButton) {
     
