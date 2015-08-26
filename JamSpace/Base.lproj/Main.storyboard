@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FxC-UZ-zSz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0ct-7n-4MD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -125,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="LFy-9w-5sB"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="LFy-9w-5sB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2z-Ni-bbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -638,7 +638,7 @@
         <scene sceneID="RyC-iL-k0o">
             <objects>
                 <navigationController title="Search" automaticallyAdjustsScrollViewInsets="NO" id="anS-fc-cSi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="HLU-fH-faL"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="HLU-fH-faL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yCb-le-anW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -697,11 +697,11 @@
             </objects>
             <point key="canvasLocation" x="134" y="1224"/>
         </scene>
-        <!--Item-->
+        <!--Messages-->
         <scene sceneID="mGe-W9-n2V">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ww-wf-AIN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dbG-eq-sJT"/>
+                    <tabBarItem key="tabBarItem" title="Messages" id="dbG-eq-sJT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XNX-AI-HTu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
