@@ -94,10 +94,8 @@ class ListMapSearchViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
       if segue.identifier == "showFilterView" {
-        if segue.identifier == "showFilterView" {
-          let filterSearchTableViewController = segue.destinationViewController as! FilterSearchTableViewController
-          filterSearchTableViewController.passedSpacesArray = arrayOfPracticeSpaces
-        }
+        let filterSearchTableViewController = segue.destinationViewController as! FilterSearchTableViewController
+        filterSearchTableViewController.passedSpacesArray = arrayOfPracticeSpaces
       }
     }
 }
@@ -121,13 +119,13 @@ extension ListMapSearchViewController: UITableViewDataSource {
   
 }
 
-////MARK: UITableViewDelegate
-//extension ListMapSearchViewController: UITableViewDelegate {
-//  func sendToFilter(){
-//    self.performSegueWithIdentifier("showFilterView", sender: nil)
-//  }
-//  
+//MARK: UITableViewDelegate
+extension ListMapSearchViewController: UITableViewDelegate {
+  func sendToFilter(){
+    self.performSegueWithIdentifier("showFilterView", sender: nil)
+  }
+  
 //  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 //    return (0.75) * view.frame.width
 //  }
-//}
+}

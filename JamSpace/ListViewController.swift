@@ -14,13 +14,12 @@ class ListViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
   
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    performSegueWithIdentifier("showSpaceDetailVC", sender: nil)
+  }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-//      if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-//        arrayOfPracticeSpaces = appDelegate.dummySpacesArray
-//      }
       
       
       if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
@@ -29,12 +28,12 @@ class ListViewController: UIViewController {
 
       
             let cellWidth = tableView.frame.size.width
-            tableView.rowHeight = (0.75) * cellWidth
-            //tableView.rowHeight = UITableViewAutomaticDimension
+            //tableView.rowHeight = (0.75) * cellWidth
+            tableView.rowHeight = UITableViewAutomaticDimension
             tableView.registerNib(UINib(nibName: "PracticeSpaceCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "PracticeSpaceCell")
       
             tableView.dataSource = self
-            //tableView.delegate = self
+            tableView.delegate = self
    
     }
 
@@ -77,12 +76,15 @@ extension ListViewController: UITableViewDataSource {
 
 //MARK: UITableViewDelegate
 extension ListViewController: UITableViewDelegate {
-  func sendToFilter(){
-    self.performSegueWithIdentifier("showFilterView", sender: nil)
-  }
   
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return (0.75) * view.frame.width
-  }
+//  
+//  
+//  func sendToFilter(){
+//    self.performSegueWithIdentifier("showFilterView", sender: nil)
+//  }
+  
+//  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//    return (0.75) * view.frame.width
+//  }
 }
 

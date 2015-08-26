@@ -448,7 +448,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQA-ag-EzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535" y="1957"/>
+            <point key="canvasLocation" x="-611" y="1957"/>
         </scene>
         <!--Guest Mode Tab Bar Controller-->
         <scene sceneID="bWP-yP-sq4">
@@ -755,7 +755,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qm9-CJ-eWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1285" y="1232"/>
+            <point key="canvasLocation" x="-1285" y="1292"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="6C3-jm-lHd">
@@ -827,11 +827,12 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="9Ua-Hs-ClW" id="Eae-HR-QYh"/>
+                        <segue destination="FxC-UZ-zSz" kind="show" identifier="showSpaceDetailVC" id="5TF-Y4-txO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ue-Ij-ojD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="1957"/>
+            <point key="canvasLocation" x="94" y="1957"/>
         </scene>
         <!--Requests-->
         <scene sceneID="mGe-W9-n2V">
