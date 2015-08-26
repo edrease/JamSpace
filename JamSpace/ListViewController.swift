@@ -22,6 +22,12 @@ class ListViewController: UIViewController {
 //        arrayOfPracticeSpaces = appDelegate.dummySpacesArray
 //      }
       
+      
+      if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+        arrayOfPracticeSpaces = appDelegate.dummySpacesArray
+      }
+
+      
             let cellWidth = tableView.frame.size.width
             tableView.rowHeight = (0.75) * cellWidth
             //tableView.rowHeight = UITableViewAutomaticDimension
@@ -70,7 +76,7 @@ extension ListViewController: UITableViewDataSource {
 }
 
 //MARK: UITableViewDelegate
-extension ListMapSearchViewController: UITableViewDelegate {
+extension ListViewController: UITableViewDelegate {
   func sendToFilter(){
     self.performSegueWithIdentifier("showFilterView", sender: nil)
   }

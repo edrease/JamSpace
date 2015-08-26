@@ -13,6 +13,7 @@
 		346FBC801B8BC12900B960E5 /* ListMapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC7F1B8BC12900B960E5 /* ListMapSearchViewController.swift */; };
 		346FBC821B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */; };
 		346FBC881B8BD0D500B960E5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346FBC871B8BD0D500B960E5 /* Parse.framework */; };
+		349212881B8E2490001AB9E8 /* FirstSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349212871B8E2490001AB9E8 /* FirstSearchViewController.swift */; };
 		34DC5EC11B8CFEC000EDC7C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1F21B8BE12700DC0319 /* Message.swift */; };
 		34DC5EC31B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34DC5EC21B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib */; };
 		34DC5EC51B8CFEF700EDC7C2 /* PracticeSpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DC5EC41B8CFEF700EDC7C2 /* PracticeSpaceCell.swift */; };
@@ -63,6 +64,7 @@
 		346FBC7F1B8BC12900B960E5 /* ListMapSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMapSearchViewController.swift; sourceTree = "<group>"; };
 		346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeSpaceDetailViewController.swift; sourceTree = "<group>"; };
 		346FBC871B8BD0D500B960E5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.8.1 (1)/Parse.framework"; sourceTree = "<group>"; };
+		349212871B8E2490001AB9E8 /* FirstSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSearchViewController.swift; sourceTree = "<group>"; };
 		34DC5EC21B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PracticeSpaceCell.xib; sourceTree = "<group>"; };
 		34DC5EC41B8CFEF700EDC7C2 /* PracticeSpaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeSpaceCell.swift; sourceTree = "<group>"; };
 		34DC5EC61B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		346FBC751B8BB55E00B960E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				349212871B8E2490001AB9E8 /* FirstSearchViewController.swift */,
 				346FBC7F1B8BC12900B960E5 /* ListMapSearchViewController.swift */,
 				34DC5EC81B8D484700EDC7C2 /* ListViewController.swift */,
 				6C39046B1B8BE26400C94306 /* MapViewController.swift */,
@@ -380,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349212881B8E2490001AB9E8 /* FirstSearchViewController.swift in Sources */,
 				34DC5EC91B8D484700EDC7C2 /* ListViewController.swift in Sources */,
 				9E0AA1EF1B8BDD6700DC0319 /* MessageCenterViewController.swift in Sources */,
 				9E0AA1F81B8BFBE700DC0319 /* DateToStringFormatter.swift in Sources */,

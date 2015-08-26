@@ -11,6 +11,8 @@ import MapKit
 
 class ListMapSearchViewController: UIViewController {
   
+  var passedCity: String!
+  
   var arrayOfPracticeSpaces = [PracticeSpace]()
   
   var mapViewController: MapViewController!
