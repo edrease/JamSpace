@@ -60,10 +60,25 @@ class SignUpLoginViewController: UIViewController, PFLogInViewControllerDelegate
 
 extension SignUpLoginViewController : PFLogInViewControllerDelegate {
   
+  
   func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
     
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
+        
+    logInController.presentViewController(initialView, animated: true, completion: nil)
+   
   }
   
+}
+
+extension SignUpLoginViewController : PFSignUpViewControllerDelegate {
+  func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+    
+    self.dismissViewControllerAnimated(true, completion: nil)
+    
+  }
 }
 
 
