@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
   var window: UIWindow?
   let locationManager = CLLocationManager()
+  var currentSpacesArray = [PracticeSpace]()
 
 
   var dummyUsersArray = [User]()
@@ -33,23 +34,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     let tomsBasement = UIImage(named: "basement")
     var tomsImageFolder = [UIImage]()
     tomsImageFolder.append(tomsBasement!)
-    let space1 = PracticeSpace(city: "Chicago", zipcode: 38001, streetAddress: "532 Rogers Park West", nameOfSpace: "Tom's Basement", sizeInFeet: 332, pricePerDay: 88, isBasement: true, isRoom: false, isGarage: false, isStudio: false, imageFolder: tomsImageFolder)
-    dummySpacesArray.append(space1)
-    let juliesLivingRoom = UIImage(named: "room")
-    var juliesImageFolder = [UIImage]()
-    juliesImageFolder.append(juliesLivingRoom!)
-    let space2 = PracticeSpace(city: "Chicago", zipcode: 38002, streetAddress: "1253 Lake Shore Drive #32B", nameOfSpace: "Julie's Living Room", sizeInFeet: 62, pricePerDay: 105, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: juliesImageFolder)
-    dummySpacesArray.append(space2)
-    let joesGarage = UIImage(named: "garage")
-    var joesImageFolder = [UIImage]()
-    joesImageFolder.append(joesGarage!)
-    let space3 = PracticeSpace(city: "Chicago", zipcode: 38022, streetAddress: "2233 Lake Shore Drive #43C", nameOfSpace: "Joe's Garage", sizeInFeet: 882, pricePerDay: 45, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: joesImageFolder)
-    dummySpacesArray.append(space3)
-    let susansStudio = UIImage(named: "studio")
-    var susansImageFolder = [UIImage]()
-    susansImageFolder.append(susansStudio!)
-    let space4 = PracticeSpace(city: "Chicago", zipcode: 38022, streetAddress: "2233 Lake Shore Drive #45D", nameOfSpace: "Susan's Studio", sizeInFeet: 200, pricePerDay: 175, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: susansImageFolder)
-    dummySpacesArray.append(space4)
+    
+//    let test = PracticeSpace()
+//    test.nameOfSpace = "Karate Dojo"
+//    test.zipcode = 98121
+//    test.streetAddress = "123 Dragon Way"
+//    //test.nameOfSpace = "Daniel-Son's Carwash"
+//    test.sizeInFeet = 1000
+//    test.pricePerDay = 0
+//    test.isBasement = false
+//    test.isRoom = true
+//    test.isGarage = true
+//    test.isStudio = false
+//    test.imageFolder = nil
+//    
+//    test.saveInBackground() 
+//    let space1 = PracticeSpace(city: "Chicago", zipcode: 38001, streetAddress: "532 Rogers Park West", nameOfSpace: "Tom's Basement", sizeInFeet: 332, pricePerDay: 88, isBasement: true, isRoom: false, isGarage: false, isStudio: false, imageFolder: tomsImageFolder)
+//    dummySpacesArray.append(space1)
+//    let juliesLivingRoom = UIImage(named: "room")
+//    var juliesImageFolder = [UIImage]()
+//    juliesImageFolder.append(juliesLivingRoom!)
+//    let space2 = PracticeSpace(city: "Chicago", zipcode: 38002, streetAddress: "1253 Lake Shore Drive #32B", nameOfSpace: "Julie's Living Room", sizeInFeet: 62, pricePerDay: 105, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: juliesImageFolder)
+//    dummySpacesArray.append(space2)
+//    let joesGarage = UIImage(named: "garage")
+//    var joesImageFolder = [UIImage]()
+//    joesImageFolder.append(joesGarage!)
+//    let space3 = PracticeSpace(city: "Chicago", zipcode: 38022, streetAddress: "2233 Lake Shore Drive #43C", nameOfSpace: "Joe's Garage", sizeInFeet: 882, pricePerDay: 45, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: joesImageFolder)
+//    dummySpacesArray.append(space3)
+//    let susansStudio = UIImage(named: "studio")
+//    var susansImageFolder = [UIImage]()
+//    susansImageFolder.append(susansStudio!)
+//    let space4 = PracticeSpace(city: "Chicago", zipcode: 38022, streetAddress: "2233 Lake Shore Drive #45D", nameOfSpace: "Susan's Studio", sizeInFeet: 200, pricePerDay: 175, isBasement: true, isRoom: false, isGarage: false, isStudio: false,imageFolder: susansImageFolder)
+//    dummySpacesArray.append(space4)
   }
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -58,6 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
       clientKey: kClientKey)
     
         let jamUser = PFUser.currentUser()?.username
+      PracticeSpace.registerSubclass()
     
         if (jamUser != nil) {
           let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -75,7 +92,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
 //    locationManager.delegate = self                
 //    locationManager.requestAlwaysAuthorization()
-   
+   loadDummySpacesArray()
+    loadDummyUsersArray()
 
     return true
   }
