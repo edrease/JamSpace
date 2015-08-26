@@ -12,7 +12,16 @@ import Parse
 class MessageCenterViewController: UIViewController {
   
   var messages = [Message]()
+  
+  //MARK: - Outlets
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var imgViewUser: UIImageView!
+  @IBOutlet weak var buttonCamera: UIButton!
+  @IBOutlet weak var txtFieldFirstName: UITextField!
+  @IBOutlet weak var txtFieldLastName: UITextField!
+  
+  @IBOutlet weak var switchHost: UISwitch!
+  @IBOutlet weak var buttonSend: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,7 +47,13 @@ class MessageCenterViewController: UIViewController {
     super.didReceiveMemoryWarning()
   }
 
+  @IBAction func triggerCamera(sender: AnyObject) {
+  }
+  @IBAction func uploadAdditionalData(sender: AnyObject) {
+  }
 }
+
+
 
 extension MessageCenterViewController: UITableViewDataSource {
   
