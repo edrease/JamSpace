@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
   var window: UIWindow?
   let locationManager = CLLocationManager()
+  var currentSpacesArray = [PracticeSpace]()
 
 
   var dummyUsersArray = [User]()
@@ -73,7 +74,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
 //    locationManager.delegate = self                
 //    locationManager.requestAlwaysAuthorization()
-   
+   loadDummySpacesArray()
+    loadDummyUsersArray()
 
     return true
   }

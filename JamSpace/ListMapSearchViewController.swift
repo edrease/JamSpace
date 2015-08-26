@@ -13,29 +13,32 @@ class ListMapSearchViewController: UIViewController {
   
   var arrayOfPracticeSpaces = [PracticeSpace]()
   
-  
+  var mapViewController: MapViewController!
+  var listViewController: ListViewController!
+  var currentViewController : UIViewController?
   
   @IBAction func toggleSegment(sender: UISegmentedControl) {
-    switch listOrMap.selectedSegmentIndex
-    {
-    case 0:
-      tableView.hidden = false
-      mapView.hidden = true
-    case 1:
-      tableView.hidden = true
-      mapView.hidden = false
-    default:
-      break;
-    }
+    switchToViewController()
   }
   
   @IBOutlet weak var listOrMap: UISegmentedControl!
-  @IBOutlet weak var mapView: MKMapView!
-  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var containerView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
+      for space in arrayOfPracticeSpaces {
+        println(space.nameOfSpace)
+      }
+      
+      if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+        arrayOfPracticeSpaces = appDelegate.dummySpacesArray
+      }
+      
+      mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
+      listViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ListViewController") as! ListViewController
+      switchToViewController()
+      
         // Do any additional setup after loading the view.
       var filterButton : UIBarButtonItem = UIBarButtonItem(title: "Filter", style: UIBarButtonItemStyle.Plain, target: self, action: "sendToFilter")
 
@@ -45,21 +48,15 @@ class ListMapSearchViewController: UIViewController {
       
       //title = ""
       
-      if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-        arrayOfPracticeSpaces = appDelegate.dummySpacesArray
-      }
       
-      for thing in arrayOfPracticeSpaces {
-        println(thing.nameOfSpace)
-      }
       
-      let cellWidth = tableView.frame.size.width
-      tableView.rowHeight = (0.75) * cellWidth
-      //tableView.rowHeight = UITableViewAutomaticDimension
-      tableView.registerNib(UINib(nibName: "PracticeSpaceCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "PracticeSpaceCell")
-      
-      tableView.dataSource = self
-      tableView.delegate = self
+//      let cellWidth = tableView.frame.size.width
+//      tableView.rowHeight = (0.75) * cellWidth
+//      //tableView.rowHeight = UITableViewAutomaticDimension
+//      tableView.registerNib(UINib(nibName: "PracticeSpaceCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "PracticeSpaceCell")
+//      
+//      tableView.dataSource = self
+//      tableView.delegate = self
       
     }
 
@@ -67,6 +64,26 @@ class ListMapSearchViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+  func switchToViewController() {
+    
+    if let currentViewController = currentViewController {
+      currentViewController.removeFromParentViewController()
+      currentViewController.view.removeFromSuperview()
+      currentViewController.didMoveToParentViewController(nil)
+    }
+    
+    currentViewController = listOrMap.selectedSegmentIndex == 0 ? listViewController : mapViewController
+    
+    self.addChildViewController(currentViewController!)
+    currentViewController!.view.frame = containerView.frame
+    currentViewController!.view.frame.origin = CGPointZero
+    containerView.addSubview(currentViewController!.view)
+    currentViewController?.didMoveToParentViewController(self)
+    
+    //animate between two views?
+ 
+  }
     
 
   
@@ -77,10 +94,9 @@ class ListMapSearchViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
       if segue.identifier == "showFilterView" {
-//        let filterSearchViewController = segue.destinationTableViewController as! FilterSearchTableViewController
+        let filterSearchTableViewController = segue.destinationViewController as! FilterSearchTableViewController
+        filterSearchTableViewController.passedSpacesArray = arrayOfPracticeSpaces
       }
-      
-      
     }
 }
 
@@ -96,7 +112,7 @@ extension ListMapSearchViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCellWithIdentifier("PracticeSpaceCell", forIndexPath: indexPath) as! PracticeSpaceCell
     cell.cellImageView.image = arrayOfPracticeSpaces[indexPath.row].imageFolder[0]
     cell.cellPrice.text = "$\(arrayOfPracticeSpaces[indexPath.row].pricePerDay.description)"
-    //cell.favoriteButton.backgroundColor = UIColor.redColor()
+    
     
     return cell
   }
@@ -109,7 +125,7 @@ extension ListMapSearchViewController: UITableViewDelegate {
     self.performSegueWithIdentifier("showFilterView", sender: nil)
   }
   
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return (0.75) * view.frame.width
-  }
+//  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//    return (0.75) * view.frame.width
+//  }
 }

@@ -9,6 +9,17 @@
 import UIKit
 
 class FilterSearchTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+  
+  var passedSpacesArray = [PracticeSpace]()
+  var filteredSpacesArray = [PracticeSpace]()
+  
+  @IBOutlet weak var searchCityTextField: UITextField!
+  @IBOutlet weak var currentMaxPriceLabel: UILabel!
+  @IBOutlet weak var priceSlider: UISlider!
+  @IBOutlet weak var maxPriceLabel: UILabel!
+  @IBOutlet weak var currentMinSizeLabel: UILabel!
+  @IBOutlet weak var sizeSlider: UISlider!
+  @IBOutlet weak var maxSizeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +29,10 @@ class FilterSearchTableViewController: UITableViewController, UITableViewDataSou
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+      
+      for space in passedSpacesArray {
+        println(space.nameOfSpace)
+      }
     }
 
     override func didReceiveMemoryWarning() {
