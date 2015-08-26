@@ -26,18 +26,29 @@ class SignUpLoginViewController: UIViewController, PFLogInViewControllerDelegate
   }
   
   override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    
     var loginItems = PFLogInViewController()
     
-    loginItems.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.Twitter | PFLogInFields.Facebook | PFLogInFields.SignUpButton
+    loginItems.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.Twitter | PFLogInFields.Facebook | PFLogInFields.SignUpButton | PFLogInFields.PasswordForgotten
     
     loginItems.delegate = self
     loginItems.signUpController?.delegate = self
     
-    self.presentViewController(loginItems, animated: true, completion: nil)
+    self.presentViewController(loginItems, animated: false, completion: nil)
+//
+//    var loginItems = PFLogInViewController()
+//    
+//    loginItems.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.Twitter | PFLogInFields.Facebook | PFLogInFields.SignUpButton | PFLogInFields.PasswordForgotten
+//    
+//    loginItems.delegate = self
+//    loginItems.signUpController?.delegate = self
+//    
+//    self.presentViewController(loginItems, animated: true, completion: nil)
+//    
   }
   
-  
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
