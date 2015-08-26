@@ -23,7 +23,7 @@ class PracticeSpace : PFObject, PFSubclassing {
   }
   
   static func parseClassName() -> String {
-    return "PracticeSpace"
+    return "PracticeSpaces"
   }
   
   @NSManaged var city: String

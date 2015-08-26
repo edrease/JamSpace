@@ -16,8 +16,9 @@ class LocationSearchService {
     let queryForLocations = PFQuery(className: "PracticeSpaces")
     queryForLocations.whereKey("city", equalTo: searchTerm)
     queryForLocations.findObjectsInBackgroundWithBlock { (practiceSpaces, error) -> Void in
+      
       if let error = error {
-        println(error.localizedDescription)
+        println(error.code)
       } else if let practiceSpaces = practiceSpaces as? [PracticeSpace] {
         
         let practiceSpaceArray = practiceSpaces
