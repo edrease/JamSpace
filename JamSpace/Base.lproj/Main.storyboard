@@ -598,7 +598,7 @@
         <!--Guest Mode Tab Bar Controller-->
         <scene sceneID="bWP-yP-sq4">
             <objects>
-                <tabBarController title="Guest Mode Tab Bar Controller" id="ILU-Ct-JwM" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="initialView" title="Guest Mode Tab Bar Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ILU-Ct-JwM" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9WS-m9-N9A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
