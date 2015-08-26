@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+
 
 class SpacePostViewController: UIViewController {
 	
@@ -19,20 +21,50 @@ class SpacePostViewController: UIViewController {
 	@IBOutlet weak var postCity: UITextField!
 	@IBOutlet weak var postState: UITextField!
 	@IBOutlet weak var postZipCode: UITextField!
+	@IBOutlet weak var pastStartDate: UITextField!
+	@IBOutlet weak var postEndDate: UITextField!
+	@IBOutlet weak var spaceSize: UITextField!
 	
+	@IBOutlet weak var startTime: UITextField!
+	@IBOutlet weak var endTime: UITextField!
 	
 	
 	// MARK: IBActions
 
 	@IBAction func postImageButton(sender: AnyObject) {
-		//kick off UIImageController
+		//kick off UIImageController and Alert View controller
 	}
 	
 	@IBAction func postSavedButton(sender: AnyObject) {
 		//validate text input via REGEX
 		//post to parse
+		// validate entry of field to ensure all is field out
+		// look at input validation
+		
+		//grab current User from PFuser object
+//		var gameScore = PFObject(className:"GameScore")
+//		gameScore["score"] = 1337
+//		gameScore["playerName"] = "Sean Plott"
+//		gameScore["cheatMode"] = false
+//		gameScore.saveInBackgroundWithBlock {
+//			(success: Bool, error: NSError?) -> Void in
+//			if (success) {
+//    // The object has been saved.
+//			} else {
+//    // There was a problem, check error.description
+//			}
+//		}
+		
+		//PracticeSpaces
+		
+
+		
+		
 	}
 	
+	@IBAction func resetButtonPressed(sender: AnyObject) {
+		// Set all IBOutlets to nill
+	}
 	
 	
     override func viewDidLoad() {
