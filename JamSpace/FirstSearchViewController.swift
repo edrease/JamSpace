@@ -34,6 +34,12 @@ class FirstSearchViewController: UIViewController {
     
     //while search is taking place, run the wheel of death
     
+    //for now, use dummy data from app delegate for user and space arrays
+    
+    if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+      searchResults = appDelegate.dummySpacesArray
+    }
+    
     //then, when data has been returned from parse, perform segue below:
     
     performSegueWithIdentifier("showListMapVC", sender: nil)
@@ -48,7 +54,7 @@ class FirstSearchViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       if segue.identifier == "showListMapVC" {
         let listMapSearchViewController = segue.destinationViewController as! ListMapSearchViewController
-        listMapSearchViewController.passedCity = searchTextField.text 
+        listMapSearchViewController.arrayOfPracticeSpaces = searchResults
       }
     }
 

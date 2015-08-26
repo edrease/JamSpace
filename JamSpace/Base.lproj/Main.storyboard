@@ -243,15 +243,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-CL-bL5">
                                 <rect key="frame" x="300" y="551" width="0.0" height="0.0"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGS-Ue-Hhc">
-                                <rect key="frame" x="141" y="323" width="318" height="30"/>
-                                <state key="normal" title="Temporary Fake Segue Trigger To List/Map VC">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Fq3-Af-kcS" kind="show" identifier="showListMapVC" id="9gF-Nv-zkI"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a City to Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x5-OU-Emf">
                                 <rect key="frame" x="216" y="256" width="168" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -270,15 +261,12 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kiC-sI-c3e" firstAttribute="trailing" secondItem="qXM-KK-5fE" secondAttribute="trailingMargin" multiplier="1.5" constant="-309" id="1Lw-8C-mcQ"/>
-                            <constraint firstAttribute="centerX" secondItem="uGS-Ue-Hhc" secondAttribute="centerX" id="BIs-lJ-zJM"/>
                             <constraint firstAttribute="centerX" secondItem="7x5-OU-Emf" secondAttribute="centerX" id="BTa-ZP-z0C"/>
                             <constraint firstAttribute="centerY" secondItem="kiC-sI-c3e" secondAttribute="centerY" id="Nhg-3j-jq5"/>
-                            <constraint firstAttribute="centerX" secondItem="uGS-Ue-Hhc" secondAttribute="centerX" id="RII-eR-wtO"/>
                             <constraint firstAttribute="centerX" secondItem="kiC-sI-c3e" secondAttribute="centerX" id="Rrl-FE-bA3"/>
                             <constraint firstItem="jxa-CL-bL5" firstAttribute="top" secondItem="WoJ-2d-7E3" secondAttribute="bottom" id="T4b-8S-dS7"/>
                             <constraint firstAttribute="centerX" secondItem="kiC-sI-c3e" secondAttribute="centerX" id="UMq-cw-9LO"/>
                             <constraint firstAttribute="centerX" secondItem="jxa-CL-bL5" secondAttribute="centerX" id="Vxw-43-Zl9"/>
-                            <constraint firstItem="uGS-Ue-Hhc" firstAttribute="top" secondItem="kiC-sI-c3e" secondAttribute="bottom" constant="8" id="aAV-Pz-iiO"/>
                             <constraint firstItem="kiC-sI-c3e" firstAttribute="top" secondItem="7x5-OU-Emf" secondAttribute="bottom" constant="8" id="avn-hH-bSb"/>
                             <constraint firstItem="kiC-sI-c3e" firstAttribute="leading" secondItem="qXM-KK-5fE" secondAttribute="leadingMargin" multiplier="1.5" constant="10" id="gHS-Sa-IZV"/>
                             <constraint firstItem="kY0-ws-5OC" firstAttribute="top" secondItem="jxa-CL-bL5" secondAttribute="bottom" id="sLN-Zo-qN2"/>
@@ -288,7 +276,6 @@
                                 <exclude reference="1Lw-8C-mcQ"/>
                                 <exclude reference="Rrl-FE-bA3"/>
                                 <exclude reference="gHS-Sa-IZV"/>
-                                <exclude reference="BIs-lJ-zJM"/>
                                 <exclude reference="T4b-8S-dS7"/>
                             </mask>
                         </variation>
@@ -296,6 +283,7 @@
                     <navigationItem key="navigationItem" id="N5X-Qt-Xue"/>
                     <connections>
                         <outlet property="searchTextField" destination="kiC-sI-c3e" id="CJn-rS-zpw"/>
+                        <segue destination="Fq3-Af-kcS" kind="show" identifier="showListMapVC" id="EhP-Wp-F2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mbg-6H-WdN" userLabel="First Responder" sceneMemberID="firstResponder"/>

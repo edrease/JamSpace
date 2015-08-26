@@ -11,8 +11,6 @@ import MapKit
 
 class ListMapSearchViewController: UIViewController {
   
-  var passedCity: String!
-  
   var arrayOfPracticeSpaces = [PracticeSpace]()
   
   var mapViewController: MapViewController!
@@ -28,6 +26,10 @@ class ListMapSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      for space in arrayOfPracticeSpaces {
+        println(space.nameOfSpace)
+      }
       
       if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
         arrayOfPracticeSpaces = appDelegate.dummySpacesArray
