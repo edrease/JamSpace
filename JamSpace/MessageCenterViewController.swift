@@ -8,10 +8,13 @@
 
 import UIKit
 import Parse
+import ParseUI
 
-class MessageCenterViewController: UIViewController {
+class MessageCenterViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
   
   var messages = [Message]()
+  var loginItems = PFLogInViewController()
+  var signUpItems = PFSignUpViewController()
   
   //MARK: - Outlets
   @IBOutlet weak var tableView: UITableView!
@@ -34,6 +37,7 @@ class MessageCenterViewController: UIViewController {
   let kBottomViewConstraintPhotoRemoved : CGFloat = -108
   let kBottomViewConstraintCameraButtonRemoved: CGFloat = -50
   let kBottomViewConstraintCameraButton : CGFloat = 43
+  var presentedSignup = false
   
   //MARK: - Lifecycle methods
   
@@ -45,10 +49,16 @@ class MessageCenterViewController: UIViewController {
     self.tabBarController?.delegate = self
     txtFieldFirstName.delegate = self
     txtFieldLastName.delegate = self
+    loginItems.delegate = self
+    signUpItems.delegate = self
+    loginItems.signUpController?.delegate = self
     
     let userOne = User(firstName: "Ed", lastName: "Peshtaz", favorites: nil)
     let messageOne = Message(user: userOne, messageText: "Hullo", profileImage: nil, dateSent: NSDate())
     messages.append(messageOne)
+    
+//    presentedSignup = true
+    
     
   }
   
@@ -60,16 +70,26 @@ class MessageCenterViewController: UIViewController {
     if (jamUser != nil) {
       println("user exists")
       
-    } else {
+    } else  if presentedSignup == false{
+      presentedSignup = true
       
-      constraintBottomView.constant = kBottomViewConstraint
-      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
-      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
+      let jamUser = PFUser.currentUser()?.username
       
-      UIView.animateWithDuration(0.3, animations: { () -> Void in
-        self.view.layoutIfNeeded()
-      })
+      signUpItems.fields = PFSignUpFields.UsernameAndPassword | PFSignUpFields.Email | PFSignUpFields.SignUpButton | PFSignUpFields.DismissButton
       
+      
+      self.presentViewController(signUpItems, animated: true, completion: nil)
+      
+//      constraintBottomView.constant = kBottomViewConstraint
+//      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
+//      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
+//      
+//      UIView.animateWithDuration(0.3, animations: { () -> Void in
+//        self.view.layoutIfNeeded()
+//      })
+      
+    } else if presentedSignup == true {
+      presentedSignup = false
     }
   }
   
@@ -119,6 +139,42 @@ class MessageCenterViewController: UIViewController {
   }
 }
 
+
+//MARK: - Parse's PFLoginViewControllerDelegate
+
+extension MessageCenterViewController : PFLogInViewControllerDelegate {
+  
+  
+  func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+    
+    self.dismissViewControllerAnimated(true, completion: nil)
+    
+  }
+  
+  func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
+    
+    self.dismissViewControllerAnimated(false, completion: nil)
+    
+  }
+  
+}
+
+//MARK: - Parse's PFSignupViewControllerDelegate
+
+extension MessageCenterViewController : PFSignUpViewControllerDelegate {
+  func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+    
+    signUpItems.dismissViewControllerAnimated(true, completion: nil)
+    
+  }
+  
+  func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
+    signUpItems.dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+}
+
+
 //MARK: - UITextFieldDelegate
 
 extension MessageCenterViewController: UITextFieldDelegate {
@@ -142,12 +198,12 @@ extension MessageCenterViewController: UITextFieldDelegate {
 extension MessageCenterViewController: UITabBarControllerDelegate{
   func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
     
-    constraintBottomView.constant = kBottomViewConstraint
-    switchHost.on = false
-    
-    UIView.animateWithDuration(0.3, animations: { () -> Void in
-      self.view.layoutIfNeeded()
-    })
+//    constraintBottomView.constant = kBottomViewConstraint
+//    switchHost.on = false
+//    
+//    UIView.animateWithDuration(0.3, animations: { () -> Void in
+//      self.view.layoutIfNeeded()
+//    })
   }
 }
 

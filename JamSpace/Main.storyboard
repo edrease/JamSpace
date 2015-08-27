@@ -789,13 +789,13 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ndT-Uj-nLn" id="7dn-SK-U9p">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="garage" translatesAutoresizingMaskIntoConstraints="NO" id="I4l-xo-2t6">
-                                                    <rect key="frame" x="0.0" y="20" width="600" height="279"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garage" translatesAutoresizingMaskIntoConstraints="NO" id="I4l-xo-2t6">
+                                                    <rect key="frame" x="-8" y="0.0" width="616" height="299"/>
                                                 </imageView>
-                                                <view alpha="0.80000001192092896" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6F-Kz-13G">
+                                                <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6F-Kz-13G">
                                                     <rect key="frame" x="8" y="259" width="155" height="32"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name of space" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyw-ks-U9K">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of space" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyw-ks-U9K">
                                                             <rect key="frame" x="8" y="4" width="139" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -816,6 +816,8 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="m6F-Kz-13G" secondAttribute="trailing" constant="437" id="5gd-rD-dNg"/>
+                                                <constraint firstItem="m6F-Kz-13G" firstAttribute="bottom" secondItem="7dn-SK-U9p" secondAttribute="bottomMargin" id="71d-LY-5PY"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="I4l-xo-2t6" secondAttribute="trailing" constant="-16" id="9Qe-QW-Ae3"/>
                                                 <constraint firstItem="I4l-xo-2t6" firstAttribute="top" secondItem="7dn-SK-U9p" secondAttribute="topMargin" constant="-8" id="MbP-Fz-XFF"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="I4l-xo-2t6" secondAttribute="bottom" constant="-8" id="fbM-qq-58f"/>
@@ -856,8 +858,8 @@
                                                         <constraint firstAttribute="width" secondItem="eS0-Z2-ADz" secondAttribute="height" multiplier="1:1" id="lxa-vJ-BFp"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Host Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlV-gZ-sgo">
-                                                    <rect key="frame" x="132" y="8" width="77" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlV-gZ-sgo">
+                                                    <rect key="frame" x="132" y="8" width="103" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -957,24 +959,6 @@
             </objects>
             <point key="canvasLocation" x="42" y="-287"/>
         </scene>
-        <!--Sign Up Login View Controller-->
-        <scene sceneID="qXb-QZ-gFi">
-            <objects>
-                <viewController id="0ct-7n-4MD" customClass="SignUpLoginViewController" customModule="JamSpace" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5US-po-auF"/>
-                        <viewControllerLayoutGuide type="bottom" id="SO9-OS-en8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="b6T-yd-4bV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NQb-XZ-6iJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1505" y="-287"/>
-        </scene>
         <!--Search-->
         <scene sceneID="RyC-iL-k0o">
             <objects>
@@ -1033,7 +1017,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum Daily Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKZ-4l-f0a">
-                                                    <rect key="frame" x="8" y="8" width="162" height="20.5"/>
+                                                    <rect key="frame" x="8" y="8" width="162" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1083,7 +1067,7 @@
                                                     </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbv-VG-dF0">
-                                                    <rect key="frame" x="24" y="42" width="19.5" height="20.5"/>
+                                                    <rect key="frame" x="24" y="42" width="20" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1095,7 +1079,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum Space Size (in sq. ft.)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UH6-fG-gEP">
-                                                    <rect key="frame" x="8" y="8" width="238" height="20.5"/>
+                                                    <rect key="frame" x="8" y="8" width="238" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1256,7 +1240,11 @@
     </scenes>
     <resources>
         <image name="calendar" width="48" height="48"/>
+        <image name="garage" width="320" height="240"/>
         <image name="myProfile" width="48" height="48"/>
         <image name="requests" width="48" height="48"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ALM-h0-Wdp"/>
+    </inferredMetricsTieBreakers>
 </document>
