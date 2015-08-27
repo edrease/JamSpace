@@ -201,7 +201,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reservations" id="eIr-g2-5Wf"/>
+                    <tabBarItem key="tabBarItem" title="Reservations" image="calendar" id="eIr-g2-5Wf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5LY-pe-KGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,7 +310,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="LFy-9w-5sB"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="LFy-9w-5sB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2z-Ni-bbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -910,7 +910,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="Ebf-cK-2KK"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="myProfile" id="Ebf-cK-2KK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubb-M3-EKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1263,7 +1263,7 @@
         <scene sceneID="mGe-W9-n2V">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ww-wf-AIN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Requests" id="dbG-eq-sJT"/>
+                    <tabBarItem key="tabBarItem" title="Requests" image="requests" id="dbG-eq-sJT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XNX-AI-HTu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1297,4 +1297,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" width="48" height="48"/>
+        <image name="myProfile" width="48" height="48"/>
+        <image name="requests" width="48" height="48"/>
+    </resources>
 </document>
