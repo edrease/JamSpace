@@ -15,13 +15,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 cf. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
+                    <rect key="frame" x="20" y="439.5" width="441" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boomboxAvenir" translatesAutoresizingMaskIntoConstraints="NO" id="ebz-3G-c84">
-                    <rect key="frame" x="100" y="69" width="280" height="77"/>
+                    <rect key="frame" x="100" y="160" width="280" height="77"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="280" id="8bX-Uk-89R"/>
                         <constraint firstAttribute="height" constant="77" id="Kkn-ED-nqp"/>
@@ -31,8 +31,8 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="uop-8k-KVd"/>
                             <exclude reference="sr7-wK-2rQ"/>
+                            <exclude reference="uop-8k-KVd"/>
                         </mask>
                     </variation>
                 </imageView>
@@ -46,7 +46,7 @@
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
                 <constraint firstItem="51w-j2-22i" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a6R-oF-xbj"/>
                 <constraint firstItem="51w-j2-22i" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fAc-ak-WJY"/>
-                <constraint firstItem="ebz-3G-c84" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="69" id="p5F-8e-mjI"/>
+                <constraint firstItem="ebz-3G-c84" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="160" id="p5F-8e-mjI"/>
                 <constraint firstAttribute="centerX" secondItem="ebz-3G-c84" secondAttribute="centerX" id="pJX-qP-zu1"/>
                 <constraint firstAttribute="trailing" secondItem="51w-j2-22i" secondAttribute="trailing" id="yBI-t5-ipy"/>
             </constraints>

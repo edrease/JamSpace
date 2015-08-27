@@ -29,7 +29,6 @@ class ListMapSearchViewController: UIViewController {
         super.viewDidLoad()
 
       
-      
       mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
       listViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ListViewController") as! ListViewController
       listViewController.passedArrayOfPracticeSpaces = arrayOfPracticeSpaces

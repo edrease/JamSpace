@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HXV-bE-Dgf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oL6-BB-ucQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZXW-7B-ZwF">
@@ -197,11 +197,22 @@
                         <viewControllerLayoutGuide type="bottom" id="Phc-aO-WCy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hVn-gK-6ax">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reservations" id="eIr-g2-5Wf"/>
+                    <tabBarItem key="tabBarItem" title="Reservations" id="eIr-g2-5Wf">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                            <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5LY-pe-KGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vu8-9k-GM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="160" y="-243"/>
+            <point key="canvasLocation" x="712" y="-393"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="kbM-gb-DwX">
@@ -306,11 +317,17 @@
                         <viewControllerLayoutGuide type="bottom" id="9gW-8V-dhe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TIv-S3-vNr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="LFy-9w-5sB"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="LFy-9w-5sB">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2z-Ni-bbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -658,7 +675,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kY0-ws-5OC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qXM-KK-5fE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boomboxTabImage" translatesAutoresizingMaskIntoConstraints="NO" id="6p2-lE-esM">
@@ -670,7 +687,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kiC-sI-c3e">
-                                <rect key="frame" x="140" y="285" width="320" height="30"/>
+                                <rect key="frame" x="140" y="260" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="h9j-ae-AQt"/>
                                 </constraints>
@@ -742,7 +759,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4kP-DG-kpL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RZO-Dl-g16">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cPb-2w-vgB">
@@ -1093,8 +1110,9 @@
         <scene sceneID="bWP-yP-sq4">
             <objects>
                 <tabBarController storyboardIdentifier="initialView" title="Guest Mode Tab Bar Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ILU-Ct-JwM" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="9WS-m9-N9A">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="9WS-m9-N9A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1120,15 +1138,21 @@
                         <viewControllerLayoutGuide type="bottom" id="gov-dY-Xeu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ehz-WG-Knx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="Ebf-cK-2KK"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="Ebf-cK-2KK">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubb-M3-EKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="-287"/>
+            <point key="canvasLocation" x="12" y="-543"/>
         </scene>
         <!--Sign Up Login View Controller-->
         <scene sceneID="qXb-QZ-gFi">
@@ -1152,7 +1176,13 @@
         <scene sceneID="RyC-iL-k0o">
             <objects>
                 <navigationController title="Search" automaticallyAdjustsScrollViewInsets="NO" id="anS-fc-cSi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="HLU-fH-faL"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="HLU-fH-faL">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yCb-le-anW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1393,13 +1423,24 @@
         <scene sceneID="mGe-W9-n2V">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ww-wf-AIN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Requests" id="dbG-eq-sJT"/>
+                    <tabBarItem key="tabBarItem" title="Requests" id="dbG-eq-sJT">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XNX-AI-HTu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                            <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="mil-BD-kGX" kind="relationship" relationship="rootViewController" id="l1s-8S-CR8"/>
                     </connections>
@@ -1425,6 +1466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4t-aA-tcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="783" y="-102"/>
         </scene>
     </scenes>
     <resources>

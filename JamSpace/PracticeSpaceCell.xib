@@ -94,7 +94,7 @@
                             <constraint firstAttribute="height" constant="30" id="QaO-zd-Ual"/>
                             <constraint firstAttribute="width" constant="30" id="q0Z-Kd-Mp6"/>
                         </constraints>
-                        <state key="normal" image="greyHeartThirty">
+                        <state key="normal" image="greyheartwhiteoutline">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
@@ -181,6 +181,6 @@
     </objects>
     <resources>
         <image name="garage" width="320" height="240"/>
-        <image name="greyHeartThirty" width="250" height="250"/>
+        <image name="greyheartwhiteoutline" width="250" height="250"/>
     </resources>
 </document>
