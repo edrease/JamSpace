@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ILU-Ct-JwM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ILU-Ct-JwM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -1426,7 +1427,12 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="boomboxAvenir" width="6044" height="1736"/>
+        <image name="boomboxTabImage" width="750" height="1201"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="t5d-BP-WaQ"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.36078431370000003" green="0.090196078430000007" blue="0.97450728440000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>
