@@ -13,6 +13,7 @@ class ListViewController: UIViewController {
   var passedArrayOfPracticeSpaces = [PracticeSpace]()
 
   @IBOutlet weak var tableView: UITableView!
+  //weak var delegate: FilteredArrayDelegate?
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     performSegueWithIdentifier("showSpaceDetailVC", sender: nil)
@@ -33,6 +34,11 @@ class ListViewController: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
     }
+  
+  override func viewWillAppear(animated: Bool) {
+    println("filtered array passed back?")
+    println(passedArrayOfPracticeSpaces.count)
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,5 +95,15 @@ extension ListViewController: UITableViewDelegate {
 //  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 //    return (0.75) * view.frame.width
 //  }
+}
+
+//MARK: -
+extension ListViewController: FilteredArrayDelegate {
+  func arrayWasFiltered(filteredArray: [PracticeSpace]){
+    passedArrayOfPracticeSpaces = filteredArray
+    for space in passedArrayOfPracticeSpaces {
+      println("Filtered array passed: \(space.nameOfSpace)")
+    }
+  }
 }
 

@@ -48,7 +48,7 @@ class ListMapSearchViewController: UIViewController {
 //      //tableView.rowHeight = UITableViewAutomaticDimension
 //      tableView.registerNib(UINib(nibName: "PracticeSpaceCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "PracticeSpaceCell")
 //      
-//      tableView.dataSource = self
+  //    tableView.dataSource = self
 //      tableView.delegate = self
       
     }
