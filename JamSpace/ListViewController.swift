@@ -36,9 +36,10 @@ class ListViewController: UIViewController {
     }
   
   override func viewWillAppear(animated: Bool) {
-    println("filtered array passed back?")
     println(passedArrayOfPracticeSpaces.count)
+    tableView.reloadData()
   }
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -97,13 +98,5 @@ extension ListViewController: UITableViewDelegate {
 //  }
 }
 
-//MARK: -
-extension ListViewController: FilteredArrayDelegate {
-  func arrayWasFiltered(filteredArray: [PracticeSpace]){
-    passedArrayOfPracticeSpaces = filteredArray
-    for space in passedArrayOfPracticeSpaces {
-      println("Filtered array passed: \(space.nameOfSpace)")
-    }
-  }
-}
+
 

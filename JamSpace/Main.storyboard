@@ -661,16 +661,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-CL-bL5">
-                                <rect key="frame" x="300" y="551" width="0.0" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" id="Lyf-pW-LkU"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boomboxTabImage" translatesAutoresizingMaskIntoConstraints="NO" id="6p2-lE-esM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a City to Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x5-OU-Emf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter a City to Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x5-OU-Emf">
                                 <rect key="frame" x="216" y="256" width="168" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kiC-sI-c3e">
@@ -681,27 +677,49 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="search"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="boomboxAvenir" translatesAutoresizingMaskIntoConstraints="NO" id="bft-zI-Sv5">
+                                <rect key="frame" x="160" y="171" width="280" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="EXo-YB-QtP"/>
+                                    <constraint firstAttribute="width" constant="467" id="oKz-Ah-JU0"/>
+                                    <constraint firstAttribute="width" constant="280" id="ope-EO-qP4"/>
+                                    <constraint firstAttribute="height" constant="128" id="wm0-fU-Oqg"/>
+                                    <constraint firstAttribute="width" secondItem="bft-zI-Sv5" secondAttribute="height" multiplier="467:128" id="xVH-PT-WMg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="oKz-Ah-JU0"/>
+                                        <exclude reference="wm0-fU-Oqg"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kiC-sI-c3e" firstAttribute="trailing" secondItem="qXM-KK-5fE" secondAttribute="trailingMargin" multiplier="1.5" constant="-309" id="1Lw-8C-mcQ"/>
+                            <constraint firstAttribute="centerX" secondItem="bft-zI-Sv5" secondAttribute="centerX" id="3tv-mB-eun"/>
+                            <constraint firstItem="7x5-OU-Emf" firstAttribute="top" secondItem="bft-zI-Sv5" secondAttribute="bottom" constant="36" id="8G5-ak-EOy"/>
+                            <constraint firstItem="6p2-lE-esM" firstAttribute="top" secondItem="WoJ-2d-7E3" secondAttribute="bottom" id="9dR-Jy-W4o"/>
                             <constraint firstAttribute="centerX" secondItem="7x5-OU-Emf" secondAttribute="centerX" id="BTa-ZP-z0C"/>
-                            <constraint firstItem="jxa-CL-bL5" firstAttribute="top" secondItem="kY0-ws-5OC" secondAttribute="top" id="DOW-zx-IjI"/>
+                            <constraint firstItem="6p2-lE-esM" firstAttribute="leading" secondItem="qXM-KK-5fE" secondAttribute="leadingMargin" constant="-16" id="K4D-Pb-f89"/>
+                            <constraint firstItem="6p2-lE-esM" firstAttribute="top" secondItem="qXM-KK-5fE" secondAttribute="topMargin" id="Lx6-Xl-c0p"/>
                             <constraint firstAttribute="centerY" secondItem="kiC-sI-c3e" secondAttribute="centerY" id="Nhg-3j-jq5"/>
                             <constraint firstAttribute="centerX" secondItem="kiC-sI-c3e" secondAttribute="centerX" id="Rrl-FE-bA3"/>
-                            <constraint firstItem="jxa-CL-bL5" firstAttribute="top" secondItem="WoJ-2d-7E3" secondAttribute="bottom" id="T4b-8S-dS7"/>
                             <constraint firstAttribute="centerX" secondItem="kiC-sI-c3e" secondAttribute="centerX" id="UMq-cw-9LO"/>
-                            <constraint firstAttribute="centerX" secondItem="jxa-CL-bL5" secondAttribute="centerX" id="Vxw-43-Zl9"/>
+                            <constraint firstItem="6p2-lE-esM" firstAttribute="top" secondItem="WoJ-2d-7E3" secondAttribute="bottom" id="URH-nR-5jO"/>
                             <constraint firstItem="kiC-sI-c3e" firstAttribute="top" secondItem="7x5-OU-Emf" secondAttribute="bottom" constant="8" id="avn-hH-bSb"/>
+                            <constraint firstItem="6p2-lE-esM" firstAttribute="leading" secondItem="qXM-KK-5fE" secondAttribute="leadingMargin" constant="-16" id="een-Xw-NLv"/>
                             <constraint firstItem="kiC-sI-c3e" firstAttribute="leading" secondItem="qXM-KK-5fE" secondAttribute="leadingMargin" multiplier="1.5" constant="10" id="gHS-Sa-IZV"/>
-                            <constraint firstItem="kY0-ws-5OC" firstAttribute="top" secondItem="jxa-CL-bL5" secondAttribute="bottom" id="sLN-Zo-qN2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6p2-lE-esM" secondAttribute="trailing" constant="-16" id="h6P-i1-RHK"/>
+                            <constraint firstItem="kY0-ws-5OC" firstAttribute="top" secondItem="6p2-lE-esM" secondAttribute="bottom" id="jRa-d7-Kz7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6p2-lE-esM" secondAttribute="trailing" constant="-16" id="qF5-Hy-5ay"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="9dR-Jy-W4o"/>
+                                <exclude reference="URH-nR-5jO"/>
                                 <exclude reference="1Lw-8C-mcQ"/>
                                 <exclude reference="Rrl-FE-bA3"/>
                                 <exclude reference="gHS-Sa-IZV"/>
-                                <exclude reference="T4b-8S-dS7"/>
                             </mask>
                         </variation>
                     </view>
@@ -1254,6 +1272,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="boomboxAvenir" width="6044" height="1736"/>
+        <image name="boomboxTabImage" width="750" height="1201"/>
         <image name="garage" width="320" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
