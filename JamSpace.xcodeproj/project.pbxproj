@@ -22,7 +22,6 @@
 		6C39046C1B8BE26400C94306 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C39046B1B8BE26400C94306 /* MapViewController.swift */; };
 		6C39046E1B8BE33200C94306 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C39046D1B8BE33200C94306 /* MapKit.framework */; };
 		6C3904701B8C1CD100C94306 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C39046F1B8C1CD100C94306 /* LocationManager.swift */; };
-		6C8A2DBC1B8E45DB000D37E3 /* AdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A2DBB1B8E45DB000D37E3 /* AdditionalInfoViewController.swift */; };
 		6CAE51B11B8D286D008D9BB0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAE51B01B8D286D008D9BB0 /* SignUpViewController.swift */; };
 		9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */; };
 		9E0AA1AD1B8B90DB00DC0319 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */; };
@@ -77,7 +76,6 @@
 		6C39046B1B8BE26400C94306 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6C39046D1B8BE33200C94306 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6C39046F1B8C1CD100C94306 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		6C8A2DBB1B8E45DB000D37E3 /* AdditionalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewController.swift; sourceTree = "<group>"; };
 		6CAE51B01B8D286D008D9BB0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9E0AA1A01B8B90DB00DC0319 /* JamSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0AA1A41B8B90DB00DC0319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -411,7 +409,6 @@
 				346FBC801B8BC12900B960E5 /* ListMapSearchViewController.swift in Sources */,
 				9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */,
 				34DC5EC71B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift in Sources */,
-				6C8A2DBC1B8E45DB000D37E3 /* AdditionalInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
