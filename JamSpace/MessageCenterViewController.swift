@@ -32,7 +32,7 @@ class MessageCenterViewController: UIViewController {
   let kBottomViewConstraintRemoved : CGFloat = -400
   let kBottomViewConstraintPhoto : CGFloat = 108
   let kBottomViewConstraintPhotoRemoved : CGFloat = -108
-  
+  let kBottomViewConstraintCameraButtonRemoved: CGFloat = -50
   
   //MARK: - Lifecycle methods
   
@@ -58,6 +58,8 @@ class MessageCenterViewController: UIViewController {
     } else {
       
       constraintBottomView.constant = kBottomViewConstraint
+      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
+      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
       
       UIView.animateWithDuration(0.3, animations: { () -> Void in
         self.view.layoutIfNeeded()
@@ -92,15 +94,17 @@ class MessageCenterViewController: UIViewController {
   
   @IBAction func toggleToHostUser(sender: AnyObject) {
     
-    if switchHost.on == false {
-      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
-    } else {
+    if switchHost.on == true {
+      
       
       constraintPhotoBottomView.constant = kBottomViewConstraintPhoto
       
       UIImageView.animateWithDuration(0.3, animations: { () -> Void in
         self.view.layoutIfNeeded()
       })
+
+    } else {
+      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
       
     }
 
