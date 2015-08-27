@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		007C5CFA1B8D057000018E2D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C5CF91B8D057000018E2D /* Keys.swift */; };
 		007C5CFC1B8D3E0C00018E2D /* SpacePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */; };
+		344BF32B1B8EA594000BC29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344BF32A1B8EA594000BC29A /* Main.storyboard */; };
 		346FBC781B8BB5B700B960E5 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC771B8BB5B700B960E5 /* Users.swift */; };
 		346FBC7A1B8BB5E600B960E5 /* PracticeSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */; };
 		346FBC801B8BC12900B960E5 /* ListMapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC7F1B8BC12900B960E5 /* ListMapSearchViewController.swift */; };
@@ -24,7 +25,6 @@
 		6C8A2DBC1B8E45DB000D37E3 /* AdditionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A2DBB1B8E45DB000D37E3 /* AdditionalInfoViewController.swift */; };
 		6CAE51B11B8D286D008D9BB0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAE51B01B8D286D008D9BB0 /* SignUpViewController.swift */; };
 		9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */; };
-		9E0AA1AB1B8B90DB00DC0319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */; };
 		9E0AA1AD1B8B90DB00DC0319 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */; };
 		9E0AA1B01B8B90DB00DC0319 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */; };
 		9E0AA1BC1B8B90DC00DC0319 /* JamSpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0AA1BB1B8B90DC00DC0319 /* JamSpaceTests.swift */; };
@@ -63,6 +63,7 @@
 /* Begin PBXFileReference section */
 		007C5CF91B8D057000018E2D /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpacePostViewController.swift; path = ../SpacePostViewController.swift; sourceTree = "<group>"; };
+		344BF32A1B8EA594000BC29A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		346FBC771B8BB5B700B960E5 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeSpaces.swift; sourceTree = "<group>"; };
 		346FBC7F1B8BC12900B960E5 /* ListMapSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMapSearchViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		9E0AA1A01B8B90DB00DC0319 /* JamSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0AA1A41B8B90DB00DC0319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0AA1A51B8B90DB00DC0319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E0AA1AA1B8B90DB00DC0319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9E0AA1AF1B8B90DB00DC0319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9E0AA1B51B8B90DC00DC0319 /* JamSpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JamSpaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +150,7 @@
 				346FBC771B8BB5B700B960E5 /* Users.swift */,
 				9E0AA1F71B8BFBE700DC0319 /* DateToStringFormatter.swift */,
 				6C39046F1B8C1CD100C94306 /* LocationManager.swift */,
+				9ECB0A031B8E395300CE16D6 /* LocationSearchService.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -163,10 +164,10 @@
 				6C39046B1B8BE26400C94306 /* MapViewController.swift */,
 				34DC5EC61B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift */,
 				346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */,
+				9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */,
 				6CAE51B01B8D286D008D9BB0 /* SignUpViewController.swift */,
 				007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */,
 				9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */,
-				9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */,
 				6C8A2DBB1B8E45DB000D37E3 /* AdditionalInfoViewController.swift */,
 			);
 			name = Controllers;
@@ -175,7 +176,7 @@
 		346FBC761B8BB56800B960E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */,
+				344BF32A1B8EA594000BC29A /* Main.storyboard */,
 				34DC5EC41B8CFEF700EDC7C2 /* PracticeSpaceCell.swift */,
 				34DC5EC21B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib */,
 				9E0AA1F41B8BEF7200DC0319 /* MessageCenterViews */,
@@ -214,7 +215,6 @@
 				346FBC761B8BB56800B960E5 /* Views */,
 				9E0AA1AC1B8B90DB00DC0319 /* Images.xcassets */,
 				9E0AA1A31B8B90DB00DC0319 /* Supporting Files */,
-				9ECB0A031B8E395300CE16D6 /* LocationSearchService.swift */,
 			);
 			path = JamSpace;
 			sourceTree = "<group>";
@@ -370,8 +370,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E0AA1AB1B8B90DB00DC0319 /* Main.storyboard in Resources */,
 				34DC5EC31B8CFEEC00EDC7C2 /* PracticeSpaceCell.xib in Resources */,
+				344BF32B1B8EA594000BC29A /* Main.storyboard in Resources */,
 				9E0AA1B01B8B90DB00DC0319 /* LaunchScreen.xib in Resources */,
 				9E0AA1AD1B8B90DB00DC0319 /* Images.xcassets in Resources */,
 				9E43D1B51B8D14A700AE70F4 /* DetailListingFooterView.xib in Resources */,
@@ -434,14 +434,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9E0AA1A91B8B90DB00DC0319 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E0AA1AA1B8B90DB00DC0319 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9E0AA1AE1B8B90DB00DC0319 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
