@@ -53,8 +53,9 @@ class MessageCenterViewController: UIViewController, PFLogInViewControllerDelega
     signUpItems.delegate = self
     loginItems.signUpController?.delegate = self
     
-    let userOne = User(firstName: "Ed", lastName: "Peshtaz", favorites: nil)
-    let messageOne = Message(user: userOne, messageText: "Hullo", profileImage: nil, dateSent: NSDate())
+    var users = PFUser()
+    users["name"] = txtFieldFirstName.text
+    let messageOne = Message(user: users, messageText: "Hullo", profileImage: nil, dateSent: NSDate())
     messages.append(messageOne)
     
 //    presentedSignup = true
