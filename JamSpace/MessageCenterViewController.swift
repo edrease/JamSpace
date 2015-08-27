@@ -30,9 +30,10 @@ class MessageCenterViewController: UIViewController {
   //MARK: - Constants
   let kBottomViewConstraint : CGFloat = 100
   let kBottomViewConstraintRemoved : CGFloat = -400
-  let kBottomViewConstraintPhoto : CGFloat = 108
+  let kBottomViewConstraintPhoto : CGFloat = 50
   let kBottomViewConstraintPhotoRemoved : CGFloat = -108
   let kBottomViewConstraintCameraButtonRemoved: CGFloat = -50
+  let kBottomViewConstraintCameraButton : CGFloat = 43
   
   //MARK: - Lifecycle methods
   
@@ -49,6 +50,10 @@ class MessageCenterViewController: UIViewController {
     let messageOne = Message(user: userOne, messageText: "Hullo", profileImage: nil, dateSent: NSDate())
     messages.append(messageOne)
     
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
     
     let jamUser = PFUser.currentUser()?.username
     
@@ -66,7 +71,6 @@ class MessageCenterViewController: UIViewController {
       })
       
     }
-    
   }
   
   override func viewDidDisappear(animated: Bool) {
@@ -98,6 +102,8 @@ class MessageCenterViewController: UIViewController {
       
       
       constraintPhotoBottomView.constant = kBottomViewConstraintPhoto
+      contraintCameraBottomView.constant = kBottomViewConstraintCameraButton
+      
       
       UIImageView.animateWithDuration(0.3, animations: { () -> Void in
         self.view.layoutIfNeeded()
@@ -105,7 +111,7 @@ class MessageCenterViewController: UIViewController {
 
     } else {
       constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
-      
+      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
     }
 
   }
@@ -135,6 +141,7 @@ extension MessageCenterViewController: UITabBarControllerDelegate{
   func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
     
     constraintBottomView.constant = kBottomViewConstraint
+    switchHost.on = false
     
     UIView.animateWithDuration(0.3, animations: { () -> Void in
       self.view.layoutIfNeeded()
