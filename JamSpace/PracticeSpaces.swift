@@ -27,6 +27,7 @@ class PracticeSpace : PFObject, PFSubclassing {
   }
   
   @NSManaged var city: String
+  @NSManaged var state: String
   @NSManaged var zipcode: Int
   @NSManaged var streetAddress: String
   @NSManaged var nameOfSpace: String
@@ -37,7 +38,7 @@ class PracticeSpace : PFObject, PFSubclassing {
   @NSManaged var isRoom: Bool
   @NSManaged var isGarage: Bool
   @NSManaged var isStudio: Bool
-  @NSManaged var imageFolder : [UIImage]
+  @NSManaged var images : [PFFile]
 }
 
 

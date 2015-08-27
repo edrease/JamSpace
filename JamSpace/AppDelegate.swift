@@ -79,7 +79,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         if (jamUser != nil) {
           let storyboard = UIStoryboard(name: "Main", bundle: nil)
     
-          let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
+//          let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
+					
+					 let initialView = storyboard.instantiateViewControllerWithIdentifier("spacePostView") as! SpacePostViewController
     
           self.window?.rootViewController = initialView
     
@@ -90,8 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
 //    locationManager.delegate = self                
 //    locationManager.requestAlwaysAuthorization()
-   loadDummySpacesArray()
-    loadDummyUsersArray()
+
 
     return true
   }

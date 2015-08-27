@@ -26,17 +26,14 @@ class ListMapSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
       
-      for space in arrayOfPracticeSpaces {
-        println(space.nameOfSpace)
-      }
-      
-      if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-        arrayOfPracticeSpaces = appDelegate.dummySpacesArray
-      }
       
       mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
       listViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ListViewController") as! ListViewController
+      listViewController.passedArrayOfPracticeSpaces = arrayOfPracticeSpaces
+      mapViewController.passedArrayOfPracticeSpaces = arrayOfPracticeSpaces
+      
       switchToViewController()
       
         // Do any additional setup after loading the view.
@@ -44,11 +41,7 @@ class ListMapSearchViewController: UIViewController {
 
       self.navigationItem.rightBarButtonItem = filterButton
       
-      //filterButton.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-      
-      //title = ""
-      
-      
+
       
 //      let cellWidth = tableView.frame.size.width
 //      tableView.rowHeight = (0.75) * cellWidth
@@ -100,32 +93,29 @@ class ListMapSearchViewController: UIViewController {
     }
 }
 
-//MARK: -
-extension ListMapSearchViewController: UITableViewDataSource {
-  
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
-    return arrayOfPracticeSpaces.count
-  }
-  
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("PracticeSpaceCell", forIndexPath: indexPath) as! PracticeSpaceCell
-    cell.cellImageView.image = arrayOfPracticeSpaces[indexPath.row].imageFolder[0]
-    cell.cellPrice.text = "$\(arrayOfPracticeSpaces[indexPath.row].pricePerDay.description)"
-    
-    
-    return cell
-  }
-  
-}
+////MARK: -
+//extension ListMapSearchViewController: UITableViewDataSource {
+////  
+////  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+////    
+////    return arrayOfPracticeSpaces.count
+////  }
+////  
+////  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+////    let cell = tableView.dequeueReusableCellWithIdentifier("PracticeSpaceCell", forIndexPath: indexPath) as! PracticeSpaceCell
+////    cell.cellImageView.image = arrayOfPracticeSpaces[indexPath.row].imageFolder[0]
+////    //cell.cellImageView.image =
+////    cell.cellPrice.text = "$\(arrayOfPracticeSpaces[indexPath.row].pricePerDay.description)"
+////    
+////    
+////    return cell
+////  }
+//  
+//}
 
 //MARK: UITableViewDelegate
 extension ListMapSearchViewController: UITableViewDelegate {
   func sendToFilter(){
     self.performSegueWithIdentifier("showFilterView", sender: nil)
   }
-  
-//  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//    return (0.75) * view.frame.width
-//  }
 }

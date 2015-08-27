@@ -12,7 +12,7 @@ import Parse
 
 class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
   
-  var arrayOfPracticeSpaces = [PracticeSpace]()
+  var passedArrayOfPracticeSpaces = [PracticeSpace]()
 
   
   //MARK: - Outlets
