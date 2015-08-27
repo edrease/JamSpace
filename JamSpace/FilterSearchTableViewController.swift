@@ -8,27 +8,33 @@
 
 import UIKit
 
+protocol FilteredArrayDelegate: class {
+  func arrayWasFiltered([PracticeSpace]) -> (Void)
+}
+
 class FilterSearchTableViewController: UITableViewController {
   
   var passedSpacesArray = [PracticeSpace]()
   var filteredSpacesArray = [PracticeSpace]()
+  weak var delegate: FilteredArrayDelegate?
   
   @IBAction func applyButton(sender: UIButton) {
-    
-    filteredSpacesArray = []
-    let maxPrice = Int(priceSlider.value)
-    let minSize = Int(sizeSlider.value)
-    
-    for space in passedSpacesArray {
-      if (space.pricePerDay < maxPrice + 1) && (space.sizeInFeet > minSize - 1) {
-        filteredSpacesArray.append(space)
-      }
-    }
-    println("filtered array:")
-    for space in filteredSpacesArray {
-      println(space.nameOfSpace)
-    }
-    
+    filterThisArray(passedSpacesArray)
+//    filteredSpacesArray = []
+//    let maxPrice = Int(priceSlider.value)
+//    let minSize = Int(sizeSlider.value)
+//    
+//    for space in passedSpacesArray {
+//      if (space.pricePerDay < maxPrice + 1) && (space.sizeInFeet > minSize - 1) {
+//        filteredSpacesArray.append(space)
+//      }
+//      
+//    }
+//    println("filtered array:")
+//    for space in filteredSpacesArray {
+//      println(space.nameOfSpace)
+//    }
+//    delegate?.arrayWasFiltered(filteredSpacesArray)
   }
   
   
@@ -155,16 +161,21 @@ extension FilterSearchTableViewController: UITableViewDataSource {
 
 extension FilterSearchTableViewController: UITableViewDelegate {
   func filterThisArray(arrayToFilter: [PracticeSpace]){
-//    let maxPrice = Int(priceSlider.value)
-//    let minSize = Int(sizeSlider.value)
-//    
-//    for space in passedSpacesArray {
-//      if space.pricePerDay <= maxPrice && space.sizeInFeet >= minSize {
-//        filteredSpacesArray.append(space)
-//      }
-//    }
-//    for space in filteredSpacesArray {
-//      println(space.nameOfSpace)
-//    }
+    filteredSpacesArray = []
+    let maxPrice = Int(priceSlider.value)
+    let minSize = Int(sizeSlider.value)
+    
+    for space in passedSpacesArray {
+      if (space.pricePerDay < maxPrice + 1) && (space.sizeInFeet > minSize - 1) {
+        filteredSpacesArray.append(space)
+      }
+      
+    }
+    println("filtered array:")
+    for space in filteredSpacesArray {
+      println(space.nameOfSpace)
+    }
+    delegate?.arrayWasFiltered(filteredSpacesArray)
+  
   }
 }
