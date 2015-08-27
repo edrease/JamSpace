@@ -94,6 +94,8 @@ class MessageCenterViewController: UIViewController {
   
   @IBAction func uploadAdditionalData(sender: AnyObject) {
     
+    
+    
   }
   
   @IBAction func toggleToHostUser(sender: AnyObject) {
