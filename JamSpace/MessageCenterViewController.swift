@@ -14,7 +14,6 @@ class MessageCenterViewController: UIViewController {
   var messages = [Message]()
   
   //MARK: - Outlets
-  
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var imgViewUser: UIImageView!
   @IBOutlet weak var buttonCamera: UIButton!
@@ -26,15 +25,21 @@ class MessageCenterViewController: UIViewController {
   @IBOutlet weak var buttonSend: UIButton!
   @IBOutlet weak var constraintBottomView: NSLayoutConstraint!
   
+  //MARK: - Constants
   let kBottomViewConstraint : CGFloat = 100
   let kBottomViewConstraintRemoved : CGFloat = -400
+  
   
   //MARK: - Lifecycle methods
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    //Delegate setup
     tableView.dataSource = self
     self.tabBarController?.delegate = self
+    txtFieldFirstName.delegate = self
+    txtFieldLastName.delegate = self
     
     let userOne = User(firstName: "Ed", lastName: "Peshtaz", favorites: nil)
     let messageOne = Message(user: userOne, messageText: "Hullo", profileImage: nil, dateSent: NSDate())
@@ -57,7 +62,6 @@ class MessageCenterViewController: UIViewController {
     
   }
   
-  
   override func viewDidDisappear(animated: Bool) {
     
     constraintBottomView.constant = kBottomViewConstraintRemoved
@@ -73,12 +77,31 @@ class MessageCenterViewController: UIViewController {
 
   //MARK: - My actions
   @IBAction func triggerCamera(sender: AnyObject) {
+    
   }
   
   
   @IBAction func uploadAdditionalData(sender: AnyObject) {
+    
   }
   
+}
+
+//MARK: - UITextFieldDelegate
+
+extension MessageCenterViewController: UITextFieldDelegate {
+  
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    
+    if textField == txtFieldFirstName {
+      txtFieldLastName.becomeFirstResponder()
+    } else if textField == txtFieldLastName {
+      textField.resignFirstResponder()
+    }
+    
+    
+    return true
+  }
   
 }
 
