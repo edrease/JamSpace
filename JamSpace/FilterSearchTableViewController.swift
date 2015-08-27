@@ -8,10 +8,29 @@
 
 import UIKit
 
-class FilterSearchTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class FilterSearchTableViewController: UITableViewController {
   
   var passedSpacesArray = [PracticeSpace]()
   var filteredSpacesArray = [PracticeSpace]()
+  
+  @IBAction func applyButton(sender: UIButton) {
+    
+    filteredSpacesArray = []
+    let maxPrice = Int(priceSlider.value)
+    let minSize = Int(sizeSlider.value)
+    
+    for space in passedSpacesArray {
+      if (space.pricePerDay < maxPrice + 1) && (space.sizeInFeet > minSize - 1) {
+        filteredSpacesArray.append(space)
+      }
+    }
+    println("filtered array:")
+    for space in filteredSpacesArray {
+      println(space.nameOfSpace)
+    }
+    
+  }
+  
   
   @IBOutlet weak var searchCityTextField: UITextField!
   @IBOutlet weak var currentMaxPriceLabel: UILabel!
@@ -19,21 +38,32 @@ class FilterSearchTableViewController: UITableViewController, UITableViewDataSou
   @IBOutlet weak var maxPriceLabel: UILabel!
   @IBOutlet weak var currentMinSizeLabel: UILabel!
   @IBOutlet weak var sizeSlider: UISlider!
-  @IBOutlet weak var maxSizeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
+      maxPriceLabel.text = "$" + String(Int(priceSlider.value))
+      currentMinSizeLabel.text = String(Int(sizeSlider.value))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+//      var filterButton : UIBarButtonItem = UIBarButtonItem(title: "Apply", style: UIBarButtonItemStyle.Plain, target: self, action: "filterThisArray")
+//      
+//      self.navigationItem.rightBarButtonItem = filterButton
       
       for space in passedSpacesArray {
         println(space.nameOfSpace)
       }
+      tableView.dataSource = self
+      tableView.delegate = self 
     }
+  
+  override func viewWillDisappear(animated: Bool) {
+    
+  }
+  
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,7 +81,7 @@ class FilterSearchTableViewController: UITableViewController, UITableViewDataSou
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 7
+        return 3
     }
 
     /*
@@ -99,14 +129,42 @@ class FilterSearchTableViewController: UITableViewController, UITableViewDataSou
     }
     */
 
-    /*
+  
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+    
     }
-    */
+  
 
+}
+
+extension FilterSearchTableViewController: UITableViewDataSource {
+  @IBAction func sliderValueChanged(sender: UISlider) {
+    var currentPriceSliderValue = Int(sender.value)
+    maxPriceLabel.text = "$" + String(currentPriceSliderValue)
+  }
+  @IBAction func sizeSliderValueChanged(sender: UISlider) {
+    var currentSizeSliderValue = Int(sender.value)
+    currentMinSizeLabel.text = String(currentSizeSliderValue)
+  }
+}
+
+extension FilterSearchTableViewController: UITableViewDelegate {
+  func filterThisArray(arrayToFilter: [PracticeSpace]){
+//    let maxPrice = Int(priceSlider.value)
+//    let minSize = Int(sizeSlider.value)
+//    
+//    for space in passedSpacesArray {
+//      if space.pricePerDay <= maxPrice && space.sizeInFeet >= minSize {
+//        filteredSpacesArray.append(space)
+//      }
+//    }
+//    for space in filteredSpacesArray {
+//      println(space.nameOfSpace)
+//    }
+  }
 }
