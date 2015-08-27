@@ -106,9 +106,6 @@ class SpaceDetailViewController: UITableViewController {
     } 
     */
   
-  override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-   let footer = NSBundle.mainBundle().loadNibNamed("DetailListingFooterView", owner: self, options: nil).first as! UIView
-      return footer
-  }
+  
 
 }
