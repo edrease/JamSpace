@@ -58,7 +58,7 @@ class SpacePostViewController: UIViewController {
 		practiceSpaces["state"] = postState.text
 		practiceSpaces["zipCode"] = postZipCode.text.toInt()
 //		practiceSpaces.imageFolder = nil
-		practiceSpaces.owner = PFUser.currentUser()!
+		//practiceSpaces.owner = PFUser.currentUser()!
 		practiceSpaces.save()
 		
 		
