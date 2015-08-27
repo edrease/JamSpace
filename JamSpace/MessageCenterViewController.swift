@@ -55,8 +55,10 @@ class MessageCenterViewController: UIViewController, PFLogInViewControllerDelega
     
     var users = PFUser()
     users["name"] = txtFieldFirstName.text
-    let messageOne = Message(user: users, messageText: "Hullo", profileImage: nil, dateSent: NSDate())
-    messages.append(messageOne)
+    
+    MessageService.messagesService { (errorDescription, messages) -> (Void) in
+      println("messageService called")
+    }
     
 //    presentedSignup = true
     
@@ -220,7 +222,6 @@ extension MessageCenterViewController: UITableViewDataSource {
     
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MessageCenterCell
     let message = messages[indexPath.row]
-    cell.userName.text = message.user.firstName + " " + message.user.lastName
     cell.userProfileImage.image = message.profileImage
     cell.messageText.text = message.messageText
     let datePosted = DateToStringFormatter.stringFromDate(message.dateSent)
