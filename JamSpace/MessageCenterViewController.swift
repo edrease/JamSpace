@@ -25,6 +25,8 @@ class MessageCenterViewController: UIViewController {
   @IBOutlet weak var buttonSend: UIButton!
   @IBOutlet weak var constraintBottomView: NSLayoutConstraint!
   
+  @IBOutlet weak var constraintPhotoBottomView: NSLayoutConstraint!
+  @IBOutlet weak var contraintCameraBottomView: NSLayoutConstraint!
   //MARK: - Constants
   let kBottomViewConstraint : CGFloat = 100
   let kBottomViewConstraintRemoved : CGFloat = -400
