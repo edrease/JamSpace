@@ -28,7 +28,7 @@ class ListMapSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
+      println("This is a description of the first image of first ITEM IN FIRST ARRAY::::::::::: \(arrayOfPracticeSpaces[0].tempImage.description)")
       mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
       listViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ListViewController") as! ListViewController
       listViewController.passedArrayOfPracticeSpaces = arrayOfPracticeSpaces
@@ -45,7 +45,7 @@ class ListMapSearchViewController: UIViewController {
     }
   
   override func viewWillAppear(animated: Bool) {
-    println("filtered array passed back!")
+    
     println(arrayOfPracticeSpaces.count)
     listViewController.passedArrayOfPracticeSpaces = arrayOfPracticeSpaces
     
