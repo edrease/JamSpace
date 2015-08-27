@@ -45,18 +45,20 @@ class SpacePostViewController: UIViewController {
 		//PracticeSpaces
 		//instantiate current user
 		
-		var practiceSpaces = PFObject(className: "PracticeSpaces")
+		var practiceSpaces = PracticeSpace()
 		practiceSpaces["nameOfSpace"] = postTitle.text
 		practiceSpaces["description"] = postSummary.text
-		practiceSpaces["openingHour"] = startTime.text
-		practiceSpaces["closingHour"] = endTime.text
-		practiceSpaces["startDate"] = postStartDate.text
-		practiceSpaces["endDate"] = postEndDate.text
-		practiceSpaces["pricePerDay"] = postEndDate.text.toInt()
+//		practiceSpaces["openingHour"] = nil
+//		practiceSpaces["closingHour"] = nil
+//		practiceSpaces["startDate"] = nil
+//		practiceSpaces["endDate"] = nil
+		practiceSpaces["pricePerDay"] = postPrice.text.toInt()
 		practiceSpaces["sizeInFeet"] = spaceSize.text.toInt()
 		practiceSpaces["streetAddress"] = postStreetAddress.text
 		practiceSpaces["state"] = postState.text
-		practiceSpaces["zipCode"] = postZipCode.text
+		practiceSpaces["zipCode"] = postZipCode.text.toInt()
+//		practiceSpaces.imageFolder = nil
+		practiceSpaces.owner = PFUser.currentUser()!
 		practiceSpaces.save()
 		
 		
