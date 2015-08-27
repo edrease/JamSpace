@@ -632,7 +632,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="229" id="gX9-9p-0X8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="364" id="gX9-9p-0X8">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gX9-9p-0X8" id="TbB-Rc-tmN">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -658,6 +658,31 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="L80-jx-WRn">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L80-jx-WRn" id="Vmt-0h-KSB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Y9-4e-mGm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                                                    <state key="normal" title="Book This Space">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="kMU-Ik-IOl" kind="show" identifier="ShowBookingRequestConfirmationViewController" id="1XG-sD-81M"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.90980398650000005" green="0.64313727620000005" blue="0.94901967050000002" alpha="1" colorSpace="deviceRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="3Y9-4e-mGm" firstAttribute="top" secondItem="Vmt-0h-KSB" secondAttribute="topMargin" constant="-8" id="Kku-IV-k55"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3Y9-4e-mGm" secondAttribute="bottom" constant="-8" id="M2N-hd-0f0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3Y9-4e-mGm" secondAttribute="trailing" constant="-8" id="akN-ts-cdr"/>
+                                                <constraint firstItem="3Y9-4e-mGm" firstAttribute="leading" secondItem="Vmt-0h-KSB" secondAttribute="leadingMargin" constant="-8" id="bjt-tP-X77"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -666,15 +691,23 @@
                             <outlet property="delegate" destination="FxC-UZ-zSz" id="hqJ-uM-8n2"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="bookThisSpaceButtonPressed" destination="3Y9-4e-mGm" id="xrV-Hd-erw"/>
+                        <outlet property="hostProfileImage" destination="fCA-Nu-MJL" id="btf-Np-3CM"/>
+                        <outlet property="nameOfSpaceLabel" destination="MXE-kh-gJi" id="bkf-td-nwR"/>
+                        <outlet property="spaceDescriptionText" destination="hAg-gj-xoy" id="4jG-wS-5np"/>
+                        <outlet property="spaceHostNameLabel" destination="rlV-gZ-sgo" id="Zft-hs-SMk"/>
+                        <outlet property="spaceListingImageView" destination="I4l-xo-2t6" id="OsB-TY-b7C"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQA-ag-EzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-793" y="2062"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Booking Request Confirmation View Controller-->
         <scene sceneID="t04-3H-nNg">
             <objects>
-                <tableViewController id="kMU-Ik-IOl" sceneMemberID="viewController">
+                <tableViewController id="kMU-Ik-IOl" customClass="BookingRequestConfirmationViewController" customModule="JamSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2K6-kQ-rEm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -798,28 +831,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vLp-7E-zuK" id="Q61-CP-os4">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjw-FE-lhx">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7J-0D-Bql">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Booking Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2M-4D-F28">
-                                                            <rect key="frame" x="175" y="34" width="250" height="27"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.44788240130000001" green="0.21734024237129959" blue="0.25842088379265349" alpha="0.71999999999999997" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="centerY" secondItem="j2M-4D-F28" secondAttribute="centerY" id="ZRR-Na-GFl"/>
-                                                        <constraint firstAttribute="centerX" secondItem="j2M-4D-F28" secondAttribute="centerX" id="jAy-un-pqJ"/>
-                                                    </constraints>
-                                                </view>
+                                                    <state key="normal" title="Confirm Booking Request">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.20815771592719262" blue="0.39032640056648471" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.94116950757575757" green="0.33300153604764016" blue="0.62079209077997299" alpha="0.75" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="Hjw-FE-lhx" firstAttribute="leading" secondItem="Q61-CP-os4" secondAttribute="leadingMargin" constant="-8" id="MQ3-uw-xDZ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Hjw-FE-lhx" secondAttribute="bottom" constant="-8" id="apt-Qx-76R"/>
-                                                <constraint firstItem="Hjw-FE-lhx" firstAttribute="top" secondItem="Q61-CP-os4" secondAttribute="topMargin" constant="-8" id="bXY-Xl-3KL"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Hjw-FE-lhx" secondAttribute="trailing" constant="-8" id="lXt-Xs-csz"/>
+                                                <constraint firstItem="f7J-0D-Bql" firstAttribute="leading" secondItem="Q61-CP-os4" secondAttribute="leadingMargin" constant="-8" id="0CX-UL-HpA"/>
+                                                <constraint firstItem="f7J-0D-Bql" firstAttribute="top" secondItem="Q61-CP-os4" secondAttribute="topMargin" constant="-8" id="0mG-LD-jJ5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="f7J-0D-Bql" secondAttribute="bottom" constant="-8" id="8xa-Lb-LcQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="f7J-0D-Bql" secondAttribute="trailing" constant="-8" id="NbD-4W-yVe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -831,10 +856,16 @@
                             <outlet property="delegate" destination="kMU-Ik-IOl" id="BLL-ib-epd"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="cityAndStateLabel" destination="dF6-qr-F1y" id="0PF-xn-N4U"/>
+                        <outlet property="nameOfSpace" destination="6ts-r3-t9I" id="Btc-61-Aak"/>
+                        <outlet property="requestedDatesLabel" destination="ZT6-l5-05e" id="clO-dP-w6v"/>
+                        <outlet property="totalPriceForBookingLabel" destination="7JS-bC-HuP" id="LGb-xM-iP8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7d-7k-Loj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-798" y="2746"/>
+            <point key="canvasLocation" x="-793" y="2853"/>
         </scene>
         <!--Guest Mode Tab Bar Controller-->
         <scene sceneID="bWP-yP-sq4">

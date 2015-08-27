@@ -10,6 +10,18 @@ import UIKit
 
 class SpaceDetailViewController: UITableViewController {
 
+  @IBOutlet weak var spaceListingImageView: UIImageView!
+  
+  @IBOutlet weak var nameOfSpaceLabel: UILabel!
+  
+  @IBOutlet weak var hostProfileImage: UIImageView!
+  
+  @IBOutlet weak var spaceHostNameLabel: UILabel!
+  
+  @IBOutlet weak var spaceDescriptionText: UITextView!
+  
+  
+  @IBOutlet weak var bookThisSpaceButtonPressed: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
