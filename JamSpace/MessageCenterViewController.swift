@@ -30,6 +30,8 @@ class MessageCenterViewController: UIViewController {
   //MARK: - Constants
   let kBottomViewConstraint : CGFloat = 100
   let kBottomViewConstraintRemoved : CGFloat = -400
+  let kBottomViewConstraintPhoto : CGFloat = 108
+  let kBottomViewConstraintPhotoRemoved : CGFloat = -108
   
   
   //MARK: - Lifecycle methods
@@ -46,6 +48,7 @@ class MessageCenterViewController: UIViewController {
     let userOne = User(firstName: "Ed", lastName: "Peshtaz", favorites: nil)
     let messageOne = Message(user: userOne, messageText: "Hullo", profileImage: nil, dateSent: NSDate())
     messages.append(messageOne)
+    
     
     let jamUser = PFUser.currentUser()?.username
     
@@ -87,6 +90,21 @@ class MessageCenterViewController: UIViewController {
     
   }
   
+  @IBAction func toggleToHostUser(sender: AnyObject) {
+    
+    if switchHost.on == false {
+      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
+    } else {
+      
+      constraintPhotoBottomView.constant = kBottomViewConstraintPhoto
+      
+      UIImageView.animateWithDuration(0.3, animations: { () -> Void in
+        self.view.layoutIfNeeded()
+      })
+      
+    }
+
+  }
 }
 
 //MARK: - UITextFieldDelegate
@@ -117,8 +135,6 @@ extension MessageCenterViewController: UITabBarControllerDelegate{
     UIView.animateWithDuration(0.3, animations: { () -> Void in
       self.view.layoutIfNeeded()
     })
-
-    
   }
 }
 
