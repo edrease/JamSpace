@@ -37,7 +37,8 @@ class PracticeSpace : PFObject, PFSubclassing {
   @NSManaged var isRoom: Bool
   @NSManaged var isGarage: Bool
   @NSManaged var isStudio: Bool
-  @NSManaged var imageFolder : [UIImage]
+  @NSManaged var imageFolder : [UIImage]?
+	@NSManaged var owner : PFUser
 }
 
 

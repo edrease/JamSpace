@@ -65,7 +65,7 @@ extension ListViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("PracticeSpaceCell", forIndexPath: indexPath) as! PracticeSpaceCell
-    cell.cellImageView.image = arrayOfPracticeSpaces[indexPath.row].imageFolder[0]
+    cell.cellImageView.image = arrayOfPracticeSpaces[indexPath.row].imageFolder![0]
     cell.cellPrice.text = "$\(arrayOfPracticeSpaces[indexPath.row].pricePerDay.description)"
     cell.spaceSummaryLabel.text = "Practice space in \(arrayOfPracticeSpaces[indexPath.row].city)"
     
