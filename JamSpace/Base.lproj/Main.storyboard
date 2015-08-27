@@ -9,6 +9,7 @@
         <!--Message/Reservation Center-->
         <scene sceneID="QLN-op-z6N">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FG4-eh-gLl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Message/Reservation Center" automaticallyAdjustsScrollViewInsets="NO" id="mil-BD-kGX" customClass="MessageCenterViewController" customModule="JamSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Md-be-xvz"/>
@@ -76,7 +77,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MD5-ES-k2o">
-                                <rect key="frame" x="147" y="315" width="306" height="336"/>
+                                <rect key="frame" x="147" y="615" width="306" height="336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Information required" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2B-9W-C5s">
                                         <rect key="frame" x="35" y="8" width="237" height="21"/>
@@ -191,7 +192,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HXV-bE-Dgf" firstAttribute="top" secondItem="MD5-ES-k2o" secondAttribute="bottom" constant="-100" id="Lyi-Lw-Jn2"/>
+                            <constraint firstItem="HXV-bE-Dgf" firstAttribute="top" secondItem="MD5-ES-k2o" secondAttribute="bottom" constant="-400" id="Lyi-Lw-Jn2"/>
                             <constraint firstAttribute="centerX" secondItem="MD5-ES-k2o" secondAttribute="centerX" id="xyr-7K-S6r"/>
                         </constraints>
                     </view>
@@ -199,14 +200,15 @@
                     <connections>
                         <outlet property="buttonCamera" destination="AeJ-Hl-YBd" id="wwD-FH-J1K"/>
                         <outlet property="buttonSend" destination="b4M-r3-Nwf" id="wTY-m1-79W"/>
+                        <outlet property="constraintBottomView" destination="Lyi-Lw-Jn2" id="UIv-xl-IE4"/>
                         <outlet property="imgViewUser" destination="fPa-w5-C5q" id="KR8-bd-yMb"/>
                         <outlet property="switchHost" destination="lGJ-50-48S" id="Frr-8H-vVy"/>
                         <outlet property="tableView" destination="ZXW-7B-ZwF" id="dQU-PR-jfB"/>
                         <outlet property="txtFieldFirstName" destination="b7y-HD-gKB" id="KvZ-iB-QUf"/>
                         <outlet property="txtFieldLastName" destination="RuS-z4-oXj" id="UOu-sG-R2P"/>
+                        <outlet property="viewAdditionalInfo" destination="MD5-ES-k2o" id="JwY-Tq-f3x"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FG4-eh-gLl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1771" y="526"/>
         </scene>
