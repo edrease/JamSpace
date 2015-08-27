@@ -92,8 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
 //    locationManager.delegate = self                
 //    locationManager.requestAlwaysAuthorization()
-   loadDummySpacesArray()
-    loadDummyUsersArray()
+
 
     return true
   }

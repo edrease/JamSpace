@@ -17,12 +17,7 @@ class FirstSearchViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-      
-    //searchTextField.becomeFirstResponder()
-    
-      // Do any additional setup after loading the view.
-      
+
       searchTextField.delegate = self
     }
 
@@ -30,25 +25,6 @@ class FirstSearchViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
-  func searchForCity(city: String){
-    //send city name to Parse and pull down array of practice spaces in that city to var searchResults
-    
-    //while search is taking place, run the wheel of death
-    
-    //for now, use dummy data from app delegate for user and space arrays
-    
-    if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-      searchResults = appDelegate.dummySpacesArray
-    }
-    
-    //then, when data has been returned from parse, perform segue below:
-    
-    performSegueWithIdentifier("showListMapVC", sender: nil)
-    
-   
-  }
-    
 
     // MARK: - Navigation
 
@@ -68,11 +44,14 @@ extension FirstSearchViewController: UITextFieldDelegate {
     searchTextField.resignFirstResponder()
     println(cityToSearch)
     dismissViewControllerAnimated(true, completion: nil)
-    LocationSearchService.locationsForSearchTerm("Seattle", completionHandler: { (error, practiceSpaces) -> (Void) in
+    LocationSearchService.locationsForSearchTerm(textField.text, completionHandler: { (error, practiceSpaces) -> (Void) in
+      if let practiceSpaces = practiceSpaces {
+        self.searchResults = practiceSpaces
+      }
       
+      self.performSegueWithIdentifier("showListMapVC", sender: nil)
     })
-    //trigger search query to parse, return data, segue to next vc with following method:
-    //searchForCity(cityToSearch)
+
     return true
   }
 }
