@@ -1201,7 +1201,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gov-dY-Xeu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ehz-WG-Knx">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5y7-O2-fHw">
@@ -1294,24 +1294,8 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Di7-0U-kbH">
-                                <rect key="frame" x="300" y="0.0" width="300" height="487"/>
+                                <rect key="frame" x="684" y="8" width="300" height="471"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxn-WM-y8A">
-                                        <rect key="frame" x="0.0" y="449" width="300" height="38"/>
-                                        <color key="backgroundColor" red="0.35294117650000001" green="0.67450980390000004" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="EwJ-TP-vWx"/>
-                                            <constraint firstAttribute="height" constant="38" id="Iny-mL-uzH"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Switch to host">
-                                            <color key="titleColor" red="0.15686274509803921" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="switchToHostMode:" destination="kJx-V6-UlB" eventType="touchUpInside" id="Xxy-0p-0i1"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HRc-xD-TqR">
                                         <rect key="frame" x="100" y="28" width="100" height="100"/>
                                         <constraints>
@@ -1332,6 +1316,22 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxn-WM-y8A">
+                                        <rect key="frame" x="0.0" y="433" width="300" height="38"/>
+                                        <color key="backgroundColor" red="0.35294117650000001" green="0.67450980390000004" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="EwJ-TP-vWx"/>
+                                            <constraint firstAttribute="height" constant="38" id="Iny-mL-uzH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Switch to host">
+                                            <color key="titleColor" red="0.15686274509803921" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="switchToHostMode:" destination="kJx-V6-UlB" eventType="touchUpInside" id="Xxy-0p-0i1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1340,7 +1340,7 @@
                                     <constraint firstItem="mRP-hy-0dg" firstAttribute="top" secondItem="dKn-1d-3JM" secondAttribute="bottom" constant="8" id="Cx8-Mk-s8e"/>
                                     <constraint firstAttribute="trailing" secondItem="mRP-hy-0dg" secondAttribute="trailing" id="FzE-g8-rxs"/>
                                     <constraint firstItem="HRc-xD-TqR" firstAttribute="top" secondItem="Di7-0U-kbH" secondAttribute="top" constant="28" id="GO1-xr-rJA"/>
-                                    <constraint firstAttribute="height" constant="487" id="KEk-xN-VpQ"/>
+                                    <constraint firstAttribute="height" constant="471" id="KEk-xN-VpQ"/>
                                     <constraint firstItem="Gxn-WM-y8A" firstAttribute="leading" secondItem="Di7-0U-kbH" secondAttribute="leading" id="LDp-bq-IK1"/>
                                     <constraint firstAttribute="width" constant="300" id="gU7-Gp-CcB"/>
                                     <constraint firstAttribute="trailing" secondItem="Gxn-WM-y8A" secondAttribute="trailing" id="iIe-ip-pvb"/>
@@ -1352,13 +1352,13 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.31792536709043717" green="0.31792536709043717" blue="0.31792536709043717" alpha="0.89000000000000001" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="5y7-O2-fHw" secondAttribute="centerX" id="7jI-tD-olN"/>
                             <constraint firstItem="gov-dY-Xeu" firstAttribute="top" secondItem="5y7-O2-fHw" secondAttribute="bottom" constant="-400" id="Lzc-XA-4G7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Di7-0U-kbH" secondAttribute="trailing" constant="-16" id="WYE-Pu-bZj"/>
-                            <constraint firstItem="gov-dY-Xeu" firstAttribute="top" secondItem="Di7-0U-kbH" secondAttribute="bottom" id="wq7-pp-ucP"/>
-                            <constraint firstItem="Di7-0U-kbH" firstAttribute="top" secondItem="A7u-I0-pLw" secondAttribute="bottom" id="yBA-i8-B2o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Di7-0U-kbH" secondAttribute="trailing" constant="-400" id="WYE-Pu-bZj"/>
+                            <constraint firstItem="gov-dY-Xeu" firstAttribute="top" secondItem="Di7-0U-kbH" secondAttribute="bottom" constant="8" id="wq7-pp-ucP"/>
+                            <constraint firstItem="Di7-0U-kbH" firstAttribute="top" secondItem="A7u-I0-pLw" secondAttribute="bottom" constant="8" id="yBA-i8-B2o"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="myProfile" id="Ebf-cK-2KK">
@@ -1368,6 +1368,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="constraintTrailingLoginView" destination="WYE-Pu-bZj" id="FcI-UQ-09p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubb-M3-EKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,7 @@ import UIKit
 
 class GuestAccountViewController: UIViewController {
   
+  @IBOutlet weak var constraintTrailingLoginView: NSLayoutConstraint!
   
   
   
