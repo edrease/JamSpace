@@ -942,7 +942,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JV-lq-NY8">
-                                                    <rect key="frame" x="476" y="-56" width="116" height="116"/>
+                                                    <rect key="frame" x="484" y="-56" width="116" height="116"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eastwood" translatesAutoresizingMaskIntoConstraints="NO" id="jfR-gP-vlu">
                                                             <rect key="frame" x="8" y="8" width="100" height="100"/>
@@ -995,7 +995,7 @@
                                                 <constraint firstItem="OLl-Rz-zHA" firstAttribute="leading" secondItem="cTX-6y-V29" secondAttribute="leadingMargin" constant="-8" id="MqW-bd-dvq"/>
                                                 <constraint firstItem="5JV-lq-NY8" firstAttribute="top" secondItem="cTX-6y-V29" secondAttribute="topMargin" constant="-64" id="lFx-65-UAf"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="OLl-Rz-zHA" secondAttribute="bottom" constant="-8" id="rFK-b1-mgW"/>
-                                                <constraint firstItem="5JV-lq-NY8" firstAttribute="trailing" secondItem="cTX-6y-V29" secondAttribute="trailingMargin" id="y7e-kG-Er3"/>
+                                                <constraint firstItem="5JV-lq-NY8" firstAttribute="trailing" secondItem="cTX-6y-V29" secondAttribute="trailingMargin" constant="8" id="y7e-kG-Er3"/>
                                                 <constraint firstItem="OLl-Rz-zHA" firstAttribute="top" secondItem="Irw-Yd-84Q" secondAttribute="bottom" id="zt6-XA-g4J"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1004,31 +1004,26 @@
                                             <segue destination="kMU-Ik-IOl" kind="show" identifier="ShowBookingRequestConfirmationViewController" id="7dy-Gg-050"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="391" id="aPc-xK-Gl9">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="aPc-xK-Gl9">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aPc-xK-Gl9" id="OBK-7X-F0D">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BG9-u9-GGx">
-                                                    <rect key="frame" x="8" y="44" width="584" height="176"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BG9-u9-GGx">
+                                                    <rect key="frame" x="8" y="8" width="584" height="75"/>
+                                                    <string key="text">This space comes with everything you've ever dreamed of. You want to rent this space. Just go ahead and click the button below. Do it. Come on now. You are getting sleepy. Very, very sleepy. Click the button.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listing Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFD-UG-bNx">
-                                                    <rect key="frame" x="229" y="16" width="143" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="yFD-UG-bNx" firstAttribute="top" secondItem="OBK-7X-F0D" secondAttribute="topMargin" constant="8" id="HhG-bM-PBn"/>
-                                                <constraint firstAttribute="centerX" secondItem="yFD-UG-bNx" secondAttribute="centerX" id="dQY-FL-iZe"/>
-                                                <constraint firstItem="yFD-UG-bNx" firstAttribute="top" secondItem="OBK-7X-F0D" secondAttribute="topMargin" constant="8" id="uif-qH-6zw"/>
+                                                <constraint firstItem="BG9-u9-GGx" firstAttribute="bottom" secondItem="OBK-7X-F0D" secondAttribute="bottomMargin" id="a5W-vo-zxW"/>
+                                                <constraint firstItem="BG9-u9-GGx" firstAttribute="trailing" secondItem="OBK-7X-F0D" secondAttribute="trailingMargin" id="ekt-AU-Qzf"/>
+                                                <constraint firstItem="BG9-u9-GGx" firstAttribute="top" secondItem="OBK-7X-F0D" secondAttribute="topMargin" id="pax-Bs-hm8"/>
+                                                <constraint firstItem="BG9-u9-GGx" firstAttribute="leading" secondItem="OBK-7X-F0D" secondAttribute="leadingMargin" id="zYb-BQ-IRb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="hR5-oa-4um">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1037,13 +1032,14 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aec-gT-sHJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                     <state key="normal" title="Book This Space">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.90980398650000005" green="0.64313727620000005" blue="0.94901967050000002" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="backgroundColor" red="1" green="0.5" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="aec-gT-sHJ" secondAttribute="bottom" constant="-8" id="I6N-tu-oG8"/>
                                                 <constraint firstItem="aec-gT-sHJ" firstAttribute="leading" secondItem="pTy-wq-Bhb" secondAttribute="leadingMargin" constant="-8" id="Oaz-G9-EYB"/>
