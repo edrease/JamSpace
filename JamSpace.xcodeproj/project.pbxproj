@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0066CC071B8F8B3900612475 /* SpaceAvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0066CC061B8F8B3900612475 /* SpaceAvailabilityViewController.swift */; };
 		007C5CFA1B8D057000018E2D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C5CF91B8D057000018E2D /* Keys.swift */; };
-		00D072371B8FF1AD00FBBA40 /* SpaceListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D072361B8FF1AD00FBBA40 /* SpaceListingTableViewController.swift */; };
+		007C5CFC1B8D3E0C00018E2D /* SpacePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */; };
 		344BF32B1B8EA594000BC29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344BF32A1B8EA594000BC29A /* Main.storyboard */; };
 		346FBC781B8BB5B700B960E5 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC771B8BB5B700B960E5 /* Users.swift */; };
 		346FBC7A1B8BB5E600B960E5 /* PracticeSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */; };
@@ -66,9 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0066CC061B8F8B3900612475 /* SpaceAvailabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceAvailabilityViewController.swift; sourceTree = "<group>"; };
 		007C5CF91B8D057000018E2D /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		00D072361B8FF1AD00FBBA40 /* SpaceListingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceListingTableViewController.swift; sourceTree = "<group>"; };
+		007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpacePostViewController.swift; path = ../SpacePostViewController.swift; sourceTree = "<group>"; };
 		344BF32A1B8EA594000BC29A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		346FBC771B8BB5B700B960E5 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeSpaces.swift; sourceTree = "<group>"; };
@@ -181,6 +179,8 @@
 				00D072361B8FF1AD00FBBA40 /* SpaceListingTableViewController.swift */,
 				0066CC061B8F8B3900612475 /* SpaceAvailabilityViewController.swift */,
 				9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */,
+				9E56A91B1B8EE1A200C2EA78 /* BookingRequestConfirmationViewController.swift */,
+				6CD929EA1B8FA3150092A777 /* MyAccountViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -424,13 +424,12 @@
 				34DC5EC51B8CFEF700EDC7C2 /* PracticeSpaceCell.swift in Sources */,
 				346FBC821B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift in Sources */,
 				34DC5EC11B8CFEC000EDC7C2 /* Message.swift in Sources */,
+				007C5CFC1B8D3E0C00018E2D /* SpacePostViewController.swift in Sources */,
 				346FBC7A1B8BB5E600B960E5 /* PracticeSpaces.swift in Sources */,
 				9E56A91A1B8E74B500C2EA78 /* FirstSearchViewController.swift in Sources */,
 				346FBC801B8BC12900B960E5 /* ListMapSearchViewController.swift in Sources */,
 				9E0AA1A61B8B90DB00DC0319 /* AppDelegate.swift in Sources */,
-				0066CC071B8F8B3900612475 /* SpaceAvailabilityViewController.swift in Sources */,
 				34DC5EC71B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift in Sources */,
-				00D072371B8FF1AD00FBBA40 /* SpaceListingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
