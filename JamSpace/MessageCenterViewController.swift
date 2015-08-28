@@ -71,8 +71,15 @@ class MessageCenterViewController: UIViewController, PFLogInViewControllerDelega
       println("user exists")
       
       MessageService.messagesService { (errorDescription, messages) -> (Void) in
-        println("messageService called")
-        self.tableView.reloadData()
+        
+        if let messages = messages {
+          NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+            println(messages)
+            println("messageService called")
+            self.messages = messages
+            self.tableView.reloadData()
+          })
+        }
       }
       
     } else  if presentedSignup == false{
@@ -285,7 +292,7 @@ extension MessageCenterViewController: UITableViewDataSource {
     
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MessageCenterCell
     let message = messages[indexPath.row]
-    cell.userProfileImage.image = message.profileImage
+    //cell.userProfileImage.image = message.profileImage
     cell.messageText.text = message.messageText
     let datePosted = DateToStringFormatter.stringFromDate(message.dateSent)
     cell.datePosted.text = datePosted
