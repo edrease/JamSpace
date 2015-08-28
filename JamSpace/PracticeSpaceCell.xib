@@ -14,7 +14,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Z8-ze-CYJ" id="2hx-5V-ode">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="garage" translatesAutoresizingMaskIntoConstraints="NO" id="0rx-4U-3AW">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="0rx-4U-3AW">
                         <rect key="frame" x="-8" y="0.0" width="320" height="240"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="0rx-4U-3AW" secondAttribute="height" multiplier="4:3" id="0Kv-sC-ieb"/>
@@ -180,7 +180,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="garage" width="320" height="240"/>
         <image name="greyheartwhiteoutline" width="250" height="250"/>
     </resources>
 </document>
