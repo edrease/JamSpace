@@ -1205,7 +1205,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5y7-O2-fHw">
-                                <rect key="frame" x="147" y="132" width="306" height="336"/>
+                                <rect key="frame" x="147" y="551" width="306" height="336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Additional Information required" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5D-nO-Uyi">
                                         <rect key="frame" x="35" y="8" width="237" height="21"/>
@@ -1291,11 +1291,22 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf3-hf-w7o">
+                                <rect key="frame" x="228" y="229" width="145" height="30"/>
+                                <state key="normal" title="Switch to Host Mode">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchToHostMode:" destination="kJx-V6-UlB" eventType="touchUpInside" id="VBm-45-Ve1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="5y7-O2-fHw" secondAttribute="centerX" id="7jI-tD-olN"/>
-                            <constraint firstItem="gov-dY-Xeu" firstAttribute="top" secondItem="5y7-O2-fHw" secondAttribute="bottom" constant="19" id="Lzc-XA-4G7"/>
+                            <constraint firstAttribute="centerX" secondItem="Sf3-hf-w7o" secondAttribute="centerX" id="9d3-pn-UH2"/>
+                            <constraint firstItem="gov-dY-Xeu" firstAttribute="top" secondItem="5y7-O2-fHw" secondAttribute="bottom" constant="-400" id="Lzc-XA-4G7"/>
+                            <constraint firstAttribute="centerY" secondItem="Sf3-hf-w7o" secondAttribute="centerY" id="R4o-nA-Ceq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="myProfile" id="Ebf-cK-2KK">
