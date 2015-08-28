@@ -23,12 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
   var dummyUsersArray = [User]()
   var dummySpacesArray = [PracticeSpace]()
   
-  func loadDummyUsersArray(){
-    let user1 = User(firstName: "Tom", lastName: "Callahan", favorites: nil)
-    dummyUsersArray.append(user1)
-    let user2 = User(firstName: "Julie", lastName: "Black", favorites: nil)
-    dummyUsersArray.append(user2)
-  }
+//  func loadDummyUsersArray(){
+//    let user1 = User(firstName: "Tom", lastName: "Callahan", favorites: nil)
+//    dummyUsersArray.append(user1)
+//    let user2 = User(firstName: "Julie", lastName: "Black", favorites: nil)
+//    dummyUsersArray.append(user2)
+//  }
   
   func loadDummySpacesArray(){
     let tomsBasement = UIImage(named: "basement")
@@ -73,22 +73,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     Parse.setApplicationId(kApplicationID,
       clientKey: kClientKey)
     
-        let jamUser = PFUser.currentUser()?.username
-      PracticeSpace.registerSubclass()
+    let jamUser = PFUser.currentUser()?.username
+    PracticeSpace.registerSubclass()
     
-        if (jamUser != nil) {
-          let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    
-//          let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
-					
-					 let initialView = storyboard.instantiateViewControllerWithIdentifier("spacePostView") as! SpacePostViewController
-    
-          self.window?.rootViewController = initialView
-    
-        } else {
-    
-    
-    }
+//    if (jamUser != nil) {
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      
+      //          let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
+      
+					 let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
+      
+      self.window?.rootViewController = initialView
+      
+//    } else {
+//      
+//      
+//    }
     
 //    locationManager.delegate = self                
 //    locationManager.requestAlwaysAuthorization()
