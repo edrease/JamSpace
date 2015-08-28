@@ -53,8 +53,8 @@ class MessageCenterViewController: UIViewController, PFLogInViewControllerDelega
     signUpItems.delegate = self
     loginItems.signUpController?.delegate = self
     
-    var users = PFUser()
-    users["name"] = txtFieldFirstName.text
+//    var users = PFUser()
+//    users["name"] = txtFieldFirstName.text
     
     
     
