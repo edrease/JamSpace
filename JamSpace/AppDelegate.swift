@@ -19,16 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
   let locationManager = CLLocationManager()
   var currentSpacesArray = [PracticeSpace]()
 
-
-  var dummyUsersArray = [User]()
-  var dummySpacesArray = [PracticeSpace]()
-  
-//  func loadDummyUsersArray(){
-//    let user1 = User(firstName: "Tom", lastName: "Callahan", favorites: nil)
-//    dummyUsersArray.append(user1)
-//    let user2 = User(firstName: "Julie", lastName: "Black", favorites: nil)
-//    dummyUsersArray.append(user2)
-//  }
   
   func loadDummySpacesArray(){
     let tomsBasement = UIImage(named: "basement")
