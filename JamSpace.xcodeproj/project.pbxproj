@@ -178,6 +178,7 @@
 				9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */,
 				00D072361B8FF1AD00FBBA40 /* SpaceListingTableViewController.swift */,
 				0066CC061B8F8B3900612475 /* SpaceAvailabilityViewController.swift */,
+				007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */,
 				9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */,
 				9E56A91B1B8EE1A200C2EA78 /* BookingRequestConfirmationViewController.swift */,
 				6CD929EA1B8FA3150092A777 /* MyAccountViewController.swift */,
