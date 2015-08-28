@@ -17,6 +17,7 @@ class ListMapSearchViewController: UIViewController {
   var listViewController: ListViewController!
   var currentViewController : UIViewController?
   
+  //toggles between list child vc and map child vc
   @IBAction func toggleSegment(sender: UISegmentedControl) {
     switchToViewController()
   }
@@ -27,8 +28,7 @@ class ListMapSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
-      
+      println("This is a description of the first image of first ITEM IN FIRST ARRAY::::::::::: \(arrayOfPracticeSpaces[0].tempImage.description)")
       mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapViewController") as! MapViewController
       listViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ListViewController") as! ListViewController
       listViewController.passedArrayOfPracticeSpaces = arrayOfPracticeSpaces
@@ -42,16 +42,14 @@ class ListMapSearchViewController: UIViewController {
       self.navigationItem.rightBarButtonItem = filterButton
       
 
-      
-//      let cellWidth = tableView.frame.size.width
-//      tableView.rowHeight = (0.75) * cellWidth
-//      //tableView.rowHeight = UITableViewAutomaticDimension
-//      tableView.registerNib(UINib(nibName: "PracticeSpaceCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "PracticeSpaceCell")
-//      
-//      tableView.dataSource = self
-//      tableView.delegate = self
-      
     }
+  
+  override func viewWillAppear(animated: Bool) {
+    
+    println(arrayOfPracticeSpaces.count)
+    listViewController.passedArrayOfPracticeSpaces = arrayOfPracticeSpaces
+    
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -81,41 +79,32 @@ class ListMapSearchViewController: UIViewController {
 
   
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
       if segue.identifier == "showFilterView" {
-        let filterSearchTableViewController = segue.destinationViewController as! FilterSearchTableViewController
+        if let filterSearchTableViewController = segue.destinationViewController as? FilterSearchTableViewController {
+        filterSearchTableViewController.delegate = self
         filterSearchTableViewController.passedSpacesArray = arrayOfPracticeSpaces
+        }
       }
     }
 }
 
-////MARK: -
-//extension ListMapSearchViewController: UITableViewDataSource {
-////  
-////  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-////    
-////    return arrayOfPracticeSpaces.count
-////  }
-////  
-////  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-////    let cell = tableView.dequeueReusableCellWithIdentifier("PracticeSpaceCell", forIndexPath: indexPath) as! PracticeSpaceCell
-////    cell.cellImageView.image = arrayOfPracticeSpaces[indexPath.row].imageFolder[0]
-////    //cell.cellImageView.image =
-////    cell.cellPrice.text = "$\(arrayOfPracticeSpaces[indexPath.row].pricePerDay.description)"
-////    
-////    
-////    return cell
-////  }
-//  
-//}
 
 //MARK: UITableViewDelegate
 extension ListMapSearchViewController: UITableViewDelegate {
   func sendToFilter(){
     self.performSegueWithIdentifier("showFilterView", sender: nil)
+  }
+}
+
+//MARK: -
+extension ListMapSearchViewController: FilteredArrayDelegate {
+  func arrayWasFiltered(filteredArray: [PracticeSpace]){
+    arrayOfPracticeSpaces = filteredArray
+    for space in arrayOfPracticeSpaces {
+      println("Filtered array passed: \(space.nameOfSpace)")
+    }
   }
 }

@@ -8,10 +8,13 @@
 
 import UIKit
 import Parse
+import ParseUI
 
-class MessageCenterViewController: UIViewController {
+class MessageCenterViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
   
   var messages = [Message]()
+  var loginItems = PFLogInViewController()
+  var signUpItems = PFSignUpViewController()
   
   //MARK: - Outlets
   @IBOutlet weak var tableView: UITableView!
@@ -30,9 +33,11 @@ class MessageCenterViewController: UIViewController {
   //MARK: - Constants
   let kBottomViewConstraint : CGFloat = 100
   let kBottomViewConstraintRemoved : CGFloat = -400
-  let kBottomViewConstraintPhoto : CGFloat = 108
+  let kBottomViewConstraintPhoto : CGFloat = 50
   let kBottomViewConstraintPhotoRemoved : CGFloat = -108
-  
+  let kBottomViewConstraintCameraButtonRemoved: CGFloat = -50
+  let kBottomViewConstraintCameraButton : CGFloat = 43
+  var presentedSignup = false
   
   //MARK: - Lifecycle methods
   
@@ -44,27 +49,89 @@ class MessageCenterViewController: UIViewController {
     self.tabBarController?.delegate = self
     txtFieldFirstName.delegate = self
     txtFieldLastName.delegate = self
+    loginItems.delegate = self
+    signUpItems.delegate = self
+    loginItems.signUpController?.delegate = self
     
-    let userOne = User(firstName: "Ed", lastName: "Peshtaz", favorites: nil)
-    let messageOne = Message(user: userOne, messageText: "Hullo", profileImage: nil, dateSent: NSDate())
-    messages.append(messageOne)
+//    var users = PFUser()
+//    users["name"] = txtFieldFirstName.text
     
+    
+    
+//    presentedSignup = true
+    
+    
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    let jamUser = PFUser.currentUser()?.username
+    
+    if (jamUser != nil) {
+      
+      println("user exists")
+      
+      MessageService.messagesService { (errorDescription, messages) -> (Void) in
+        
+        if let messages = messages {
+          NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+            println(messages)
+            println("messageService called")
+            self.messages = messages
+            self.tableView.reloadData()
+          })
+        }
+      }
+      
+    } else  if presentedSignup == false{
+      presentedSignup = true
+      
+      let jamUser = PFUser.currentUser()?.username
+      
+      loginItems.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.PasswordForgotten | PFLogInFields.SignUpButton
+      
+      signUpItems.fields = PFSignUpFields.UsernameAndPassword | PFSignUpFields.Email | PFSignUpFields.SignUpButton | PFSignUpFields.DismissButton
+      
+      self.presentViewController(loginItems, animated: true, completion: nil)
+      //self.presentViewController(signUpItems, animated: true, completion: nil)
+      
+      //      constraintBottomView.constant = kBottomViewConstraint
+      //      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
+      //      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
+      //
+      //      UIView.animateWithDuration(0.3, animations: { () -> Void in
+      //        self.view.layoutIfNeeded()
+      //      })
+      
+    }
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
     
     let jamUser = PFUser.currentUser()?.username
     
     if (jamUser != nil) {
       println("user exists")
       
-    } else {
+    } else  if presentedSignup == false{
+      presentedSignup = true
       
-      constraintBottomView.constant = kBottomViewConstraint
+      let jamUser = PFUser.currentUser()?.username
       
-      UIView.animateWithDuration(0.3, animations: { () -> Void in
-        self.view.layoutIfNeeded()
-      })
+      signUpItems.fields = PFSignUpFields.UsernameAndPassword | PFSignUpFields.Email | PFSignUpFields.SignUpButton | PFSignUpFields.DismissButton
+      
+      
+      self.presentViewController(signUpItems, animated: true, completion: nil)
+      
+//      constraintBottomView.constant = kBottomViewConstraint
+//      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
+//      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
+//      
+//      UIView.animateWithDuration(0.3, animations: { () -> Void in
+//        self.view.layoutIfNeeded()
+//      })
       
     }
-    
   }
   
   override func viewDidDisappear(animated: Bool) {
@@ -88,24 +155,69 @@ class MessageCenterViewController: UIViewController {
   
   @IBAction func uploadAdditionalData(sender: AnyObject) {
     
+    
+    
   }
   
   @IBAction func toggleToHostUser(sender: AnyObject) {
     
-    if switchHost.on == false {
-      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
-    } else {
+    if switchHost.on == true {
+      
       
       constraintPhotoBottomView.constant = kBottomViewConstraintPhoto
+      contraintCameraBottomView.constant = kBottomViewConstraintCameraButton
+      
       
       UIImageView.animateWithDuration(0.3, animations: { () -> Void in
         self.view.layoutIfNeeded()
       })
-      
+
+    } else {
+      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
+      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
     }
 
   }
 }
+
+
+//MARK: - Parse's PFLoginViewControllerDelegate
+
+extension MessageCenterViewController : PFLogInViewControllerDelegate {
+  
+  
+  func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+    
+    self.dismissViewControllerAnimated(true, completion: nil)
+    
+  }
+  
+  func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
+    
+    self.dismissViewControllerAnimated(true, completion: nil)
+    
+  }
+  
+}
+
+//MARK: - Parse's PFSignupViewControllerDelegate
+
+extension MessageCenterViewController : PFSignUpViewControllerDelegate {
+  func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+    
+    signUpItems.dismissViewControllerAnimated(true, completion: nil)
+    
+  }
+  
+  func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
+
+    signUpItems.dismissViewControllerAnimated(true, completion: { () -> Void in
+      self.presentedSignup = true
+    })
+  }
+  
+}
+
 
 //MARK: - UITextFieldDelegate
 
@@ -130,11 +242,41 @@ extension MessageCenterViewController: UITextFieldDelegate {
 extension MessageCenterViewController: UITabBarControllerDelegate{
   func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
     
-    constraintBottomView.constant = kBottomViewConstraint
+    if tabBarController.selectedIndex == 1{
+      presentedSignup = false
+    }
     
-    UIView.animateWithDuration(0.3, animations: { () -> Void in
-      self.view.layoutIfNeeded()
-    })
+    let jamUser = PFUser.currentUser()?.username
+    
+    if (jamUser != nil) {
+      println("user exists")
+      
+    } else  if presentedSignup == false{
+      presentedSignup = true
+      
+      let jamUser = PFUser.currentUser()?.username
+      
+      signUpItems.fields = PFSignUpFields.UsernameAndPassword | PFSignUpFields.Email | PFSignUpFields.SignUpButton | PFSignUpFields.DismissButton
+      
+      
+      self.presentViewController(signUpItems, animated: true, completion: nil)
+      
+      //      constraintBottomView.constant = kBottomViewConstraint
+      //      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
+      //      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
+      //
+      //      UIView.animateWithDuration(0.3, animations: { () -> Void in
+      //        self.view.layoutIfNeeded()
+      //      })
+      
+    }
+    
+//    constraintBottomView.constant = kBottomViewConstraint
+//    switchHost.on = false
+//    
+//    UIView.animateWithDuration(0.3, animations: { () -> Void in
+//      self.view.layoutIfNeeded()
+//    })
   }
 }
 
@@ -150,8 +292,7 @@ extension MessageCenterViewController: UITableViewDataSource {
     
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MessageCenterCell
     let message = messages[indexPath.row]
-    cell.userName.text = message.user.firstName + " " + message.user.lastName
-    cell.userProfileImage.image = message.profileImage
+    //cell.userProfileImage.image = message.profileImage
     cell.messageText.text = message.messageText
     let datePosted = DateToStringFormatter.stringFromDate(message.dateSent)
     cell.datePosted.text = datePosted

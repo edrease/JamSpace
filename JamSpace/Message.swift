@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
-struct Message {
+class Message : PFObject, PFSubclassing {
   
-  let user: User
-  var messageText: String
-  var profileImage: UIImage?
-  var dateSent: NSDate
+  override class func initialize() {
+    struct Static {
+      static var onceToken : dispatch_once_t = 0;
+    }
+    dispatch_once(&Static.onceToken) {
+      self.registerSubclass()
+    }
+  }
+  
+  static func parseClassName() -> String {
+    return "Messages"
+  }
+  
+  @NSManaged var user: PFRelation
+  @NSManaged var messageText: String
+  @NSManaged var profileImage: UIImage?
+  @NSManaged var dateSent: NSDate
   
 }
 

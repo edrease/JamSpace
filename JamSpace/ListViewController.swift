@@ -13,6 +13,7 @@ class ListViewController: UIViewController {
   var passedArrayOfPracticeSpaces = [PracticeSpace]()
 
   @IBOutlet weak var tableView: UITableView!
+  //weak var delegate: FilteredArrayDelegate?
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     performSegueWithIdentifier("showSpaceDetailVC", sender: nil)
@@ -33,6 +34,12 @@ class ListViewController: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
     }
+  
+  override func viewWillAppear(animated: Bool) {
+    println(passedArrayOfPracticeSpaces.count)
+    tableView.reloadData()
+  }
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,7 +70,31 @@ extension ListViewController: UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("PracticeSpaceCell", forIndexPath: indexPath) as! PracticeSpaceCell
-//    cell.cellImageView.image = arrayOfPracticeSpaces[indexPath.row].imageFolder[0]
+    
+    cell.tag++
+    let tag = cell.tag
+    
+    let imageFile = passedArrayOfPracticeSpaces[indexPath.row].tempImage
+      imageFile.getDataInBackgroundWithBlock({ (data, error) -> Void in
+        if let error = error {
+          println(error.localizedDescription)
+        } else if let data = data,
+          image = UIImage(data: data){
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+              //let post = Post(image: image)
+              //                      posts.append(post)
+              if cell.tag == tag {
+                cell.cellImageView.image = image
+              }
+              //self.tableView.reloadData()
+            })
+        }
+      })
+    
+
+    //let image = U
+    //let mainImage = passedArrayOfPracticeSpaces[indexPath.row].
+    //cell.cellImageView.image = passedArrayOfPracticeSpaces[indexPath.row].tempImage
     cell.cellPrice.text = "$\(passedArrayOfPracticeSpaces[indexPath.row].pricePerDay.description)"
     cell.headlineLabel.text = passedArrayOfPracticeSpaces[indexPath.row].nameOfSpace
     let city = passedArrayOfPracticeSpaces[indexPath.row].city
@@ -90,4 +121,6 @@ extension ListViewController: UITableViewDelegate {
 //    return (0.75) * view.frame.width
 //  }
 }
+
+
 

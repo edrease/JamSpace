@@ -1,36 +1,30 @@
 //
-//  SpaceDetailViewController.swift
+//  BookingRequestConfirmationViewController.swift
 //  JamSpace
 //
-//  Created by Edrease Peshtaz on 8/25/15.
+//  Created by Edrease Peshtaz on 8/26/15.
 //  Copyright (c) 2015 cf. All rights reserved.
 //
 
 import UIKit
 
-class SpaceDetailViewController: UITableViewController {
+class BookingRequestConfirmationViewController: UITableViewController {
 
-  @IBOutlet weak var spaceListingImageView: UIImageView!
+  @IBOutlet weak var nameOfSpace: UILabel!
   
-  @IBOutlet weak var nameOfSpaceLabel: UILabel!
+  @IBOutlet weak var requestedDatesLabel: UILabel!
+
+  @IBOutlet weak var totalPriceForBookingLabel: UILabel!
   
-  @IBOutlet weak var hostProfileImage: UIImageView!
-  
-  @IBOutlet weak var spaceHostNameLabel: UILabel!
-  
-  @IBOutlet weak var spaceDescriptionText: UITextView!
+  @IBOutlet weak var cityAndStateLabel: UILabel!
   
   
-  @IBOutlet weak var bookThisSpaceButtonPressed: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+ 
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,17 +33,6 @@ class SpaceDetailViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Potentially incomplete method implementation.
-//        // Return the number of sections.
-//        return 0
-//    }
-//
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete method implementation.
-//        // Return the number of rows in the section.
-//        return 0
-//    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -103,9 +86,7 @@ class SpaceDetailViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-    } 
+    }
     */
-  
-  
 
 }
