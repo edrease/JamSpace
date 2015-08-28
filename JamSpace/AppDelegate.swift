@@ -73,25 +73,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     Parse.setApplicationId(kApplicationID,
       clientKey: kClientKey)
     
-        let jamUser = PFUser.currentUser()?.username
-      PracticeSpace.registerSubclass()
+    let jamUser = PFUser.currentUser()?.username
+    PracticeSpace.registerSubclass()
     
-//        if (jamUser != nil) {
-//          let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//    
-////          let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
-//					
-////					 let initialView = storyboard.instantiateViewControllerWithIdentifier("SpaceAvailabilityView") as! SpaceAvailabilityViewController
-//					
-//			let initialView = storyboard.instantiateViewControllerWithIdentifier("spacePostNavController") as! UINavigationController
-//    
-//          self.window?.rootViewController = initialView
-//    
-//        } else {
-//    
-//    
+//    if (jamUser != nil) {
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      
+      //          let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
+      
+					 let initialView = storyboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
+      
+      self.window?.rootViewController = initialView
+      
+//    } else {
+//      
+//      
 //    }
-		
+    
 //    locationManager.delegate = self                
 //    locationManager.requestAlwaysAuthorization()
 
