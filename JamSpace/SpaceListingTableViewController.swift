@@ -1,16 +1,14 @@
 //
-//  SpacePostViewController.swift
+//  SpaceListingTableViewController.swift
 //  JamSpace
 //
-//  Created by Mick Soumphonphakdy on 8/25/15.
+//  Created by Mick Soumphonphakdy on 8/27/15.
 //  Copyright (c) 2015 cf. All rights reserved.
 //
 
 import UIKit
-import Parse
 
-
-class SpacePostViewController: UIViewController {
+class SpaceListingTableViewController: UITableViewController {
 	
 	// MARK: IBOutlets
 	
@@ -28,7 +26,7 @@ class SpacePostViewController: UIViewController {
 	@IBOutlet weak var endDateLabelText: UILabel!
 	
 	// MARK: IBActions
-
+	
 	@IBAction func postImageButton(sender: AnyObject) {
 		//kick off UIImageController and Alert View controller
 	}
@@ -46,16 +44,14 @@ class SpacePostViewController: UIViewController {
 		var practiceSpaces = PracticeSpace()
 		practiceSpaces["nameOfSpace"] = postTitle.text
 		practiceSpaces["description"] = postSummary.text
-//		practiceSpaces["openingHour"] = nil
-//		practiceSpaces["closingHour"] = nil
-//		practiceSpaces["startDate"] = nil
-//		practiceSpaces["endDate"] = nil
+		//		practiceSpaces["startDate"] = nil
+		//		practiceSpaces["endDate"] = nil
 		practiceSpaces["pricePerDay"] = postPrice.text.toInt()
 		practiceSpaces["sizeInFeet"] = spaceSize.text.toInt()
 		practiceSpaces["streetAddress"] = postStreetAddress.text
 		practiceSpaces["state"] = postState.text
 		practiceSpaces["zipCode"] = postZipCode.text.toInt()
-//		practiceSpaces.imageFolder = nil
+		//		practiceSpaces.imageFolder = nil
 		//practiceSpaces.owner = PFUser.currentUser()!
 		practiceSpaces.save()
 	}
@@ -64,31 +60,25 @@ class SpacePostViewController: UIViewController {
 		// Set all IBOutlets to nill
 	}
 	
-	
-	override func viewDidLoad() {
-			super.viewDidLoad()
-		
-	}
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+
+    }
+	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "setAvailability"{
 			var destinationVC = segue.destinationViewController as? SpaceAvailabilityViewController
 			destinationVC?.dateDelegate = self
 		}
 	}
+
 }
 
 // MARK : SpaceAvailibityViewController Delegate Set Up
-extension SpacePostViewController : availableDatesSelectedDelegate{
+extension SpaceListingTableViewController : availableDatesSelectedDelegate{
 	func uiPickerAvailableDatesSelected(startDate: NSDate, endDate: NSDate) {
-//		<#code#>
+		//		<#code#>
 	}
 }
-
-////MARK: GalleryView Controller Delegate Set Up
-//extension ViewController : ImageSelectedDelegate {
-//	func controllerDidSelectImage(newImage: UIImage) {
-//		displayImage = newImage
-//	}
-//}
-
