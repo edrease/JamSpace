@@ -17,6 +17,9 @@ class GuestAccountViewController: UIViewController {
   let kTrailingViewConstraintRemove : CGFloat = 400
   
   //MARK: - Outlets
+  
+  @IBOutlet weak var imageViewMyProfile: UIImageView!
+  @IBOutlet weak var lableMyprofileName: UILabel!
   @IBOutlet weak var constraintTrailingLoginView: NSLayoutConstraint!
   @IBOutlet weak var toggleToHostMode: UIButton!
   @IBAction func switchToHostMode(sender: AnyObject) {
@@ -38,6 +41,16 @@ class GuestAccountViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      let currentUser = PFUser.currentUser()
+      
+      var user = PFObject(className:"_User")
+      
+      var query : PFQuery = PFQuery(className: "_User")
+      
+      query.whereKey("username", equalTo: PFUser.currentUser()!)
+      
+      
+      
     }
 
     override func didReceiveMemoryWarning() {
