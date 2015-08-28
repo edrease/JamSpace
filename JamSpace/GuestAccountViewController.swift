@@ -7,33 +7,32 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class GuestAccountViewController: UIViewController {
   
+  //MARK: - Constants
+  let kTrailingViewConstraint : CGFloat = -60
+  
+  //MARK: - Outlets
   @IBOutlet weak var constraintTrailingLoginView: NSLayoutConstraint!
-  
-  
-  
-  
   @IBOutlet weak var toggleToHostMode: UIButton!
-  
   @IBAction func switchToHostMode(sender: AnyObject) {
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let window = appDelegate.window
-
+    
     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     var hostModeViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HostModeTabBarController") as! UITabBarController
     
-   window?.rootViewController = hostModeViewController
+    window?.rootViewController = hostModeViewController
     
-   window?.makeKeyAndVisible()
+    window?.makeKeyAndVisible()
     
-    
-
   }
   
-
+  //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +43,26 @@ class GuestAccountViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+  override func viewWillAppear(animated: Bool) {
+    let jamUser = PFUser.currentUser()?.username
+    
+    if (jamUser != nil) {
+      println("user exists")
+      let jamUser = PFUser.currentUser()?.username
+      
+      constraintTrailingLoginView.constant = kTrailingViewConstraint
+      
+      UIView.animateWithDuration(0.3, animations: { () -> Void in
+        self.view.layoutIfNeeded()
+      })
+      
+    } else {
+//      presentedSignup = true
+      println("user does not exist!")
+    
+    }
+  }
     
 
     /*
@@ -57,3 +76,20 @@ class GuestAccountViewController: UIViewController {
     */
 
 }
+
+
+extension GuestAccountViewController : UITabBarControllerDelegate {
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
