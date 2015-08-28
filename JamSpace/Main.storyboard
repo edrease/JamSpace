@@ -1111,7 +1111,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="initialView" title="Guest Mode Tab Bar Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ILU-Ct-JwM" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="9WS-m9-N9A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
