@@ -963,6 +963,12 @@
                                                         <constraint firstItem="jfR-gP-vlu" firstAttribute="top" secondItem="5JV-lq-NY8" secondAttribute="top" constant="8" id="eYk-IV-nOh"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Response Rate: 100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLl-Rz-zHA">
+                                                    <rect key="frame" x="8" y="56" width="173" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <view alpha="0.80000001192092896" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Irw-Yd-84Q">
                                                     <rect key="frame" x="8" y="8" width="110" height="40"/>
                                                     <subviews>
@@ -982,12 +988,6 @@
                                                         <constraint firstItem="75E-I2-GJ8" firstAttribute="top" secondItem="Irw-Yd-84Q" secondAttribute="top" constant="8" id="vPw-Sv-TVl"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Response Rate: 100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLl-Rz-zHA">
-                                                    <rect key="frame" x="8" y="56" width="173" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Irw-Yd-84Q" firstAttribute="leading" secondItem="cTX-6y-V29" secondAttribute="leadingMargin" constant="-8" id="1yB-oH-d56"/>
@@ -1285,6 +1285,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="exploreMoreSpaces:" destination="9Zy-7U-lfR" eventType="touchUpInside" id="zr2-Ue-vFM"/>
                                     <segue destination="ILU-Ct-JwM" kind="show" id="BLL-r5-P2H"/>
                                 </connections>
                             </button>
@@ -1317,7 +1318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZkQ-Me-qMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-691" y="387"/>
+            <point key="canvasLocation" x="-315" y="3647"/>
         </scene>
         <!--Guest Mode Tab Bar Controller-->
         <scene sceneID="bWP-yP-sq4">

@@ -88,13 +88,12 @@ extension ListViewController: UITableViewDataSource {
         } else if let data = data,
           image = UIImage(data: data){
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-              //let post = Post(image: image)
-              //                      posts.append(post)
+
               if cell.tag == tag {
                 cell.cellImageView.image = image
                 self.tempArrayOfImages.append(image)
               }
-              //self.tableView.reloadData()
+
             })
         }
       })

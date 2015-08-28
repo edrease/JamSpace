@@ -9,6 +9,11 @@
 import UIKit
 
 class RequestSentViewController: UIViewController {
+  
+
+  @IBAction func exploreMoreSpaces(sender: UIButton) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
 
     override func viewDidLoad() {
         super.viewDidLoad()
