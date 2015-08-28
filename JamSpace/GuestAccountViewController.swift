@@ -14,6 +14,7 @@ class GuestAccountViewController: UIViewController {
   
   //MARK: - Constants
   let kTrailingViewConstraint : CGFloat = -60
+  let kTrailingViewConstraintRemove : CGFloat = 400
   
   //MARK: - Outlets
   @IBOutlet weak var constraintTrailingLoginView: NSLayoutConstraint!
@@ -80,7 +81,26 @@ class GuestAccountViewController: UIViewController {
 
 extension GuestAccountViewController : UITabBarControllerDelegate {
   
-  
+  func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+    let jamUser = PFUser.currentUser()?.username
+    
+    if (jamUser != nil) {
+      println("user exists")
+      let jamUser = PFUser.currentUser()?.username
+      
+      constraintTrailingLoginView.constant = kTrailingViewConstraintRemove
+      
+      UIView.animateWithDuration(0.3, animations: { () -> Void in
+        self.view.layoutIfNeeded()
+      })
+      
+    } else {
+      //      presentedSignup = true
+      println("user does not exist!")
+      
+    }
+
+  }
   
 }
 
