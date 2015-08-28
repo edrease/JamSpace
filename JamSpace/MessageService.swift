@@ -14,7 +14,7 @@ class MessageService {
   class func messagesService(completionHandler: (String?, [Message]?) -> (Void)) {
     
     let queryForMessages = PFQuery(className: "Messages")
-    queryForMessages.whereKey("sender", equalTo: "\(PFUser.currentUser()!.objectId)")
+    queryForMessages.whereKey("sender", equalTo: PFUser.currentUser()!)
     queryForMessages.findObjectsInBackgroundWithBlock { (messages, error) -> Void in
       
       if let error = error {

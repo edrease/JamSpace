@@ -1258,7 +1258,7 @@
                             <constraint firstItem="gov-dY-Xeu" firstAttribute="top" secondItem="5y7-O2-fHw" secondAttribute="bottom" constant="83" id="Lzc-XA-4G7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="Ebf-cK-2KK">
+                    <tabBarItem key="tabBarItem" title="Account" image="myProfile" id="Ebf-cK-2KK">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1570,6 +1570,7 @@
     <resources>
         <image name="boomboxAvenir" width="6044" height="1736"/>
         <image name="boomboxTabImage" width="750" height="1201"/>
+        <image name="myProfile" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="t5d-BP-WaQ"/>

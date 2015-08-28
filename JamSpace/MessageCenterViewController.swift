@@ -56,13 +56,46 @@ class MessageCenterViewController: UIViewController, PFLogInViewControllerDelega
     var users = PFUser()
     users["name"] = txtFieldFirstName.text
     
-    MessageService.messagesService { (errorDescription, messages) -> (Void) in
-      println("messageService called")
-    }
+    
     
 //    presentedSignup = true
     
     
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    let jamUser = PFUser.currentUser()?.username
+    
+    if (jamUser != nil) {
+      
+      println("user exists")
+      
+      MessageService.messagesService { (errorDescription, messages) -> (Void) in
+        println("messageService called")
+        self.tableView.reloadData()
+      }
+      
+    } else  if presentedSignup == false{
+      presentedSignup = true
+      
+      let jamUser = PFUser.currentUser()?.username
+      
+      loginItems.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.PasswordForgotten | PFLogInFields.SignUpButton
+      
+      signUpItems.fields = PFSignUpFields.UsernameAndPassword | PFSignUpFields.Email | PFSignUpFields.SignUpButton | PFSignUpFields.DismissButton
+      
+      self.presentViewController(loginItems, animated: true, completion: nil)
+      //self.presentViewController(signUpItems, animated: true, completion: nil)
+      
+      //      constraintBottomView.constant = kBottomViewConstraint
+      //      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
+      //      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
+      //
+      //      UIView.animateWithDuration(0.3, animations: { () -> Void in
+      //        self.view.layoutIfNeeded()
+      //      })
+      
+    }
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -91,8 +124,6 @@ class MessageCenterViewController: UIViewController, PFLogInViewControllerDelega
 //        self.view.layoutIfNeeded()
 //      })
       
-    } else if presentedSignup == true {
-      presentedSignup = false
     }
   }
   
@@ -156,7 +187,7 @@ extension MessageCenterViewController : PFLogInViewControllerDelegate {
   
   func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
     
-    self.dismissViewControllerAnimated(false, completion: nil)
+    self.dismissViewControllerAnimated(true, completion: nil)
     
   }
   
@@ -172,7 +203,10 @@ extension MessageCenterViewController : PFSignUpViewControllerDelegate {
   }
   
   func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
-    signUpItems.dismissViewControllerAnimated(true, completion: nil)
+
+    signUpItems.dismissViewControllerAnimated(true, completion: { () -> Void in
+      self.presentedSignup = true
+    })
   }
   
 }
@@ -200,6 +234,35 @@ extension MessageCenterViewController: UITextFieldDelegate {
 
 extension MessageCenterViewController: UITabBarControllerDelegate{
   func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+    
+    if tabBarController.selectedIndex == 1{
+      presentedSignup = false
+    }
+    
+    let jamUser = PFUser.currentUser()?.username
+    
+    if (jamUser != nil) {
+      println("user exists")
+      
+    } else  if presentedSignup == false{
+      presentedSignup = true
+      
+      let jamUser = PFUser.currentUser()?.username
+      
+      signUpItems.fields = PFSignUpFields.UsernameAndPassword | PFSignUpFields.Email | PFSignUpFields.SignUpButton | PFSignUpFields.DismissButton
+      
+      
+      self.presentViewController(signUpItems, animated: true, completion: nil)
+      
+      //      constraintBottomView.constant = kBottomViewConstraint
+      //      constraintPhotoBottomView.constant = kBottomViewConstraintPhotoRemoved
+      //      contraintCameraBottomView.constant = kBottomViewConstraintCameraButtonRemoved
+      //
+      //      UIView.animateWithDuration(0.3, animations: { () -> Void in
+      //        self.view.layoutIfNeeded()
+      //      })
+      
+    }
     
 //    constraintBottomView.constant = kBottomViewConstraint
 //    switchHost.on = false
