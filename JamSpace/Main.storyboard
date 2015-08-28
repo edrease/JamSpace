@@ -440,7 +440,114 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEj-Rt-Dz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5253" y="-287"/>
+            <point key="canvasLocation" x="5461" y="-387"/>
+        </scene>
+        <!--Space Availability View Controller-->
+        <scene sceneID="NbA-V7-obC">
+            <objects>
+                <viewController id="5vT-HJ-F0K" customClass="SpaceAvailabilityViewController" customModule="JamSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ag-BO-IVj"/>
+                        <viewControllerLayoutGuide type="bottom" id="LrF-uv-lcC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0V3-SJ-VbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set Start Date: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilc-4n-HnV">
+                                <rect key="frame" x="16" y="72" width="103" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tVo-U4-VTw">
+                                <rect key="frame" x="0.0" y="96" width="600" height="162"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="462391771.26534802">
+                                    <!--2015-08-27 18:09:31 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="startDateSelectAction:" destination="5vT-HJ-F0K" eventType="valueChanged" id="cvj-3Y-uai"/>
+                                </connections>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UcY-vB-ULb">
+                                <rect key="frame" x="0.0" y="292" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="462391771.26534802">
+                                    <!--2015-08-27 18:09:31 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="endDateSelectAction:" destination="5vT-HJ-F0K" eventType="valueChanged" id="F8K-yC-RlO"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ao9-ze-l7J">
+                                <rect key="frame" x="277" y="518" width="47" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="+ Save">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDateButtonPressed:" destination="5vT-HJ-F0K" eventType="touchUpInside" id="Rat-ZL-eNe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start Dizzle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kw3-J8-GjW">
+                                <rect key="frame" x="124" y="72" width="77" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set End Date:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM7-S2-jdJ">
+                                <rect key="frame" x="16" y="266" width="93" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTM-yw-Fbq">
+                                <rect key="frame" x="124" y="266" width="48" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kw3-J8-GjW" firstAttribute="leading" secondItem="ilc-4n-HnV" secondAttribute="trailing" constant="5" id="2Sl-Sl-Rav"/>
+                            <constraint firstItem="ilc-4n-HnV" firstAttribute="leading" secondItem="0V3-SJ-VbZ" secondAttribute="leading" constant="16" id="2pw-eN-qtb"/>
+                            <constraint firstItem="UcY-vB-ULb" firstAttribute="top" secondItem="cTM-yw-Fbq" secondAttribute="bottom" constant="8" id="3VF-6u-iaJ"/>
+                            <constraint firstItem="tVo-U4-VTw" firstAttribute="top" secondItem="Kw3-J8-GjW" secondAttribute="bottom" constant="6" id="FyH-CD-p4P"/>
+                            <constraint firstItem="UcY-vB-ULb" firstAttribute="top" secondItem="cM7-S2-jdJ" secondAttribute="bottom" constant="8" id="Glk-yL-6RK"/>
+                            <constraint firstItem="Kw3-J8-GjW" firstAttribute="leading" secondItem="ilc-4n-HnV" secondAttribute="trailing" constant="8" id="I9q-4v-S34"/>
+                            <constraint firstItem="UcY-vB-ULb" firstAttribute="leading" secondItem="0V3-SJ-VbZ" secondAttribute="leadingMargin" constant="-16" id="JlN-Dn-2Ht"/>
+                            <constraint firstItem="tVo-U4-VTw" firstAttribute="leading" secondItem="0V3-SJ-VbZ" secondAttribute="leadingMargin" constant="-16" id="Jx5-cp-omU"/>
+                            <constraint firstItem="Kw3-J8-GjW" firstAttribute="top" secondItem="6ag-BO-IVj" secondAttribute="bottom" constant="8" id="PTX-GQ-38j"/>
+                            <constraint firstItem="ilc-4n-HnV" firstAttribute="top" secondItem="6ag-BO-IVj" secondAttribute="bottom" constant="8" id="XN9-nR-fZM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UcY-vB-ULb" secondAttribute="trailing" constant="-16" id="Xii-VI-B2r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tVo-U4-VTw" secondAttribute="trailing" constant="-16" id="Zfy-bY-MOl"/>
+                            <constraint firstItem="cTM-yw-Fbq" firstAttribute="leading" secondItem="cM7-S2-jdJ" secondAttribute="trailing" constant="15" id="mmZ-Rv-xeZ"/>
+                            <constraint firstItem="cTM-yw-Fbq" firstAttribute="top" secondItem="tVo-U4-VTw" secondAttribute="bottom" constant="8" id="mu9-vd-Wth"/>
+                            <constraint firstItem="LrF-uv-lcC" firstAttribute="top" secondItem="Ao9-ze-l7J" secondAttribute="bottom" constant="8" id="p95-fF-8dn"/>
+                            <constraint firstItem="cM7-S2-jdJ" firstAttribute="top" secondItem="tVo-U4-VTw" secondAttribute="bottom" constant="8" id="rBh-1a-dCE"/>
+                            <constraint firstItem="cM7-S2-jdJ" firstAttribute="leading" secondItem="0V3-SJ-VbZ" secondAttribute="leadingMargin" id="usv-xZ-dd6"/>
+                            <constraint firstAttribute="centerX" secondItem="Ao9-ze-l7J" secondAttribute="centerX" id="xOu-29-cyb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="I9q-4v-S34"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="endDateLabel" destination="cTM-yw-Fbq" id="hzM-Il-MD0"/>
+                        <outlet property="endDatePicker" destination="UcY-vB-ULb" id="EfM-YV-L3X"/>
+                        <outlet property="startDateLabel" destination="Kw3-J8-GjW" id="JzD-RT-k3I"/>
+                        <outlet property="startDatePicker" destination="tVo-U4-VTw" id="07U-oy-Nor"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqb-G7-uzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5482" y="-1096"/>
         </scene>
         <!--+ Listing-->
         <scene sceneID="hE3-z5-Olj">
