@@ -12,6 +12,9 @@ class SpaceDetailViewController: UITableViewController, UITableViewDataSource, U
   
   var passedSpaceListing: PracticeSpace!
   var passedSpaceImage: UIImage!
+  
+  @IBOutlet weak var photoFrame: UIView!
+  
 
   @IBOutlet weak var spaceListingImageView: UIImageView!
   @IBOutlet weak var nameOfSpaceLabel: UILabel!
@@ -31,6 +34,7 @@ class SpaceDetailViewController: UITableViewController, UITableViewDataSource, U
       priceLabel.text = "$" + "\(passedSpaceListing.pricePerDay)"
       nameOfSpaceLabel.text = passedSpaceListing.nameOfSpace
       spaceListingImageView.image = passedSpaceImage
+     // view.insertSubview(photoFrame, aboveSubview: spaceListingImageView)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -1,5 +1,5 @@
 //
-//  RequestSentViewController.swift
+//  FavoritesViewController.swift
 //  JamSpace
 //
 //  Created by Matthew McClure on 8/28/15.
@@ -8,27 +8,14 @@
 
 import UIKit
 
-class RequestSentViewController: UIViewController {
+class FavoritesViewController: UIViewController {
+  
+  @IBOutlet weak var tableView: UITableView!
   
   
-  @IBAction func exploreOthers(sender: UIButton) {
-    //dismissViewControllerAnimated(true, completion: nil)
-    dismissViewControllerAnimated(true, completion: nil)
-    
-    //navigationController?.popToRootViewControllerAnimated(false)
-    
-  }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-      let background = CAGradientLayer().colorFade()
-      
-      background.frame = self.view.bounds
-      
-      self.view.layer.insertSublayer(background, atIndex: 0)
-      
-
 
         // Do any additional setup after loading the view.
     }
