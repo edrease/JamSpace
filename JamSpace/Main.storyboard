@@ -883,12 +883,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boomboxTabImage" translatesAutoresizingMaskIntoConstraints="NO" id="6p2-lE-esM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter a City to Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x5-OU-Emf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x5-OU-Emf">
                                 <rect key="frame" x="216" y="256" width="168" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kiC-sI-c3e">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city to search.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kiC-sI-c3e">
                                 <rect key="frame" x="140" y="260" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="h9j-ae-AQt"/>
@@ -916,7 +916,7 @@
                         <constraints>
                             <constraint firstItem="kiC-sI-c3e" firstAttribute="trailing" secondItem="qXM-KK-5fE" secondAttribute="trailingMargin" multiplier="1.5" constant="-309" id="1Lw-8C-mcQ"/>
                             <constraint firstAttribute="centerX" secondItem="bft-zI-Sv5" secondAttribute="centerX" id="3tv-mB-eun"/>
-                            <constraint firstItem="7x5-OU-Emf" firstAttribute="top" secondItem="bft-zI-Sv5" secondAttribute="bottom" constant="8" id="8G5-ak-EOy"/>
+                            <constraint firstItem="7x5-OU-Emf" firstAttribute="top" secondItem="bft-zI-Sv5" secondAttribute="bottom" constant="74" id="8G5-ak-EOy"/>
                             <constraint firstItem="6p2-lE-esM" firstAttribute="top" secondItem="WoJ-2d-7E3" secondAttribute="bottom" id="9dR-Jy-W4o"/>
                             <constraint firstAttribute="centerX" secondItem="7x5-OU-Emf" secondAttribute="centerX" id="BTa-ZP-z0C"/>
                             <constraint firstItem="6p2-lE-esM" firstAttribute="leading" secondItem="qXM-KK-5fE" secondAttribute="leadingMargin" constant="-16" id="K4D-Pb-f89"/>
