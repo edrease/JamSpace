@@ -1168,7 +1168,7 @@
         <!--Guest Mode Tab Bar Controller-->
         <scene sceneID="bWP-yP-sq4">
             <objects>
-                <tabBarController storyboardIdentifier="GuestModeTabBarController" title="Guest Mode Tab Bar Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ILU-Ct-JwM" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="initialView" title="Guest Mode Tab Bar Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ILU-Ct-JwM" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="9WS-m9-N9A">
@@ -1200,20 +1200,98 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhF-St-cV8">
-                                <rect key="frame" x="227" y="229" width="145" height="30"/>
-                                <state key="normal" title="Switch to Host Mode">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="switchToHostMode:" destination="kJx-V6-UlB" eventType="touchUpInside" id="ueP-cY-4rE"/>
-                                </connections>
-                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5y7-O2-fHw">
+                                <rect key="frame" x="147" y="132" width="306" height="336"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Additional Information required" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5D-nO-Uyi">
+                                        <rect key="frame" x="35" y="8" width="237" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-QO-uds">
+                                        <rect key="frame" x="8" y="41" width="84" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLX-D1-6Cg">
+                                        <rect key="frame" x="105" y="37" width="193" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRI-Eu-OI4">
+                                        <rect key="frame" x="8" y="70" width="83" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMV-hY-VhQ">
+                                        <rect key="frame" x="105" y="70" width="193" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="H0Y-R6-w10">
+                                        <rect key="frame" x="105" y="108" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleToHostUser:" destination="mil-BD-kGX" eventType="valueChanged" id="X3b-HZ-Rga"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Host" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RV-BT-aov">
+                                        <rect key="frame" x="8" y="113" width="37" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gR-4m-csF">
+                                        <rect key="frame" x="127" y="153" width="46" height="30"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="uploadAdditionalData:" destination="mil-BD-kGX" eventType="touchUpInside" id="934-h3-OqJ"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pxk-gn-e8F">
+                                        <rect key="frame" x="62" y="336" width="100" height="100"/>
+                                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Xvp-8D-LaI"/>
+                                            <constraint firstAttribute="width" constant="100" id="epe-hw-8UH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wF-ZH-ecy">
+                                        <rect key="frame" x="170" y="406" width="54" height="30"/>
+                                        <state key="normal" title="Camera">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="triggerCamera:" destination="mil-BD-kGX" eventType="touchUpInside" id="0Ny-yE-JCX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Pxk-gn-e8F" secondAttribute="bottom" constant="-100" id="7k7-dt-V4o"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pxk-gn-e8F" secondAttribute="bottom" constant="8" id="AOM-8S-Yg7"/>
+                                    <constraint firstAttribute="bottom" secondItem="1wF-ZH-ecy" secondAttribute="bottom" constant="-100" id="HLI-t0-fDD"/>
+                                    <constraint firstAttribute="height" constant="336" id="Kqx-VT-jbd"/>
+                                    <constraint firstItem="1wF-ZH-ecy" firstAttribute="leading" secondItem="Pxk-gn-e8F" secondAttribute="trailing" constant="8" id="Uw8-3g-Ceb"/>
+                                    <constraint firstAttribute="centerX" secondItem="Pxk-gn-e8F" secondAttribute="centerX" constant="41" id="ciZ-hy-eMF"/>
+                                    <constraint firstAttribute="width" constant="306" id="uhS-2h-xp2"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AOM-8S-Yg7"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="QhF-St-cV8" secondAttribute="centerY" id="TRp-NI-5Vv"/>
-                            <constraint firstAttribute="centerX" secondItem="QhF-St-cV8" secondAttribute="centerX" id="shj-J1-UNk"/>
+                            <constraint firstAttribute="centerX" secondItem="5y7-O2-fHw" secondAttribute="centerX" id="7jI-tD-olN"/>
+                            <constraint firstItem="gov-dY-Xeu" firstAttribute="top" secondItem="5y7-O2-fHw" secondAttribute="bottom" constant="83" id="Lzc-XA-4G7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="Ebf-cK-2KK">
@@ -1223,9 +1301,6 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
-                    <connections>
-                        <outlet property="toggleToHostMode" destination="QhF-St-cV8" id="Xg3-iy-hs5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubb-M3-EKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

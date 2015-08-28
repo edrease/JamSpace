@@ -18,7 +18,7 @@ class HostAccountViewController: UIViewController {
     let window = appDelegate.window
     
     let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    var hostModeViewController = mainStoryboard.instantiateViewControllerWithIdentifier("GuestModeTabBarController") as! UITabBarController
+    var hostModeViewController = mainStoryboard.instantiateViewControllerWithIdentifier("initialView") as! UITabBarController
     
     window?.rootViewController = hostModeViewController
     
