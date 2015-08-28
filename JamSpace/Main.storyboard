@@ -203,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reservations" id="eIr-g2-5Wf">
+                    <tabBarItem key="tabBarItem" title="Reservations" image="calendar" id="eIr-g2-5Wf">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -323,7 +323,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="LFy-9w-5sB">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="LFy-9w-5sB">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1525,7 +1525,7 @@
         <scene sceneID="mGe-W9-n2V">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ww-wf-AIN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Requests" id="dbG-eq-sJT">
+                    <tabBarItem key="tabBarItem" title="Requests" image="requests" id="dbG-eq-sJT">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.4392156862745098" green="0.10980392156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1574,7 +1574,9 @@
     <resources>
         <image name="boomboxAvenir" width="6044" height="1736"/>
         <image name="boomboxTabImage" width="750" height="1201"/>
+        <image name="calendar" width="48" height="48"/>
         <image name="myProfile" width="48" height="48"/>
+        <image name="requests" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="t5d-BP-WaQ"/>
