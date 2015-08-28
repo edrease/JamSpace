@@ -9,20 +9,20 @@
 import UIKit
 
 class BookingRequestConfirmationViewController: UITableViewController {
+  
+  var passedSpace: PracticeSpace!
+  var passedImage: UIImage!
 
   @IBOutlet weak var nameOfSpace: UILabel!
-  
   @IBOutlet weak var requestedDatesLabel: UILabel!
-
   @IBOutlet weak var totalPriceForBookingLabel: UILabel!
-  
   @IBOutlet weak var cityAndStateLabel: UILabel!
-  
+  @IBOutlet weak var spaceImage: UIImageView!
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
- 
+      nameOfSpace.text = passedSpace.nameOfSpace
+      spaceImage.image = passedImage
     }
 
 
