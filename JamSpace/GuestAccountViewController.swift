@@ -10,6 +10,10 @@ import UIKit
 
 class GuestAccountViewController: UIViewController {
   
+  
+  
+  
+  
   @IBOutlet weak var toggleToHostMode: UIButton!
   
   @IBAction func switchToHostMode(sender: AnyObject) {
