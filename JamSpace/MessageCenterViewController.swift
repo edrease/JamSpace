@@ -37,13 +37,14 @@ class MessageCenterViewController: UIViewController, PFLogInViewControllerDelega
   let kBottomViewConstraintPhotoRemoved : CGFloat = -108
   let kBottomViewConstraintCameraButtonRemoved: CGFloat = -50
   let kBottomViewConstraintCameraButton : CGFloat = 43
+  let kCornerRadiusForProfileImage: CGFloat = 25
   var presentedSignup = false
   
   //MARK: - Lifecycle methods
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    title = "Requests"
     //Delegate setup
     tableView.dataSource = self
     self.tabBarController?.delegate = self
@@ -52,6 +53,7 @@ class MessageCenterViewController: UIViewController, PFLogInViewControllerDelega
     loginItems.delegate = self
     signUpItems.delegate = self
     loginItems.signUpController?.delegate = self
+
     
 //    var users = PFUser()
 //    users["name"] = txtFieldFirstName.text
@@ -296,7 +298,10 @@ extension MessageCenterViewController: UITableViewDataSource {
     cell.messageText.text = message.messageText
     let datePosted = DateToStringFormatter.stringFromDate(message.dateSent)
     cell.datePosted.text = datePosted
-    
+    cell.userProfileImage.layer.cornerRadius = kCornerRadiusForProfileImage
+    cell.userProfileImage.clipsToBounds = true
+
+  
     return cell
 
   }
