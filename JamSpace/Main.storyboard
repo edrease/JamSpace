@@ -566,7 +566,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYi-IX-3Ok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3969" y="-277"/>
+            <point key="canvasLocation" x="5337" y="578"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7zK-0p-k9Z">
+            <objects>
+                <viewController id="yXX-gR-U7Z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hEj-DD-7By"/>
+                        <viewControllerLayoutGuide type="bottom" id="df7-XK-S1W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QJF-dj-s2x">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D33-mA-N2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6030" y="578"/>
         </scene>
         <!--Add or Edit Properties-->
         <scene sceneID="lOV-L9-1s2">
@@ -585,7 +603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hkw-WF-VjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4429" y="526"/>
+            <point key="canvasLocation" x="3863" y="578"/>
         </scene>
         <!--Set Calendar-->
         <scene sceneID="QUJ-lZ-7B3">
@@ -604,26 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA2-EX-3IL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5171" y="531"/>
-        </scene>
-        <!--Monthly Data Summary-->
-        <scene sceneID="7t7-Hv-yzz">
-            <objects>
-                <viewController title="Monthly Data Summary" id="m8w-sN-vfM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oNl-qA-S2h"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xcq-7r-pQR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="A04-4t-mAx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="coF-TN-amx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Icq-Ji-ZA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5919" y="526"/>
+            <point key="canvasLocation" x="4627" y="578"/>
         </scene>
         <!--Reservations Summary List-->
         <scene sceneID="ChH-Wy-ubz">
@@ -642,12 +641,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfe-em-Xnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3675" y="526"/>
+            <point key="canvasLocation" x="3205" y="538"/>
         </scene>
         <!--Host Mode Tab Bar Controller-->
         <scene sceneID="JVm-34-F1T">
             <objects>
-                <tabBarController title="Host Mode Tab Bar Controller" id="1gG-rN-rHS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HostModeTabBarController" title="Host Mode Tab Bar Controller" id="1gG-rN-rHS" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="k3d-UD-qmC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -658,13 +657,50 @@
                         <segue destination="9P0-md-Qnt" kind="relationship" relationship="viewControllers" id="SHh-c2-9si"/>
                         <segue destination="nrj-2C-ggQ" kind="relationship" relationship="viewControllers" id="xxm-sp-dpe"/>
                         <segue destination="4Xr-eE-DGT" kind="relationship" relationship="viewControllers" id="kmC-vB-BiH"/>
-                        <segue destination="m8w-sN-vfM" kind="relationship" relationship="viewControllers" id="XUZ-b5-K9i"/>
                         <segue destination="0nr-Ub-pfL" kind="relationship" relationship="viewControllers" id="WMn-ku-QXb"/>
+                        <segue destination="bxQ-Sz-xi4" kind="relationship" relationship="viewControllers" id="xPo-IB-MMc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aU0-7r-KMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3317" y="-287"/>
+            <point key="canvasLocation" x="3355" y="-505"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="V7Y-qi-3Hd">
+            <objects>
+                <viewController id="bxQ-Sz-xi4" customClass="HostAccountViewController" customModule="JamSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CMx-Z6-IJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Z4-Fu-jL4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NFb-46-GLe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eH-QM-cns">
+                                <rect key="frame" x="223" y="285" width="154" height="30"/>
+                                <state key="normal" title="Switch to Guest Mode">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchToGuestMode:" destination="bxQ-Sz-xi4" eventType="touchUpInside" id="hmq-C3-PoI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="7eH-QM-cns" secondAttribute="centerY" id="BAM-Ef-SrY"/>
+                            <constraint firstAttribute="centerX" secondItem="7eH-QM-cns" secondAttribute="centerX" id="R4Y-4s-lQ2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" id="DHB-vH-prK"/>
+                    <connections>
+                        <outlet property="toggleToGuestMode" destination="7eH-QM-cns" id="F6z-r2-E8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qoB-zO-FBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4107" y="-505"/>
         </scene>
         <!--Search-->
         <scene sceneID="VfX-7q-UqT">
@@ -1109,7 +1145,7 @@
         <!--Guest Mode Tab Bar Controller-->
         <scene sceneID="bWP-yP-sq4">
             <objects>
-                <tabBarController storyboardIdentifier="initialView" title="Guest Mode Tab Bar Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ILU-Ct-JwM" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="GuestModeTabBarController" title="Guest Mode Tab Bar Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ILU-Ct-JwM" sceneMemberID="viewController">
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="9WS-m9-N9A">
@@ -1132,7 +1168,7 @@
         <!--Account-->
         <scene sceneID="nvC-A4-O25">
             <objects>
-                <viewController id="kJx-V6-UlB" sceneMemberID="viewController">
+                <viewController id="kJx-V6-UlB" customClass="GuestAccountViewController" customModule="JamSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A7u-I0-pLw"/>
                         <viewControllerLayoutGuide type="bottom" id="gov-dY-Xeu"/>
@@ -1140,7 +1176,22 @@
                     <view key="view" contentMode="scaleToFill" id="Ehz-WG-Knx">
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhF-St-cV8">
+                                <rect key="frame" x="227" y="229" width="145" height="30"/>
+                                <state key="normal" title="Switch to Host Mode">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchToHostMode:" destination="kJx-V6-UlB" eventType="touchUpInside" id="ueP-cY-4rE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="QhF-St-cV8" secondAttribute="centerY" id="TRp-NI-5Vv"/>
+                            <constraint firstAttribute="centerX" secondItem="QhF-St-cV8" secondAttribute="centerX" id="shj-J1-UNk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="Ebf-cK-2KK">
                         <userDefinedRuntimeAttributes>
@@ -1149,6 +1200,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="toggleToHostMode" destination="QhF-St-cV8" id="Xg3-iy-hs5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubb-M3-EKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

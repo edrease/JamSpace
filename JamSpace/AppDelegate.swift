@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
   var dummyUsersArray = [User]()
   var dummySpacesArray = [PracticeSpace]()
   
+  
   func loadDummyUsersArray(){
     let user1 = User(firstName: "Tom", lastName: "Callahan", favorites: nil)
     dummyUsersArray.append(user1)
