@@ -11,11 +11,16 @@ import UIKit
 class ListViewController: UIViewController {
   
   var passedArrayOfPracticeSpaces = [PracticeSpace]()
-
+  var spaceToPass: PracticeSpace!
+  var tempArrayOfImages = [UIImage]()
+  var imageToPass: UIImage!
+  
   @IBOutlet weak var tableView: UITableView!
   //weak var delegate: FilteredArrayDelegate?
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    spaceToPass = passedArrayOfPracticeSpaces[indexPath.row]
+    imageToPass = tempArrayOfImages[indexPath.row]
     performSegueWithIdentifier("showSpaceDetailVC", sender: nil)
   }
   
@@ -55,7 +60,9 @@ class ListViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
       if segue.identifier == "showSpaceDetailVC" {
-        
+        let spaceDetailVC = segue.destinationViewController as! SpaceDetailViewController
+        spaceDetailVC.passedSpaceListing = spaceToPass
+        spaceDetailVC.passedSpaceImage = imageToPass
       }
     }
 }
@@ -85,23 +92,19 @@ extension ListViewController: UITableViewDataSource {
               //                      posts.append(post)
               if cell.tag == tag {
                 cell.cellImageView.image = image
+                self.tempArrayOfImages.append(image)
               }
               //self.tableView.reloadData()
             })
         }
       })
     
-
-    //let image = U
-    //let mainImage = passedArrayOfPracticeSpaces[indexPath.row].
-    //cell.cellImageView.image = passedArrayOfPracticeSpaces[indexPath.row].tempImage
     cell.cellPrice.text = "$\(passedArrayOfPracticeSpaces[indexPath.row].pricePerDay.description)"
     cell.headlineLabel.text = passedArrayOfPracticeSpaces[indexPath.row].nameOfSpace
     let city = passedArrayOfPracticeSpaces[indexPath.row].city
     let state = passedArrayOfPracticeSpaces[indexPath.row].state
     cell.cityStateLabel.text = city + ", \(state)"
-    //let state = passedArrayOfPracticeSpaces[indexPath.row].
-    
+
     return cell
   }
 
@@ -110,16 +113,7 @@ extension ListViewController: UITableViewDataSource {
 
 //MARK: UITableViewDelegate
 extension ListViewController: UITableViewDelegate {
-  
-//  
-//  
-//  func sendToFilter(){
-//    self.performSegueWithIdentifier("showFilterView", sender: nil)
-//  }
-  
-//  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//    return (0.75) * view.frame.width
-//  }
+
 }
 
 

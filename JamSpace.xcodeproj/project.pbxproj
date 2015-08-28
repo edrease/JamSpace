@@ -10,6 +10,8 @@
 		007C5CFA1B8D057000018E2D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C5CF91B8D057000018E2D /* Keys.swift */; };
 		007C5CFC1B8D3E0C00018E2D /* SpacePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */; };
 		344BF32B1B8EA594000BC29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344BF32A1B8EA594000BC29A /* Main.storyboard */; };
+		344F2C601B90366500152C97 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344F2C5F1B90366500152C97 /* Gradient.swift */; };
+		344F2C621B90372B00152C97 /* RequestSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344F2C611B90372B00152C97 /* RequestSentViewController.swift */; };
 		346FBC781B8BB5B700B960E5 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC771B8BB5B700B960E5 /* Users.swift */; };
 		346FBC7A1B8BB5E600B960E5 /* PracticeSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */; };
 		346FBC801B8BC12900B960E5 /* ListMapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FBC7F1B8BC12900B960E5 /* ListMapSearchViewController.swift */; };
@@ -68,6 +70,8 @@
 		007C5CF91B8D057000018E2D /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpacePostViewController.swift; path = ../SpacePostViewController.swift; sourceTree = "<group>"; };
 		344BF32A1B8EA594000BC29A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		344F2C5F1B90366500152C97 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		344F2C611B90372B00152C97 /* RequestSentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSentViewController.swift; sourceTree = "<group>"; };
 		346FBC771B8BB5B700B960E5 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		346FBC791B8BB5E600B960E5 /* PracticeSpaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeSpaces.swift; sourceTree = "<group>"; };
 		346FBC7F1B8BC12900B960E5 /* ListMapSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMapSearchViewController.swift; sourceTree = "<group>"; };
@@ -169,14 +173,15 @@
 				346FBC7F1B8BC12900B960E5 /* ListMapSearchViewController.swift */,
 				34DC5EC81B8D484700EDC7C2 /* ListViewController.swift */,
 				6C39046B1B8BE26400C94306 /* MapViewController.swift */,
+				344F2C611B90372B00152C97 /* RequestSentViewController.swift */,
+				9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */,
 				34DC5EC61B8CFFDD00EDC7C2 /* FilterSearchTableViewController.swift */,
 				34FCE5711B8FE7D6001D2F53 /* GuestAccountViewController.swift */,
 				34FCE5731B8FE977001D2F53 /* HostAccountViewController.swift */,
 				346FBC811B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift */,
-				9E43D1B01B8D09D900AE70F4 /* SpaceDetailViewController.swift */,
+				9E56A91B1B8EE1A200C2EA78 /* BookingRequestConfirmationViewController.swift */,
 				007C5CFB1B8D3E0C00018E2D /* SpacePostViewController.swift */,
 				9E0AA1F01B8BE04800DC0319 /* MessageCenterControllers */,
-				9E56A91B1B8EE1A200C2EA78 /* BookingRequestConfirmationViewController.swift */,
 				6CD929EA1B8FA3150092A777 /* MyAccountViewController.swift */,
 			);
 			name = Controllers;
@@ -232,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				9E0AA1A41B8B90DB00DC0319 /* Info.plist */,
+				344F2C5F1B90366500152C97 /* Gradient.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 			files = (
 				9ECB0A041B8E395300CE16D6 /* LocationSearchService.swift in Sources */,
 				9E0AA1EF1B8BDD6700DC0319 /* MessageCenterViewController.swift in Sources */,
+				344F2C621B90372B00152C97 /* RequestSentViewController.swift in Sources */,
 				6CD929EB1B8FA3150092A777 /* MyAccountViewController.swift in Sources */,
 				9E0AA1F81B8BFBE700DC0319 /* DateToStringFormatter.swift in Sources */,
 				9E0AA1F61B8BEF9D00DC0319 /* MessageCenterCell.swift in Sources */,
@@ -418,6 +425,7 @@
 				9E56A9191B8E73C600C2EA78 /* ListViewController.swift in Sources */,
 				34FCE5721B8FE7D6001D2F53 /* GuestAccountViewController.swift in Sources */,
 				9E56A91D1B8F7B6800C2EA78 /* SpaceDetailViewController.swift in Sources */,
+				344F2C601B90366500152C97 /* Gradient.swift in Sources */,
 				34DC5EC51B8CFEF700EDC7C2 /* PracticeSpaceCell.swift in Sources */,
 				346FBC821B8BC13E00B960E5 /* PracticeSpaceDetailViewController.swift in Sources */,
 				34DC5EC11B8CFEC000EDC7C2 /* Message.swift in Sources */,
